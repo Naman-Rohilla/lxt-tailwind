@@ -1,0 +1,121 @@
+@import "./variable.scss";
+
+.about-card-view {
+  background-color: $primary-color-dim;
+  color: white;
+  z-index: 2;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stadium-view {
+    z-index: 100;
+
+    .stadium-background {
+      z-index: 1;
+      opacity: 1;
+
+      .stadium-background-color {
+        position: absolute;
+        background: linear-gradient(
+          178.99deg,
+          #02173a 0.76%,
+          rgb(3, 29, 75, 0.9) 90.26%
+        );
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+      }
+    }
+
+    .iphone-view {
+      z-index: 2;
+
+      .iphone {
+        position: relative; /* Add this to position absolutely child elements */
+        float: right;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          height: 700px; /* Set the height of the image */
+          width: 350px; /*  Set the width of the image */
+          position: absolute; /* Make sure img is positioned relatively */
+          z-index: 1;
+          top: $primary-margin; /* Set z-index lower than iframe */
+        }
+
+        video {
+          height: 700px; /* Set the height of the image */
+          width: 350px;
+          position: absolute; /* Keep iframe absolute to overlap img */
+
+          top: $primary-margin; /* Position at the top of the container */
+          z-index: 2;
+          border-radius: 65px;
+          padding: 25px;
+        }
+
+        .iphone-button {
+          padding-top: $primary-margin + 700;
+          padding-right: 60px;
+        }
+      }
+    }
+
+    .stadium-slider-view {
+      z-index: 3;
+
+      .stadium-slider-container {
+        padding-bottom: 80px;
+      }
+
+      .watch-shop-view {
+        background-color: $primary-color;
+        height: 90vh;
+        width: 100vw;
+        position: sticky;
+        top: 0;
+        display: flex;
+        gap: 50px;
+        padding-top: 100px;
+
+        .img-left {
+          margin-left: $primary-margin;
+          position: relative;
+          width: 45%;
+
+          img {
+            position: absolute;
+            top: 15px;
+            right: 40px;
+            height: 45px;
+            width: 45px;
+          }
+
+          video {
+            object-fit: cover;
+            border-radius: 10px;
+          }
+        }
+
+        .img-center {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 35px;
+          font-size: 4rem;
+        }
+
+        .img-right {
+          margin-right: $primary-margin;
+
+          width: 28%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "./variable.scss";
+
+.product-card-view {
+  top: 0;
+  width: 100%;
+  color: white;
+  z-index: 1;
+  .gallery-view {
+    gap: 20px;
+    position: relative;
+    right: 0;
+    z-index: 100;
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container-view-1 {
+      display: flex;
+      height: 100%;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      margin-top: 10px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .vertical-layer {
+        height: 80vh;
+        margin-top: 300px;
+      }
+    }
+    .container-view-2 {
+      display: flex;
+      height: 100%;
+
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      margin-top: 40px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .vertical-layer {
+        height: 80vh;
+        margin-top: 150px;
+      }
+    }
+    .container-view-3 {
+      display: flex;
+      height: 100%;
+
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      margin-top: 10px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .vertical-layer {
+        height: 80vh;
+        margin-top: 30px;
+      }
+    }
+  }
+}
