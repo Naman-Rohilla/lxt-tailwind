@@ -9,6 +9,7 @@ import "../../styles/productView.scss";
 import { stadiumData } from "../../jsons/productData";
 import ActionCard from "../cards/actionCard";
 import "../../styles/stadiumView.scss";
+import ProfileCard from "../cards/profileCard";
 
 const footerObject = {
   heading: "Beginner",
@@ -135,9 +136,9 @@ const ProfileCardView = () => {
       style={{
         backgroundColor: "rgba(2, 23, 58, 0.8)",
       }}
-      className="h-screen w-full sticky z-10"
+      className="h-auto md:h-screen w-full relative md:sticky z-10 flex items-start md:items-end py-10 md:pt-32"
     >
-      hello
+      <ProfileCard></ProfileCard>
     </div>
   );
 };

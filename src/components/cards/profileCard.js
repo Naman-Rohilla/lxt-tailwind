@@ -31,19 +31,21 @@ const profileData = [
 
 export default function ProfileCard() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState("next");
+  // const [direction, setDirection] = useState("next");
   const [animationKey, setAnimationKey] = useState(0);
 
   const size = profileData.length;
 
   const nextSlide = () => {
-    setDirection("next");
+    // setDirection("next");
+    console.log("clicked next");
     setCurrentIndex((prevIndex) => (prevIndex + 1) % size);
     triggerAnimation();
   };
 
   const prevSlide = () => {
-    setDirection("prev");
+    // setDirection("prev");
+    console.log("clicked prev");
     setCurrentIndex((prevIndex) => (prevIndex - 1 + size) % size);
     triggerAnimation();
   };
@@ -55,37 +57,40 @@ export default function ProfileCard() {
   const { description, imgSrc } = profileData[currentIndex];
 
   return (
-    <div className="profile-card">
-      <div className="profile-picture">
+    <div className="profile-card h-auto flex flex-col md:flex-row relative">
+      <div className="flex items-end w-full  justify-start">
         <img
           key={animationKey}
-          className={`profile-img`}
+          className={`profile-img object-fill h-auto transform origin-bottom-right md:origin-bottom scale-110 md:scale-150`}
           src={imgSrc}
           alt="Profile"
         />
       </div>
-      <div className="profile-text">
-        <div className="container">
-          <span>
+      <div className="profile-text py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
+        <div className="flex flex-col">
+          <span className="text-4xl lg:text-6xl">
             <strong>Rahul</strong> Rane
           </span>
-          <span>
+          <span className="text-md lg:text-3xl pt-2">
             Managing Director at <strong>LAZERXTECH</strong>
           </span>
-          <span>{description}</span>
-          <span>Read More</span>
+          <span className="text-xs lg:text-xl pt-2">{description}</span>
+          <span className="pt-2">Read More</span>
         </div>
-        <div className="slider-controls">
-          <div className="prev-slide" onClick={prevSlide}>
+        <div className="flex items-center justify-center lg:justify-start">
+          <div className="z-10" onClick={prevSlide}>
             <img height={80} width={80} src="leftslide.png" alt="Previous" />
           </div>
           {Array.from({ length: size }, (_, index) => (
             <span
               style={{
                 border: index === currentIndex ? `1px solid red` : "none",
+                height: "30px",
+                width: "30px",
+                borderRadius: "100%",
               }}
               key={index}
-              className="slider-dots"
+              className="flex justify-center items-center px-2 mb-2"
             >
               <div
                 style={{
@@ -97,7 +102,7 @@ export default function ProfileCard() {
               ></div>
             </span>
           ))}
-          <div className="next-slide" onClick={nextSlide}>
+          <div className="" onClick={nextSlide}>
             <img height={80} width={80} src="rightslide.png" alt="Next" />
           </div>
         </div>
