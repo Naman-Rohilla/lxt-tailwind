@@ -11,11 +11,14 @@
       font-weight: 800;
     }
 
-    span:nth-child(2) {
-    }
-
     .announcement-card-container {
       padding-top: 40px;
     }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .announcement-view {
+    height: auto;
   }
 }

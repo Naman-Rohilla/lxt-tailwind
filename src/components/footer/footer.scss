@@ -1,0 +1,74 @@
+@import "../../styles/variable.scss";
+
+.footer-container {
+  height: 65vh;
+
+  .form-footer {
+    background-color: #022359;
+    height: 310px;
+    width: 100%;
+
+    .form-container {
+      .input-container {
+        input {
+          background-color: transparent;
+          border: 1px solid white;
+          border-radius: 5px;
+          padding-left: 20px;
+          color: white;
+
+          &::placeholder {
+            color: white;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    img:nth-child(3) {
+      transform: scale(1.8) translateY(10px);
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 45px;
+    .item {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+  }
+
+  .footer-description {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .footer-divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
+  }
+
+  .footer-end {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+// @media screen and (max-width: 1380px) {
+//   .footer-container {
+//     display: none;
+//   }
+// }

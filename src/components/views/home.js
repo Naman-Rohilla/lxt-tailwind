@@ -303,10 +303,10 @@ const FreedomView = () => {
             <LxtButton text={"START TODAY"} color={"red"} />
           </span>
         </div>
-        <div className="w-full md:w-1/2 h-72 object-contain md:overflow-hidden rounded-2xl">
+        <div className="w-full flex justify-center md:w-1/2 h-72 md:h-full xl:h-72 object-fit md:overflow-hidden rounded-2xl">
           <img
             src="feedomskating.png"
-            className="object-cover h-full md:h-auto py-4 md:py-0 md:object-contain md:-translate-y-32 scale-125 rounded-2xl"
+            className="object-fit h-full px-1 py-1 md:h-auto  md:py-0  xl:-translate-y-32 scale-125 rounded-xl"
           />
         </div>
       </div>
@@ -370,7 +370,7 @@ const AchievementView = () => {
       <div className="h-auto content-box slider-hidden-scrollbar overflow-x-auto flex flex-nowrap space-x-5 md:py-10">
         <PictureView></PictureView>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end pt-10">
         <LxtButton
           text="DISCOVER MORE"
           color="transparent"
