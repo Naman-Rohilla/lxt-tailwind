@@ -14,7 +14,7 @@ export default function ProductCard({
       <div className="product-card rounded-b-xl w-60 md:w-40 xl:w-60 relative rounded-tl-xl object-contain h-80 xl:h-80  mt-5">
         {backgroundVideo && (
           <img
-            className="background-video absolute top-0 left-0 w-60 h-full"
+            className="background-video rounded-b-xl rounded-tl-xl absolute top-0 left-0 w-60 h-full"
             src={backgroundVideo}
           ></img>
         )}
@@ -32,7 +32,7 @@ export default function ProductCard({
           </div>
         )}
         {footerEnable && (
-          <div className="card-footer">
+          <div className="card-footer rounded-b-xl">
             {footerObject && (
               <>
                 <div className="card-heading text-6xs xl:text-lg">
