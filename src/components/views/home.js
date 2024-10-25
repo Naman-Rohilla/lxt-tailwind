@@ -18,7 +18,7 @@ const footerObject = {
   description: "Master the essentials of Quad Skating",
 };
 
-const ProductView = () => {
+const ProductView = ({ isMobile }) => {
   const refs = [useRef(null), useRef(null), useRef(null)];
 
   useEffect(() => {
@@ -51,16 +51,6 @@ const ProductView = () => {
       refs.forEach((ref) => ref.current && observer.unobserve(ref.current));
     };
   }, [refs]);
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className="product-card-view relative md:sticky h-auto md:h-screen flex flex-col justify-start md:justify-between md:flex-row pt-0 md:pt-24">
@@ -169,43 +159,59 @@ const IphoneView = () => {
   );
 };
 
-const WatchShopView = () => {
+const WatchShopView = ({ isMobile }) => {
   return (
-    <div className="watch-shop-view">
-      <div className="img-left">
-        <video
-          height={715}
-          width={"100%"}
-          src="watchshop/watch6.mp4"
-          autoPlay
-          loop
-          muted
-          style={{ objectFit: "cover" }}
-        />
-        <img src="watchshop/live.png" />
-      </div>
-      <div className="img-center">
-        <img width={"100%"} height={220} src="watchshop/watch2.png" />
-        <span className="text-shop">Shop Live</span>
-        <img width={"60%"} src="watchshop/watch5.png" />
-        <span
-          style={{
-            fontSize: "1rem",
-          }}
-        >
-          <LxtButton text={"Watch & Shop"} color={"red"} />
-        </span>
-        <img width={"100%"} height={150} src="watchshop/watch1.png" />
-      </div>
-      <div className="img-right">
-        <img height={715} width={"100%"} src="watchshop/watch4.png" />
-        <img />
-      </div>
-    </div>
+    <SpacedSection
+      position="sticky"
+      customStyling="watch-shop-view sticky top-0 w-screen flex py-10 md:py-24"
+    >
+      {isMobile ? (
+        <>
+          <div className="flex flex-col w-full items-center space-y-5">
+            <span className="text-5xl text-red-500">Shop Live</span>
+            <img width={"60%"} src="watchshop/watch5.png" />
+            <video className="mobile-video object-cover" autoPlay loop muted>
+              <source src="watchshop/watch6.mp4"></source>
+            </video>
+            <LxtButton
+              text={"Watch & Shop"}
+              color={"red"}
+              customStyling="text-lg py-3 px-6"
+            />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="img-left relative">
+            <video className="h-full object-cover" autoPlay loop muted>
+              <source src="watchshop/watch6.mp4"></source>
+            </video>
+            <img src="watchshop/live.png" />
+          </div>
+          <div className="img-center">
+            <img width={"100%"} height={220} src="watchshop/watch2.png" />
+            <span className="text-shop">Shop Live</span>
+            <img width={"60%"} src="watchshop/watch5.png" />
+            <span
+              style={{
+                fontSize: "1rem",
+              }}
+            >
+              <LxtButton text={"Watch & Shop"} color={"red"} />
+            </span>
+            <img width={"100%"} height={150} src="watchshop/watch1.png" />
+          </div>
+          <div className="img-right">
+            <img className="h-full" src="watchshop/watch4.png" />
+            <img />
+          </div>
+        </>
+      )}
+    </SpacedSection>
   );
 };
 
-const StadiumView = () => {
+const StadiumView = ({ isMobile }) => {
   return (
     <>
       <div className="stadium-view min-h-screen h-auto w-full relative flex justify-between">
@@ -239,7 +245,7 @@ const StadiumView = () => {
               />
             </span>
           </div>
-          <WatchShopView />
+          <WatchShopView isMobile={isMobile} />
         </div>
         <IphoneView />
       </div>
@@ -248,6 +254,15 @@ const StadiumView = () => {
 };
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <Movie />
@@ -256,12 +271,12 @@ export default function Home() {
       </SpacedSection>
 
       <SpacedSection>
-        <ProductView></ProductView>
+        <ProductView isMobile={isMobile}></ProductView>
         <ProfileCardView></ProfileCardView>
       </SpacedSection>
 
       <div className="about-card-view sticky top-0 min-h-screen h-top w-full flex flex-col items-end border-box">
-        <StadiumView />
+        <StadiumView isMobile={isMobile} />
       </div>
     </>
   );

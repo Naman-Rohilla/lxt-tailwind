@@ -33,26 +33,25 @@
       z-index: 2;
 
       .iphone {
-        position: relative; /* Add this to position absolutely child elements */
+        position: relative;
         float: right;
         width: 100%;
         display: flex;
         justify-content: flex-end;
 
         img {
-          height: 700px; /* Set the height of the image */
-          width: 350px; /*  Set the width of the image */
-          position: absolute; /* Make sure img is positioned relatively */
+          height: 700px;
+          width: 350px;
+          position: absolute;
           z-index: 1;
-          top: $primary-margin; /* Set z-index lower than iframe */
+          top: $primary-margin;
         }
 
         video {
-          height: 700px; /* Set the height of the image */
+          height: 700px;
           width: 350px;
-          position: absolute; /* Keep iframe absolute to overlap img */
-
-          top: $primary-margin; /* Position at the top of the container */
+          position: absolute;
+          top: $primary-margin;
           z-index: 2;
           border-radius: 65px;
           padding: 25px;
@@ -73,18 +72,13 @@
       }
 
       .watch-shop-view {
-        background-color: $primary-color;
-        height: 90vh;
-        width: 100vw;
-        position: sticky;
-        top: 0;
-        display: flex;
         gap: 50px;
-        padding-top: 100px;
+
+        .mobile-video {
+          height: 80vh;
+        }
 
         .img-left {
-          margin-left: $primary-margin;
-          position: relative;
           width: 45%;
 
           img {
@@ -96,7 +90,6 @@
           }
 
           video {
-            object-fit: cover;
             border-radius: 10px;
           }
         }
@@ -111,8 +104,6 @@
         }
 
         .img-right {
-          margin-right: $primary-margin;
-
           width: 28%;
         }
       }

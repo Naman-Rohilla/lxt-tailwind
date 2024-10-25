@@ -31,27 +31,24 @@ const profileData = [
 
 export default function ProfileCard() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const [direction, setDirection] = useState("next");
   const [animationKey, setAnimationKey] = useState(0);
 
   const size = profileData.length;
 
   const nextSlide = () => {
-    // setDirection("next");
     console.log("clicked next");
     setCurrentIndex((prevIndex) => (prevIndex + 1) % size);
     triggerAnimation();
   };
 
   const prevSlide = () => {
-    // setDirection("prev");
     console.log("clicked prev");
     setCurrentIndex((prevIndex) => (prevIndex - 1 + size) % size);
     triggerAnimation();
   };
 
   const triggerAnimation = () => {
-    setAnimationKey((prev) => prev + 1); // Change the key to trigger re-render
+    setAnimationKey((prev) => prev + 1);
   };
 
   const { description, imgSrc } = profileData[currentIndex];

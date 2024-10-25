@@ -2,11 +2,12 @@ export default function SpacedSection({
   position = "relative",
   zIndex = 0,
   children,
-  customStyling = "px-10 2xl:px-40",
+  customPadding = "px-10 2xl:px-40",
+  customStyling,
 }) {
   return (
     <div
-      className={`${customStyling} bg-black text-white h-auto w-full border-box top-0`}
+      className={`${customPadding} ${customStyling} bg-black text-white h-auto w-full border-box top-0`}
       style={{
         backgroundColor: "#02173a",
         position: position,
