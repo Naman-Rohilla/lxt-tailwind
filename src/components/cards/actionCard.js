@@ -13,14 +13,18 @@ export default function ActionCard({ heading, list, defaultExpanded = true }) {
           // paddingInline: expanded ? "50px" : "",
           backgroundColor: expanded ? "#022359" : "",
         }}
-        className="action-card-view flex text-base flex-col w-full px-8 md:px-10 pt-10 pb-20"
+        className={`action-card-view flex text-base flex-col w-full ${
+          expanded
+            ? "px-8 md:px-10 pb-20 pt-10"
+            : "px-0 md:px-4 py-3 pb-5 md:py-10 md:pb-10"
+        }  `}
       >
         <div className="action-card-heading pb-4">
           {!defaultExpanded ? (
             <>
               {expanded ? (
                 <h2>
-                  <strong>{heading}</strong>
+                  <strong className="text-xl md:text-2xl">{heading}</strong>
                   <img
                     height={30}
                     width={30}
@@ -30,14 +34,14 @@ export default function ActionCard({ heading, list, defaultExpanded = true }) {
                 </h2>
               ) : (
                 <>
-                  <strong>{heading}</strong>
+                  <strong className="text-xl md:text-2xl">{heading}</strong>
                   <strong onClick={() => setExpanded(!expanded)}>^</strong>
                 </>
               )}
             </>
           ) : (
             <span>
-              <strong className="pr-20">{heading}</strong>
+              <strong className="pr-20 text-xl md:text-2xl">{heading}</strong>
               <span className="bg-red-100 invisible"></span>
             </span>
           )}
@@ -59,10 +63,9 @@ export default function ActionCard({ heading, list, defaultExpanded = true }) {
           <>
             {list && (
               <span
+                className="pt-0 md:pt-2 text-lg md:text-xl"
                 style={{
-                  paddingTop: "10px",
                   color: "#84BED6",
-                  fontSize: "1.3rem",
                 }}
               >
                 {list[0]}

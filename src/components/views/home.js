@@ -10,6 +10,7 @@ import { stadiumData } from "../../jsons/productData";
 import ActionCard from "../cards/actionCard";
 import "../../styles/stadiumView.scss";
 import ProfileCard from "../cards/profileCard";
+import "../../styles/announcementView.scss";
 
 const footerObject = {
   heading: "Beginner",
@@ -253,6 +254,39 @@ const StadiumView = ({ isMobile }) => {
   );
 };
 
+const AnouncementView = () => {
+  return (
+    <div className="announcement-view text-white flex justify-between">
+      <div className="announcement-heading flex flex-col">
+        <span className="text-3xl md:text-5xl">Announcement</span>
+        <span className="text-lg md:text-2xl">
+          Get Ready to Roll—Exciting Skating Event Ahead
+        </span>
+        <div className="announcement-card-container space-y-1">
+          {stadiumData?.map((sd, index) => (
+            <ActionCard
+              key={index}
+              heading={sd.heading}
+              list={sd.list}
+              defaultExpanded={false}
+            ></ActionCard>
+          ))}
+        </div>
+        <span>
+          <LxtButton
+            text={"KNOW MORE"}
+            color={"transparent"}
+            borderColor="white"
+          />
+        </span>
+      </div>
+      <div className="flex items-center pl-20 hidden md:flex">
+        <img width={"100%"} src="race.png" />
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -275,9 +309,12 @@ export default function Home() {
         <ProfileCardView></ProfileCardView>
       </SpacedSection>
 
-      <div className="about-card-view sticky top-0 min-h-screen h-top w-full flex flex-col items-end border-box">
+      <div className="about-card-view top-0 min-h-screen h-top w-full flex flex-col items-end border-box">
         <StadiumView isMobile={isMobile} />
       </div>
+      <SpacedSection>
+        <AnouncementView></AnouncementView>
+      </SpacedSection>
     </>
   );
 }
