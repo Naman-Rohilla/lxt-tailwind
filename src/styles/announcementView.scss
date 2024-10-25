@@ -1,6 +1,7 @@
 @import "./variable.scss";
 
 .announcement-view {
+  height: 90vh;
   > * {
     flex: 1;
   }

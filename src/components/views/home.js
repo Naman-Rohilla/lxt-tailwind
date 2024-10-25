@@ -11,6 +11,7 @@ import ActionCard from "../cards/actionCard";
 import "../../styles/stadiumView.scss";
 import ProfileCard from "../cards/profileCard";
 import "../../styles/announcementView.scss";
+import "../../styles/freedomView.scss";
 
 const footerObject = {
   heading: "Beginner",
@@ -256,7 +257,7 @@ const StadiumView = ({ isMobile }) => {
 
 const AnouncementView = () => {
   return (
-    <div className="announcement-view h-screen text-white flex justify-between">
+    <div className="announcement-view text-white flex justify-between">
       <div className="announcement-heading flex flex-col">
         <span className="text-3xl md:text-5xl">Announcement</span>
         <span className="text-lg md:text-2xl">
@@ -282,6 +283,31 @@ const AnouncementView = () => {
       </div>
       <div className="flex items-center pl-20 hidden md:flex">
         <img width={"100%"} src="race.png" />
+      </div>
+    </div>
+  );
+};
+
+const FreedomView = () => {
+  return (
+    <div className="py-10 md:py-40">
+      <div className="freedom-card rounded-2xl h-auto w-auto p-10 flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col w-full items-center md:items-start md:w-2/5 text-2xl lg:text-2xl xl:text-5xl">
+          <strong>Skate to Freedom,</strong>
+          <strong>Live with Passion</strong>
+          <span className="py-5 text-xl text-center md:text-start lg:text-2xl xl:text-4xl font-extralight">
+            Push your limits with the support of a world-class coach and academy
+          </span>
+          <span className="pb-10 md:pb-0">
+            <LxtButton text={"START TODAY"} color={"red"} />
+          </span>
+        </div>
+        <div className="w-full md:w-1/2 h-72 object-contain md:overflow-hidden rounded-2xl">
+          <img
+            src="feedomskating.png"
+            className="object-cover h-full md:h-auto py-4 md:py-0 md:object-contain md:-translate-y-32 scale-125 rounded-2xl"
+          />
+        </div>
       </div>
     </div>
   );
@@ -314,6 +340,9 @@ export default function Home() {
       </div>
       <SpacedSection>
         <AnouncementView></AnouncementView>
+      </SpacedSection>
+      <SpacedSection>
+        <FreedomView></FreedomView>
       </SpacedSection>
     </>
   );

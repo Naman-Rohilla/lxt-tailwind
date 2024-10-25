@@ -8,7 +8,7 @@ export default function Navbar() {
   const textButton = "BOOK A RINK";
 
   return (
-    <SpacedSection position={"fixed"} zIndex={100}>
+    <SpacedSection position={"fixed"} zIndex={200}>
       <div className="h-24 w-full flex z-1 items-center justify-center md:justify-between">
         <div className="w-auto">
           <img className="object-contain  w-48 xl:w-60" src="lxtlogo.png" />
