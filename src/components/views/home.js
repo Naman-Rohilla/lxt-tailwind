@@ -256,7 +256,7 @@ const StadiumView = ({ isMobile }) => {
 
 const AnouncementView = () => {
   return (
-    <div className="announcement-view text-white flex justify-between">
+    <div className="announcement-view h-screen text-white flex justify-between">
       <div className="announcement-heading flex flex-col">
         <span className="text-3xl md:text-5xl">Announcement</span>
         <span className="text-lg md:text-2xl">
@@ -272,7 +272,7 @@ const AnouncementView = () => {
             ></ActionCard>
           ))}
         </div>
-        <span>
+        <span className="pt-2">
           <LxtButton
             text={"KNOW MORE"}
             color={"transparent"}

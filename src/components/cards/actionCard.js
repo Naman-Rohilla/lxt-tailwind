@@ -35,7 +35,15 @@ export default function ActionCard({ heading, list, defaultExpanded = true }) {
               ) : (
                 <>
                   <strong className="text-xl md:text-2xl">{heading}</strong>
-                  <strong onClick={() => setExpanded(!expanded)}>^</strong>
+                  <strong onClick={() => setExpanded(!expanded)}>
+                    <img
+                      height={30}
+                      width={30}
+                      onClick={() => setExpanded(!expanded)}
+                      src="arrowdown.png"
+                      className="rotate-180"
+                    />
+                  </strong>
                 </>
               )}
             </>
