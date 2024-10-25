@@ -2,7 +2,7 @@ export default function SpacedSection({
   position = "relative",
   zIndex = 0,
   children,
-  customPadding = "px-10 2xl:px-40",
+  customPadding = "px-4 2xl:px-40",
   customStyling,
 }) {
   return (

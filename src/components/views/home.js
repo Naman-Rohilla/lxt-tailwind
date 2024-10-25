@@ -12,6 +12,7 @@ import "../../styles/stadiumView.scss";
 import ProfileCard from "../cards/profileCard";
 import "../../styles/announcementView.scss";
 import "../../styles/freedomView.scss";
+import FullRoundedButton from "../buttons/fullRoundedButton";
 
 const footerObject = {
   heading: "Beginner",
@@ -234,7 +235,7 @@ const StadiumView = ({ isMobile }) => {
             <div className="pt-10 md:pt-24 text-lg md:text-5xl">
               RR <strong>LXT RINK</strong>
             </div>
-            <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll">
+            <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll slider-hidden-scrollbar">
               {stadiumData?.map((sd, index) => (
                 <ActionCard key={index} heading={sd.heading} list={sd.list} />
               ))}
@@ -313,6 +314,73 @@ const FreedomView = () => {
   );
 };
 
+const PictureView = () => {
+  return (
+    <>
+      <div className="flex w-60 flex-col space-y-4 shrink-0">
+        <img className="h-80 rounded-2xl" src="picture1.png" />
+        <img className="h-36 rounded-2xl" src="picture1.png" />
+      </div>
+      <div className="flex items-center shrink-0">
+        <img className="h-80 rounded-2xl" src="picture1.png" />
+      </div>
+      <div className="flex w-60 flex-col space-y-4 shrink-0">
+        <img className="h-36 rounded-2xl" src="picture1.png" />
+        <img className="h-80 rounded-2xl" src="picture1.png" />
+      </div>
+      <div className="flex items-center shrink-0">
+        <img className="h-80 rounded-2xl" src="picture1.png" />
+      </div>
+      <div className="flex w-60 flex-col space-y-4 shrink-0">
+        <img className="h-80 rounded-2xl" src="picture1.png" />
+        <img className="h-36 rounded-2xl" src="picture1.png" />
+      </div>
+      <div className="flex w-60 h-full items-center shrink-0">
+        <img
+          className="rounded-2xl"
+          style={{
+            height: "480px",
+          }}
+          src="picture1.png"
+        />
+      </div>
+      <div className="flex w-60 flex-col space-y-4 shrink-0">
+        <img className="h-44 rounded-2xl" src="picture1.png" />
+        <img className="h-72 rounded-2xl" src="picture1.png" />
+      </div>
+    </>
+  );
+};
+
+const AchievementView = () => {
+  return (
+    <div className="flex flex-col">
+      <strong className="text-4xl md:text-6xl">Achievement</strong>
+      <span className="text-sm md:text-lg pt-4">
+        Honored for Consistent Excellence in Skating and Cycling Performances
+      </span>
+      <div className="py-5 flex space-x-4">
+        <FullRoundedButton text="Personel Milstones"></FullRoundedButton>
+        <FullRoundedButton
+          text="Team Success as a Coach"
+          backgroundColor="#FFFFFFB2"
+          textColor="#2E2E2E"
+        ></FullRoundedButton>
+      </div>
+      <div className="h-auto content-box slider-hidden-scrollbar overflow-x-auto flex flex-nowrap space-x-5 md:py-10">
+        <PictureView></PictureView>
+      </div>
+      <div className="flex justify-end">
+        <LxtButton
+          text="DISCOVER MORE"
+          color="transparent"
+          borderColor="white"
+        ></LxtButton>
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -343,6 +411,10 @@ export default function Home() {
       </SpacedSection>
       <SpacedSection>
         <FreedomView></FreedomView>
+      </SpacedSection>
+
+      <SpacedSection>
+        <AchievementView></AchievementView>
       </SpacedSection>
     </>
   );
