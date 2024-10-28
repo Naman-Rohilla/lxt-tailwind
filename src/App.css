@@ -1,3 +1,7 @@
 .slider-hidden-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.background-primary-color {
+  background-color: #022359;
+}

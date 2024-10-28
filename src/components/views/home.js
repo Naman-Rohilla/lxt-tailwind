@@ -13,6 +13,7 @@ import ProfileCard from "../cards/profileCard";
 import "../../styles/announcementView.scss";
 import "../../styles/freedomView.scss";
 import FullRoundedButton from "../buttons/fullRoundedButton";
+import NewsCard from "../cards/newsCard";
 
 const footerObject = {
   heading: "Beginner",
@@ -44,7 +45,7 @@ const ProductView = ({ isMobile }) => {
           }
         });
       },
-      { root: null, threshold: 1 }
+      { root: null, threshold: 0.7 }
     );
 
     refs.forEach((ref) => ref.current && observer.observe(ref.current));
@@ -72,14 +73,16 @@ const ProductView = ({ isMobile }) => {
           through top-tier coaching and the latest gear
         </span>
         {!isMobile && (
-          <div className="text-lxt-button">
+          <div className="text-lxt-button mt-6">
             <LxtButton text="BOOK A CLASS" color="red" />
           </div>
         )}
       </div>
       {isMobile ? (
         <div className="gallery-view pt-0 top-0">
-          <div className={`flex overflow-y-scroll smooth mt-0`}>
+          <div
+            className={`flex slider-hidden-scrollbar overflow-y-scroll smooth mt-0`}
+          >
             <div className="flex space-x-4">
               {[...Array(6)].map((_, i) => (
                 <ProductCard
@@ -383,6 +386,47 @@ const AchievementView = () => {
   );
 };
 
+const NewsView = () => {
+  return (
+    <>
+      <div
+        className="rounded-2xl mt-48 md:flex justify-between relative hidden"
+        style={{
+          backgroundColor: "#0C6AB0",
+          height: "55vh",
+        }}
+      >
+        <div className="flex flex-col w-1/2 pt-20 text-6xl pl-10">
+          <span className="font-extrabold">In the News</span>
+          <span className="font-extralight pt-10 text-2xl w-1/2 lg:w-full lg:text-4xl">
+            Stay updated with the latest headlines, stories, and achievements
+            making waves in the skating community and beyond.
+          </span>
+        </div>
+        <div className="h-full w-full flex justify-end absolute right-0 top-0">
+          <img
+            className="h-full w-1/2 scale-y-125 -translate-y-16 pr-4"
+            src="news-cropped.png"
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
+const NewsCardView = ({ isMobile }) => {
+  return (
+    <>
+      <div className="flex slider-hidden-scrollbar h-auto overflow-y-hidden md:-translate-y-32 space-x-4 md:px-4 xl:overflow-hidden overflow-x-scroll">
+        <NewsCard isMobile={isMobile}></NewsCard>
+        <NewsCard isMobile={isMobile}></NewsCard>
+        <NewsCard isMobile={isMobile}></NewsCard>
+        <NewsCard isMobile={isMobile}></NewsCard>
+      </div>
+    </>
+  );
+};
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -417,6 +461,21 @@ export default function Home() {
 
       <SpacedSection>
         <AchievementView></AchievementView>
+      </SpacedSection>
+
+      <SpacedSection>
+        <NewsView></NewsView>
+        <div className="md:hidden mt-10 mb-5 text-3xl font-bold">
+          In the News
+        </div>
+        <NewsCardView isMobile={isMobile}></NewsCardView>
+        <div className="md:-translate-y-24 my-10 md:my-0 float-right">
+          <LxtButton
+            text={"DISCOVER MORE"}
+            borderColor="white"
+            color={"transparent"}
+          ></LxtButton>
+        </div>
       </SpacedSection>
     </>
   );

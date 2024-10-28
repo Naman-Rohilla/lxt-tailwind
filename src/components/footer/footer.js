@@ -31,7 +31,7 @@ export default function Footer() {
     <>
       <SpacedSection
         backgroundColor="#022359"
-        customStyling="mt-28 md:hidden rounded-2xl translate-y-2"
+        customStyling="mt-48 md:mt-28 md:hidden rounded-2xl translate-y-2"
         zIndex={10}
       >
         <FooterForm></FooterForm>

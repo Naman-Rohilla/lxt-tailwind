@@ -7,18 +7,25 @@ export default function Movie() {
       <div className="h-screen pt-24 pb-8 relative">
         <div
           src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
-          className="h-full  rounded-b-2xl rounded-tl-2xl"
+          className="h-screen w-full absolute z-2 top-0 left-0 bg-red-100 rounded-b-2xl rounded-tl-2xl"
           style={{
             background:
-              "linear-gradient(31.75deg, rgba(4, 44, 113, 0) 14.25%, rgba(255, 255, 255, 1) 87%)",
+              "linear-gradient(211.75deg, rgba(4, 44, 113, 0) 14.25%, #02173A 87.99%)",
           }}
           allow="autoplay; fullscreen; picture-in-picture"
-        >
-          {" "}
-        </div>
+        ></div>
+        <video
+          src="intro.mp4"
+          className="h-full w-full object-cover z-1 rounded-b-2xl rounded-tl-2xl"
+          muted
+          autoPlay
+          loop
+        ></video>
         <SpacedSection>
           <div className="absolute bottom-12 border-box w-3/4  space-y-2 md:space-y-6 flex flex-col">
-            <span className="text-xs">Dream Builder</span>
+            <span className="text-xs md:text-xl tracking-[0.25em]">
+              DREAM BUILDER
+            </span>
             <span className="text-xl md:text-8xl">Rahul Rane</span>
             <span className="text-lg md:text-4xl">
               Managing Director at LAZERXTECH
