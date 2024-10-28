@@ -292,21 +292,23 @@ const AnouncementView = () => {
 const FreedomView = () => {
   return (
     <div className="py-10 md:py-40">
-      <div className="freedom-card rounded-2xl h-auto w-auto p-10 flex flex-col md:flex-row justify-between">
-        <div className="flex flex-col w-full items-center md:items-start md:w-2/5 text-2xl lg:text-2xl xl:text-5xl">
-          <strong>Skate to Freedom,</strong>
-          <strong>Live with Passion</strong>
-          <span className="py-5 text-xl text-center md:text-start lg:text-2xl xl:text-4xl font-extralight">
+      <div className="freedom-card rounded-2xl h-auto md:h-96 w-auto p-4 py-6 md:p-10 flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col justify-between w-full items-center md:items-start md:w-2/5 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+          <div className="flex flex-col">
+            <strong>Skate to Freedom,</strong>
+            <strong>Live with Passion</strong>
+          </div>
+          <span className="py-5 text-xl text-center md:text-start lg:text-3xl xl:text-4xl font-extralight">
             Push your limits with the support of a world-class coach and academy
           </span>
-          <span className="pb-10 md:pb-0">
+          <span className="pb-6 md:pb-0">
             <LxtButton text={"START TODAY"} color={"red"} />
           </span>
         </div>
-        <div className="w-full flex justify-center md:w-1/2  h-80 object-cover md:overflow-hidden rounded-2xl">
+        <div className="w-full h-80  flex justify-center md:w-1/2 xl:h-full object-cover overflow-hidden rounded-2xl">
           <img
             src="feedomskating.png"
-            className="object-cover h-full px-1 py-2  md:py-0 scale-125 rounded-2xl"
+            className="object-cover md:w-full px-1 py-2  md:-translate-y-10  md:py-0 scale-125 rounded-2xl"
           />
         </div>
       </div>
