@@ -303,10 +303,10 @@ const FreedomView = () => {
             <LxtButton text={"START TODAY"} color={"red"} />
           </span>
         </div>
-        <div className="w-full flex justify-center md:w-1/2 h-72 md:h-full xl:h-72 object-fit md:overflow-hidden rounded-2xl">
+        <div className="w-full flex justify-center md:w-1/2  h-80 object-cover md:overflow-hidden rounded-2xl">
           <img
             src="feedomskating.png"
-            className="object-fit h-full px-1 py-1 md:h-auto  md:py-0  xl:-translate-y-32 scale-125 rounded-xl"
+            className="object-cover h-full px-1 py-2  md:py-0 scale-125 rounded-2xl"
           />
         </div>
       </div>
