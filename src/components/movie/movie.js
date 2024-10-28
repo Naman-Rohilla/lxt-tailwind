@@ -5,7 +5,7 @@ export default function Movie() {
   return (
     <SpacedSection zIndex={0} customPadding={"px-6"}>
       <div className="h-screen pt-24 pb-8 relative">
-        <div
+        {/* <div
           src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
           className="h-screen w-full absolute z-2 top-0 left-0 bg-red-100 rounded-b-2xl rounded-tl-2xl"
           style={{
@@ -13,14 +13,27 @@ export default function Movie() {
               "linear-gradient(211.75deg, rgba(4, 44, 113, 0) 14.25%, #02173A 87.99%)",
           }}
           allow="autoplay; fullscreen; picture-in-picture"
-        ></div>
-        <video
+        >
+          {" "}
+        </div> */}
+        <div
+          src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
+          className="h-full rounded-b-2xl rounded-tl-2xl"
+          style={{
+            background:
+              "linear-gradient(3.75deg, rgba(4, 44, 113, 0.8) 14.25%, #02173A 87.99%)",
+          }}
+          allow="autoplay; fullscreen; picture-in-picture"
+        >
+          {" "}
+        </div>
+        {/* <video
           src="intro.mp4"
           className="h-full w-full object-cover z-1 rounded-b-2xl rounded-tl-2xl"
           muted
           autoPlay
           loop
-        ></video>
+        ></video> */}
         <SpacedSection>
           <div className="absolute bottom-12 border-box w-3/4  space-y-2 md:space-y-6 flex flex-col">
             <span className="text-xs md:text-xl tracking-[0.25em]">
