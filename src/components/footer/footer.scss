@@ -42,11 +42,11 @@
   }
 }
 
-// @media screen and (max-width: 1380px) {
-//   .footer-container {
-//     display: none;
-//   }
-// }
+@media screen and (max-width: 850px) {
+  .footer-container {
+    height: auto;
+  }
+}
 
 input {
   background-color: transparent;
