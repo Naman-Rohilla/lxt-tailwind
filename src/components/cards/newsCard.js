@@ -2,7 +2,7 @@ export default function NewsCard({ isMobile }) {
   return (
     <div
       style={{
-        height: isMobile ? "50vh" : "43vh",
+        height: isMobile ? "auto" : "43vh",
       }}
       className="shrink-[0.05] md:shrink background-primary-color shadow-xl w-96 rounded-2xl bg-red-100 relative flex flex-col"
     >
@@ -14,7 +14,7 @@ export default function NewsCard({ isMobile }) {
           <div className="pt-4 text-md  md:text-md xl:text-2xl">
             Shiv Chhatrapati Award, Best Skating Coach
           </div>
-          <div className="pt-4 pb-24 sm:pb-8 md:pb-24 text-sm sm:text-base md:text-6xs lg:text-md">
+          <div className="pt-4 pb-16 md:pb-24 sm:pb-8 md:pb-24 text-sm sm:text-base md:text-6xs lg:text-md">
             Rahul Ramesh Rane of Pune has been felicitated with the most
             prestigious Sports...
           </div>
