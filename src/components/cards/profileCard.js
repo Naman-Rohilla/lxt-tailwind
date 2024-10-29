@@ -64,7 +64,6 @@ export default function ProfileCard() {
           setCurrentIndex={setCurrentIndex}
           size={size}
           setAnimationKey={setAnimationKey}
-          customStyling="flex items-center justify-start md:justify-center lg:justify-start"
         ></SliderControl>
       </div>
     </div>

@@ -524,7 +524,6 @@ const Review = () => {
               setCurrentIndex={setCurrentIndex}
               size={5}
               setAnimationKey={setAnimationKey}
-              customStyling="flex items-center justify-start md:justify-center lg:justify-start"
             ></SliderControl>
           </div>
         </div>
