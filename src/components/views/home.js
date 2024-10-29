@@ -14,6 +14,7 @@ import "../../styles/announcementView.scss";
 import "../../styles/freedomView.scss";
 import FullRoundedButton from "../buttons/fullRoundedButton";
 import NewsCard from "../cards/newsCard";
+import SliderControl from "../cards/sliderControls";
 
 const footerObject = {
   heading: "Beginner",
@@ -169,7 +170,7 @@ const WatchShopView = ({ isMobile }) => {
   return (
     <SpacedSection
       position="sticky"
-      customStyling="watch-shop-view sticky top-0 w-screen flex py-10 md:py-24"
+      customStyling="watch-shop-view sticky top-0 w-full md:w-screen flex py-10 md:py-24"
     >
       {isMobile ? (
         <>
@@ -234,7 +235,7 @@ const StadiumView = ({ isMobile }) => {
           </div>
         </div>
         <div className="stadium-slider-view min-h-screen h-auto w-full relative md:w-1/2">
-          <div className="stadium-slider-container px-10 xl:px-40">
+          <div className="stadium-slider-container px-4 xl:px-40">
             <div className="pt-10 md:pt-24 text-lg md:text-5xl">
               RR <strong>LXT RINK</strong>
             </div>
@@ -427,6 +428,218 @@ const NewsCardView = ({ isMobile }) => {
   );
 };
 
+const Star = ({ rating, maxRating = 1, id }) => {
+  const fillPercentage = (rating / maxRating) * 100;
+  const gradientId = `starGradient-${id}`;
+
+  return (
+    <svg
+      className="h-4 w-4"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 576 512"
+    >
+      <defs>
+        <linearGradient id={gradientId}>
+          <stop offset={`${fillPercentage}%`} stopColor="#FBBC05" />
+          <stop offset={`${fillPercentage}%`} stopColor="transparent" />
+        </linearGradient>
+      </defs>
+
+      <path
+        d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+        fill="none"
+        stroke="#FBBC05"
+        strokeWidth="20"
+      />
+
+      <path
+        fill={`url(#${gradientId})`}
+        d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+      />
+    </svg>
+  );
+};
+
+const Review = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const [checkboxState, setCheckboxState] = useState(0);
+
+  function handleCheckbox(index) {
+    setCheckboxState(index);
+  }
+  return (
+    <>
+      <div className="space-y-2 md:space-y-4">
+        <div
+          style={{
+            zIndex: -1,
+            position: "relative",
+          }}
+          className=" md:hidden"
+        >
+          <img
+            className="h-full w-full rounded-2xl my-4 hover:scale-90 hover:translate-y-20 duration-500 transition-all ease-in"
+            src="review.png"
+          />
+        </div>
+        <span className="text-md md:text-4xl">
+          Meet Anil Pednekar from Team Airss ( Chief Instructor )
+        </span>
+        <div className="w-full flex">
+          <img
+            className="-translate-x-3 md:-translate-x-6 w-3 h-3  md:h-5 md:w-5"
+            src="upquote.png"
+          ></img>
+          <span className="-translate-x-3 md:-text-xs md:text-xl leading-5 md:leading-8 pt-1 text-justify ">
+            As a coach at RR LXT Rink, I've had the privilege of working with
+            passionate skaters under the guidance of Rahul Rane. His dedication
+            and love for the sport are truly inspiring, and his coaching
+            philosophy emphasises personalised attention, discipline, and
+            technical excellence. Watching the skaters improve their skills and
+            confidence has been immensely rewarding. At RR LXT Rink, we foster a
+            supportive environment where skaters not only push their limits but
+            also grow together as a team. It's an ideal place for aspiring
+            skaters to train and thrive while having fun!{" "}
+            <span className="inline-flex -translate-y-1 rotate-180 text-slate-700">
+              <img src="upquote.png" className="md:h-5 md:w-5 h-3 w-3" />
+            </span>
+          </span>
+        </div>
+        <div className="flex md:flex-row flex-col justify-between">
+          <div className="text-xs flex space-x-4 items-center">
+            <span>Auguest 30, 2024</span>
+            <div className="flex space-x-1">
+              <Star rating={1} id={1}></Star>
+              <Star rating={1} id={1}></Star>
+              <Star rating={1} id={1}></Star>
+              <Star rating={1} id={1}></Star>
+              <Star rating={0.6} id={2}></Star>
+            </div>
+          </div>
+          <div className="w-full">
+            <SliderControl
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
+              size={5}
+              setAnimationKey={setAnimationKey}
+              customStyling="flex items-center justify-start md:justify-center lg:justify-start"
+            ></SliderControl>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div
+        style={{
+          zIndex: -1,
+          position: "relative",
+        }}
+        className="hidden md:flex"
+      >
+        <img
+          className="h-screen w-full rounded-2xl my-4 hover:scale-90 hover:translate-y-20 duration-500 transition-all ease-in"
+          src="review.png"
+        />
+      </div>
+      <div
+        style={{
+          zIndex: "100",
+          position: "relative",
+        }}
+        className="h-auto w-full background-primary-color p-4 md:p-10 space-y-4"
+      >
+        <span className="text-xl md:text-3xl lg:text-4xl font-bold">
+          My Journey with Rahul Sir and RR LXT Rink
+        </span>
+        <form className="space-y-6">
+          <div className="space-y-6 md:space-y-0 md:space-x-4 w-full flex md:flex-row flex-col">
+            <input
+              placeholder="First Name"
+              className="border-none px-4 md:px-12 background-prime-color py-5 md:py-8 rounded-b-2xl rounded-tl-2xl flex-1"
+            />
+            <input
+              placeholder="Mobile No"
+              className="border-none px-4 md:px-12 background-prime-color py-5 md:py-8 rounded-b-2xl rounded-tl-2xl flex-1"
+            />
+          </div>
+          <div className="flex">
+            <input
+              placeholder="Your Message"
+              className="border-none px-4 md:px-12 background-prime-color h-40 md:h-48 rounded-b-2xl rounded-tl-2xl flex-1"
+            />
+          </div>
+          <div className="flex md:flex-row flex-col justify-between items-start md:items-center space-y-4 md:space-y-0">
+            <div className="space-x-8 flex">
+              <div className="md:space-x-6 flex md:flex-row flex-col">
+                <span className="space-x-4 flex items-center">
+                  {checkboxState == 1 ? (
+                    <img className="h-4  w-4" src="tickedCheckbox.png" />
+                  ) : (
+                    <>
+                      <img
+                        className="h-4 w-4"
+                        src="checkbox.png"
+                        onClick={() => handleCheckbox(1)}
+                      />
+                    </>
+                  )}
+                  <span>Skater</span>
+                </span>
+                <span className="space-x-4 flex items-center mt-10 md:mt-0">
+                  {checkboxState == 2 ? (
+                    <img className="h-4 w-4" src="tickedCheckbox.png" />
+                  ) : (
+                    <>
+                      <img
+                        className="h-4 w-4"
+                        src="checkbox.png"
+                        onClick={() => handleCheckbox(2)}
+                      />
+                    </>
+                  )}
+                  <span>Parents</span>
+                </span>
+              </div>
+              <div className="">
+                <span className="space-x-4 flex items-center">
+                  {checkboxState == 3 ? (
+                    <img className="h-4 w-4" src="tickedCheckbox.png" />
+                  ) : (
+                    <>
+                      <img
+                        className="h-4 w-4"
+                        src="checkbox.png"
+                        onClick={() => handleCheckbox(3)}
+                      />
+                    </>
+                  )}
+                  <span>Coach</span>
+                </span>
+                <span className="space-x-4 flex items-center mt-10 md:mt-0">
+                  {checkboxState == 4 ? (
+                    <img className="h-4 w-4" src="tickedCheckbox.png" />
+                  ) : (
+                    <>
+                      <img
+                        className="h-4 w-4"
+                        src="checkbox.png"
+                        onClick={() => handleCheckbox(4)}
+                      />
+                    </>
+                  )}
+                  <span>Other</span>
+                </span>
+              </div>
+            </div>
+            <LxtButton text={"SEND"} color={"red"}></LxtButton>
+          </div>
+        </form>
+      </div>
+    </>
+  );
+};
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -469,13 +682,16 @@ export default function Home() {
           In the News
         </div>
         <NewsCardView isMobile={isMobile}></NewsCardView>
-        <div className="md:-translate-y-24 my-10 md:my-0 float-right">
+        <div className="my-6 md:-translate-y-24 md:my-10 md:my-0 float-right">
           <LxtButton
-            text={"DISCOVER MORE"}
+            text="DISCOVER MORE"
+            color="transparent"
             borderColor="white"
-            color={"transparent"}
           ></LxtButton>
         </div>
+      </SpacedSection>
+      <SpacedSection customStyling="mt-24">
+        <Review></Review>
       </SpacedSection>
     </>
   );

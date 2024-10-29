@@ -13,17 +13,17 @@ export default function ActionCard({ heading, list, defaultExpanded = true }) {
           // paddingInline: expanded ? "50px" : "",
           backgroundColor: expanded ? "#022359" : "",
         }}
-        className={`action-card-view flex text-base flex-col w-full ${
+        className={`action-card-vie shrink-0 flex text-base flex-col w-full ${
           expanded
             ? "px-8 md:px-10 pb-20 pt-10"
             : "px-0 md:px-4 py-3 pb-5 md:py-10 md:pb-10"
         }  `}
       >
-        <div className="action-card-heading pb-4">
+        <div className="action-card-heading pb-4 flex justify-between">
           {!defaultExpanded ? (
             <>
               {expanded ? (
-                <h2>
+                <h2 className="flex justify-between w-full">
                   <strong className="text-xl md:text-2xl">{heading}</strong>
                   <img
                     height={30}
@@ -48,9 +48,8 @@ export default function ActionCard({ heading, list, defaultExpanded = true }) {
               )}
             </>
           ) : (
-            <span>
-              <strong className="pr-20 text-xl md:text-2xl">{heading}</strong>
-              <span className="bg-red-100 invisible"></span>
+            <span className="">
+              <span className="md:pr-20 text-md md:text-2xl">{heading}</span>
             </span>
           )}
         </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./profileCard.scss";
+import SliderControl from "./sliderControls";
 
 const profileData = [
   {
@@ -35,22 +36,6 @@ export default function ProfileCard() {
 
   const size = profileData.length;
 
-  const nextSlide = () => {
-    console.log("clicked next");
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % size);
-    triggerAnimation();
-  };
-
-  const prevSlide = () => {
-    console.log("clicked prev");
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + size) % size);
-    triggerAnimation();
-  };
-
-  const triggerAnimation = () => {
-    setAnimationKey((prev) => prev + 1);
-  };
-
   const { description, imgSrc } = profileData[currentIndex];
 
   return (
@@ -74,35 +59,13 @@ export default function ProfileCard() {
           <span className="text-xs lg:text-xl pt-2">{description}</span>
           <span className="pt-2">Read More</span>
         </div>
-        <div className="flex items-center justify-center lg:justify-start">
-          <div className="z-10" onClick={prevSlide}>
-            <img height={80} width={80} src="leftslide.png" alt="Previous" />
-          </div>
-          {Array.from({ length: size }, (_, index) => (
-            <span
-              style={{
-                border: index === currentIndex ? `1px solid red` : "none",
-                height: "30px",
-                width: "30px",
-                borderRadius: "100%",
-              }}
-              key={index}
-              className="flex justify-center items-center px-2 mb-2"
-            >
-              <div
-                style={{
-                  backgroundColor: index === currentIndex ? "red" : "#B6B6B6",
-                  height: "10px",
-                  width: "10px",
-                  borderRadius: "100%",
-                }}
-              ></div>
-            </span>
-          ))}
-          <div className="" onClick={nextSlide}>
-            <img height={80} width={80} src="rightslide.png" alt="Next" />
-          </div>
-        </div>
+        <SliderControl
+          currentIndex={currentIndex}
+          setCurrentIndex={setCurrentIndex}
+          size={size}
+          setAnimationKey={setAnimationKey}
+          customStyling="flex items-center justify-start md:justify-center lg:justify-start"
+        ></SliderControl>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ export default function NewsCard({ isMobile }) {
   return (
     <div
       style={{
-        height: isMobile ? "50vh" : "43vh",
+        height: isMobile ? "65vh" : "43vh",
       }}
       className="shrink-[0.05] md:shrink background-primary-color shadow-xl w-96 rounded-2xl bg-red-100 relative flex flex-col"
     >
