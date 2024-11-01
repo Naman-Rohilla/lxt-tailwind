@@ -236,7 +236,7 @@ const StadiumView = ({ isMobile }) => {
         </div>
         <div className="stadium-slider-view min-h-screen h-auto w-full relative md:w-1/2">
           <div className="stadium-slider-container px-4 xl:px-40">
-            <div className="pt-10 md:pt-24 text-lg md:text-5xl">
+            <div className="pt-10 md:pt-24 text-2xl md:text-5xl">
               RR <strong>LXT RINK</strong>
             </div>
             <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll slider-hidden-scrollbar">

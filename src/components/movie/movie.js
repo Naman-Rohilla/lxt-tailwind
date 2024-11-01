@@ -3,8 +3,8 @@ import SpacedSection from "../spacedSection/spacedSection";
 
 export default function Movie() {
   return (
-    <SpacedSection zIndex={0} customPadding={"px-6"}>
-      <div className="h-screen pt-24 pb-8 relative">
+    <SpacedSection zIndex={0}>
+      <div className="h-screen pt-20 md:pt-24 pb-8 relative">
         {/* <div
           src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
           className="h-screen w-full absolute z-2 top-0 left-0 bg-red-100 rounded-b-2xl rounded-tl-2xl"
