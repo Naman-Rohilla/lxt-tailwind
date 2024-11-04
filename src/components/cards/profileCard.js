@@ -74,7 +74,7 @@ export default function ProfileCard({ isMobile }) {
             alt="Profile"
           />
         </div>
-        <div className="profile-text overflow-hidden py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
+        <div className="profile-text overflow-hidden md:overflow-visible py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
           <motion.div key={animationKey} className="flex flex-col">
             <AnimatedSpan
               duration="0.7"

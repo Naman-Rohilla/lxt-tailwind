@@ -145,13 +145,7 @@ const IphoneView = () => {
   return (
     <div className="iphone-view pr-10 md:pr-10 lg:pr-40 2xl:pr-80 h-screen w-1/2 sticky top-0 items-start hidden md:block">
       <div className="iphone">
-        <img
-          // height={700}
-          // width={350}
-
-          src="iphone.png"
-          alt="iPhone"
-        />
+        <img src="iphone.png" alt="iPhone" />
         <video
           src="iphone.mp4"
           autoPlay
