@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./profileCard.scss";
 import SliderControl from "./sliderControls";
 import { AnimatePresence, motion } from "framer-motion";
+import AnimatedSpan from "../animatedDiv/animatedSpan";
 
 const profileData = [
   {
@@ -53,7 +54,7 @@ export default function ProfileCard({ isMobile }) {
             initial={{
               opacity: 0,
               scale: isMobile ? 1.2 : 1.5,
-              x: isNext ? -200 : 100,
+              x: isNext ? (isMobile ? -10 : -200) : isMobile ? 10 : 100,
             }}
             animate={{
               opacity: 1,
@@ -68,89 +69,38 @@ export default function ProfileCard({ isMobile }) {
               duration: 0.8,
             }}
             key={animationKey}
-            className={`profile-img object-fill h-auto transform origin-bottom-right md:origin-bottom`}
+            className={`profile-img object-fill h-auto transform origin-bottom-right  md:origin-bottom`}
             src={imgSrc}
             alt="Profile"
           />
         </div>
-        <div className="profile-text py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
+        <div className="profile-text overflow-hidden py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
           <motion.div key={animationKey} className="flex flex-col">
-            <motion.span
-              initial={{
-                opacity: 0,
-                x: isNext ? -200 : 200,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-              }}
-              exit={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.7,
-              }}
+            <AnimatedSpan
+              duration="0.7"
+              isNext={isNext}
+              isMobile={isMobile}
               className="text-4xl lg:text-6xl"
             >
               <strong>Rahul</strong> Rane
-            </motion.span>
-            <motion.span
-              initial={{
-                opacity: 0,
-                x: isNext ? -200 : 200,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-              }}
-              exit={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 1,
-              }}
+            </AnimatedSpan>
+            <AnimatedSpan
+              duration="1"
+              isNext={isNext}
               className="text-md lg:text-3xl pt-2"
             >
               Managing Director at <strong>LAZERXTECH</strong>
-            </motion.span>
-            <motion.span
-              initial={{
-                opacity: 0,
-                x: isNext ? -200 : 200,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-              }}
-              exit={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 1.1,
-              }}
+            </AnimatedSpan>
+            <AnimatedSpan
+              duration="1.1"
+              isNext={isNext}
               className="text-xs lg:text-xl pt-2"
             >
               {description}
-            </motion.span>
-            <motion.span
-              initial={{
-                opacity: 0,
-                x: isNext ? -200 : 200,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-              }}
-              exit={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="pt-2"
-            >
+            </AnimatedSpan>
+            <AnimatedSpan isNext={isNext} duration="1.4" className="pt-2">
               Read More
-            </motion.span>
+            </AnimatedSpan>
           </motion.div>
           <SliderControl
             currentIndex={currentIndex}
