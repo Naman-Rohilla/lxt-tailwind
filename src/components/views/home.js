@@ -220,6 +220,28 @@ const WatchShopView = ({ isMobile }) => {
 };
 
 const StadiumView = ({ isMobile }) => {
+  const [inViewIndex, setInViewIndex] = useState(null);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = entry.target.getAttribute("data-index");
+          if (entry.isIntersecting) {
+            setInViewIndex(Number(index));
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    cardRefs.current.forEach((card) => observer.observe(card));
+
+    return () => {
+      cardRefs.current.forEach((card) => observer.unobserve(card));
+    };
+  }, [stadiumData]);
   return (
     <>
       <HeaderDiv className="stadium-view min-h-screen h-auto w-full relative flex justify-between">
@@ -242,7 +264,18 @@ const StadiumView = ({ isMobile }) => {
             </HeaderDiv>
             <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll slider-hidden-scrollbar">
               {stadiumData?.map((sd, index) => (
-                <ActionCard key={index} heading={sd.heading} list={sd.list} />
+                <div
+                  data-index={index}
+                  key={index}
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  className="w-full shrink-0"
+                >
+                  <ActionCard
+                    heading={sd.heading}
+                    list={sd.list}
+                    isActive={index === inViewIndex}
+                  />
+                </div>
               ))}
             </div>
             <span className="stadium-button">
