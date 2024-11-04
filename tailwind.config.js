@@ -17,6 +17,11 @@ module.exports = {
         175: "1.75",
         180: "1.8",
       },
+      colors: {
+        "red-theme": "#ff0000",
+        "card-color": "#022359",
+        "card-color-light": "#032863",
+      },
     },
   },
   plugins: [],

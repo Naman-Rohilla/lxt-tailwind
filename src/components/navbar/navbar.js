@@ -3,6 +3,7 @@ import LxtButton from "../buttons/lxtButton";
 // import "./navbar.scss";
 import menuItems from "../../jsons/menuItems";
 import SpacedSection from "../spacedSection/spacedSection";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const textButton = "BOOK A RINK";
@@ -15,7 +16,11 @@ export default function Navbar() {
         </div>
         <div className="space-x-4 text-xs text-100 xl:space-x-8 xl:text-sm font-light hidden md:flex items-center">
           {menuItems.map((mt) => (
-            <Link to={mt.redirect} className="item" exact>
+            <Link
+              to={mt.redirect}
+              className="item hover:-translate-y-1 duration-300 ease-in-out hover:text-red-theme"
+              exact
+            >
               {mt.link}
             </Link>
           ))}

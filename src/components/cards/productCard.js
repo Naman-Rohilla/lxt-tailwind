@@ -18,7 +18,12 @@ export default function ProductCard({
             src={backgroundVideo}
           ></img>
         )}
-        {hoverImage && <img className="hover-img" src={hoverImage} />}
+        {hoverImage && (
+          <img
+            className="hover-img rounded-b-xl rounded-tl-xl"
+            src={hoverImage}
+          />
+        )}
         {checkoutButtonEnable && (
           <div
             style={{

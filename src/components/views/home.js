@@ -11,10 +11,11 @@ import ActionCard from "../cards/actionCard";
 import "../../styles/stadiumView.scss";
 import ProfileCard from "../cards/profileCard";
 import "../../styles/announcementView.scss";
-import "../../styles/freedomView.scss";
 import FullRoundedButton from "../buttons/fullRoundedButton";
 import NewsCard from "../cards/newsCard";
 import SliderControl from "../cards/sliderControls";
+import { AnimatePresence, motion } from "framer-motion";
+import HeaderDiv from "../animatedDiv/headerDiv";
 
 const footerObject = {
   heading: "Beginner",
@@ -58,7 +59,7 @@ const ProductView = ({ isMobile }) => {
   }, [refs]);
 
   return (
-    <div className="product-card-view relative md:sticky h-auto md:h-screen flex flex-col justify-start md:justify-between md:flex-row pt-0 md:pt-24">
+    <HeaderDiv className="product-card-view relative md:sticky h-auto md:h-screen flex flex-col justify-start md:justify-between md:flex-row pt-0 md:pt-24">
       <div className="pt-10 md:pt-28 text-3xl xl:text-5xl w-auto flex flex-col">
         <span className="font-extralight">
           Transform <strong>Skater</strong>
@@ -123,11 +124,11 @@ const ProductView = ({ isMobile }) => {
           <LxtButton text="BOOK A CLASS" color="red" />
         </div>
       )}
-    </div>
+    </HeaderDiv>
   );
 };
 
-const ProfileCardView = () => {
+const ProfileCardView = ({ isMobile }) => {
   return (
     <div
       style={{
@@ -135,14 +136,14 @@ const ProfileCardView = () => {
       }}
       className="h-auto md:h-screen w-full relative md:sticky z-10 flex items-start md:items-end py-10 md:pt-32"
     >
-      <ProfileCard></ProfileCard>
+      <ProfileCard isMobile={isMobile}></ProfileCard>
     </div>
   );
 };
 
 const IphoneView = () => {
   return (
-    <div className="iphone-view pr-10 md:pr-10 lg:pr-40 2xl:pr-80 h-screen w-1/2 sticky top-0 items-start hidden sm:block">
+    <div className="iphone-view pr-10 md:pr-10 lg:pr-40 2xl:pr-80 h-screen w-1/2 sticky top-0 items-start hidden md:block">
       <div className="iphone">
         <img
           // height={700}
@@ -221,7 +222,7 @@ const WatchShopView = ({ isMobile }) => {
 const StadiumView = ({ isMobile }) => {
   return (
     <>
-      <div className="stadium-view min-h-screen h-auto w-full relative flex justify-between">
+      <HeaderDiv className="stadium-view min-h-screen h-auto w-full relative flex justify-between">
         <div className="stadium-background h-screen sticky top-0">
           <div className="stadium-background-color">
             <img
@@ -236,9 +237,9 @@ const StadiumView = ({ isMobile }) => {
         </div>
         <div className="stadium-slider-view min-h-screen h-auto w-full relative md:w-1/2">
           <div className="stadium-slider-container px-4 xl:px-40">
-            <div className="pt-10 md:pt-24 text-2xl md:text-5xl">
+            <HeaderDiv className="pt-10 md:pt-24 text-2xl md:text-5xl">
               RR <strong>LXT RINK</strong>
-            </div>
+            </HeaderDiv>
             <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll slider-hidden-scrollbar">
               {stadiumData?.map((sd, index) => (
                 <ActionCard key={index} heading={sd.heading} list={sd.list} />
@@ -255,19 +256,19 @@ const StadiumView = ({ isMobile }) => {
           <WatchShopView isMobile={isMobile} />
         </div>
         <IphoneView />
-      </div>
+      </HeaderDiv>
     </>
   );
 };
 
 const AnouncementView = () => {
   return (
-    <div className="announcement-view text-white flex justify-between">
+    <HeaderDiv className="announcement-view relative text-white flex justify-between h-auto">
       <div className="announcement-heading flex flex-col">
-        <span className="text-3xl md:text-5xl">Announcement</span>
-        <span className="text-lg md:text-2xl">
+        <HeaderDiv className="text-3xl md:text-5xl">Announcement</HeaderDiv>
+        <HeaderDiv className="text-lg md:text-2xl">
           Get Ready to Roll—Exciting Skating Event Ahead
-        </span>
+        </HeaderDiv>
         <div className="announcement-card-container space-y-1">
           {stadiumData?.map((sd, index) => (
             <ActionCard
@@ -286,17 +287,18 @@ const AnouncementView = () => {
           />
         </span>
       </div>
-      <div className="flex items-center pl-20 hidden md:flex">
+      <div className="hidden md:flex"></div>
+      <div className="flex absolute top-0 w-1/2 right-0 items-center pl-4 pt-14 hidden md:flex">
         <img width={"100%"} src="race.png" />
       </div>
-    </div>
+    </HeaderDiv>
   );
 };
 
 const FreedomView = () => {
   return (
-    <div className="py-10 md:py-40">
-      <div className="freedom-card rounded-2xl h-auto md:h-96 w-auto p-4 py-6 md:p-10 flex flex-col md:flex-row justify-between">
+    <HeaderDiv className="py-10 md:py-40">
+      <div className="bg-card-color hover:bg-blue-900 hover:duration-300 rounded-2xl h-auto md:h-96 w-auto p-4 py-6 md:p-10 flex flex-col md:flex-row justify-between">
         <div className="flex flex-col justify-between w-full items-center md:items-start md:w-2/5 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           <div className="flex flex-col">
             <strong>Skate to Freedom,</strong>
@@ -316,7 +318,7 @@ const FreedomView = () => {
           />
         </div>
       </div>
-    </div>
+    </HeaderDiv>
   );
 };
 
@@ -360,7 +362,7 @@ const PictureView = () => {
 
 const AchievementView = () => {
   return (
-    <div className="flex flex-col">
+    <HeaderDiv className="flex flex-col">
       <strong className="text-4xl md:text-6xl">Achievement</strong>
       <span className="text-sm md:text-lg pt-4">
         Honored for Consistent Excellence in Skating and Cycling Performances
@@ -383,14 +385,14 @@ const AchievementView = () => {
           borderColor="white"
         ></LxtButton>
       </div>
-    </div>
+    </HeaderDiv>
   );
 };
 
 const NewsView = () => {
   return (
     <>
-      <div
+      <HeaderDiv
         className="rounded-2xl mt-48 md:flex justify-between relative hidden"
         style={{
           backgroundColor: "#0C6AB0",
@@ -410,7 +412,7 @@ const NewsView = () => {
             src="news-cropped.png"
           />
         </div>
-      </div>
+      </HeaderDiv>
     </>
   );
 };
@@ -492,7 +494,7 @@ const Review = () => {
             className="-translate-x-3 md:-translate-x-6 w-3 h-3  md:h-5 md:w-5"
             src="upquote.png"
           ></img>
-          <span className="-translate-x-3 md:-text-xs md:text-xl leading-5 md:leading-8 pt-1 text-justify ">
+          <span className="-translate-x-3 md:-translate-x-4 md:-text-xs md:text-xl leading-5 md:leading-8 pt-1 text-justify ">
             As a coach at RR LXT Rink, I've had the privilege of working with
             passionate skaters under the guidance of Rahul Rane. His dedication
             and love for the sport are truly inspiring, and his coaching
@@ -658,7 +660,7 @@ export default function Home() {
 
       <SpacedSection>
         <ProductView isMobile={isMobile}></ProductView>
-        <ProfileCardView></ProfileCardView>
+        <ProfileCardView isMobile={isMobile}></ProfileCardView>
       </SpacedSection>
 
       <div className="about-card-view top-0 min-h-screen h-top w-full flex flex-col items-end border-box">

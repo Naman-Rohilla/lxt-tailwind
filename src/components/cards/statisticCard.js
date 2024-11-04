@@ -1,4 +1,5 @@
 import { motion, useInView } from "framer-motion";
+import HeaderDiv from "../animatedDiv/headerDiv";
 
 export default function StatisticCard({ cardData }) {
   const cardLength = cardData.length;
@@ -6,7 +7,7 @@ export default function StatisticCard({ cardData }) {
 
   return (
     <>
-      <motion.div
+      <HeaderDiv
         style={{
           backgroundColor: "#022359",
         }}
@@ -33,7 +34,7 @@ export default function StatisticCard({ cardData }) {
             ))}
           </>
         )}
-      </motion.div>
+      </HeaderDiv>
     </>
   );
 }
