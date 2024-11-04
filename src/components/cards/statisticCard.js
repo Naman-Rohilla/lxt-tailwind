@@ -1,10 +1,12 @@
+import { motion, useInView } from "framer-motion";
+
 export default function StatisticCard({ cardData }) {
   const cardLength = cardData.length;
   const divideWidth = 100 / cardLength;
 
   return (
     <>
-      <div
+      <motion.div
         style={{
           backgroundColor: "#022359",
         }}
@@ -15,7 +17,7 @@ export default function StatisticCard({ cardData }) {
             {cardData?.map((sc, index) => (
               <>
                 <div
-                  className="px-5  min-w-72"
+                  className="px-5  min-w-72 transition-transform duration-300 ease-in-out"
                   style={{
                     borderRight: index != 3 && "1px solid #022f77",
                   }}
@@ -31,7 +33,7 @@ export default function StatisticCard({ cardData }) {
             ))}
           </>
         )}
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -1,9 +1,13 @@
+import { useRef } from "react";
 import LxtButton from "../buttons/lxtButton";
 import SpacedSection from "../spacedSection/spacedSection";
+import { motion, useInView } from "framer-motion";
 
 export default function Movie() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
-    <SpacedSection zIndex={0}>
+    <SpacedSection zIndex={0} customPadding={"px-4 md:px-6"}>
       <div className="h-screen pt-20 md:pt-24 pb-8 relative">
         {/* <div
           src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
@@ -35,7 +39,17 @@ export default function Movie() {
           loop
         ></video> */}
         <SpacedSection>
-          <div className="absolute bottom-12 border-box w-3/4  space-y-2 md:space-y-6 flex flex-col">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{
+              duration: 1, // Time it takes to complete the animation
+              ease: "easeOut", // Easing function
+              delay: 0.5, // Delay before animation starts
+            }}
+            className="absolute bottom-12 border-box w-3/4  space-y-2 md:space-y-6 flex flex-col"
+          >
             <span className="text-xs md:text-xl tracking-[0.25em]">
               DREAM BUILDER
             </span>
@@ -56,7 +70,7 @@ export default function Movie() {
                 borderColor={"white"}
               />
             </span>
-          </div>
+          </motion.div>
         </SpacedSection>
       </div>
     </SpacedSection>
