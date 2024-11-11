@@ -453,7 +453,7 @@ const NewsView = () => {
 const NewsCardView = ({ isMobile }) => {
   return (
     <>
-      <div className="flex slider-hidden-scrollbar h-auto overflow-y-hidden md:-translate-y-32 space-x-4 md:px-4 xl:overflow-hidden overflow-x-scroll">
+      <div className="flex slider-hidden-scrollbar h-auto py-4 overflow-y-hidden md:-translate-y-32 space-x-4 md:px-4 xl:overflow-hidden overflow-x-scroll">
         <NewsCard isMobile={isMobile}></NewsCard>
         <NewsCard isMobile={isMobile}></NewsCard>
         <NewsCard isMobile={isMobile}></NewsCard>
