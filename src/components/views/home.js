@@ -218,11 +218,14 @@ const StadiumView = ({ isMobile }) => {
   const cardRefs = useRef([]);
 
   useEffect(() => {
+    if (!stadiumData || stadiumData.length === 0) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const index = entry.target.getAttribute("data-index");
           if (entry.isIntersecting) {
+            console.log("Setting inViewIndex to:", index);
             setInViewIndex(Number(index));
           }
         });
@@ -230,10 +233,13 @@ const StadiumView = ({ isMobile }) => {
       { threshold: 0.5 }
     );
 
-    cardRefs.current.forEach((card) => observer.observe(card));
+    cardRefs.current.forEach((card) => {
+      console.log("Observing card:", card);
+      card && observer.observe(card);
+    });
 
     return () => {
-      cardRefs.current.forEach((card) => observer.unobserve(card));
+      cardRefs.current.forEach((card) => card && observer.unobserve(card));
     };
   }, [stadiumData]);
   return (
