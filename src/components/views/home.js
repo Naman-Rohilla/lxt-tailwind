@@ -29,7 +29,7 @@ const ProductView = ({ isMobile }) => {
 
   useEffect(() => {
     const handleWheel = (e) => {
-      e.preventDefault();
+      // e.preventDefault();
       const scrollAmount = 30;
       refs.forEach(
         (ref) =>
