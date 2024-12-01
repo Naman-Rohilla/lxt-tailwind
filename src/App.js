@@ -21,7 +21,7 @@ function App() {
       console.log("Is Desktop Viewport:", navigator.platform);
 
       // Show message if it's a mobile device simulating desktop viewport
-      setShowDesktopViewMessage(!isDesktopDevice && !isDesktopViewport);
+      setShowDesktopViewMessage(!isDesktopDevice && isDesktopViewport);
     };
 
     // Initial check
