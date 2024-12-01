@@ -6,7 +6,12 @@ import SpacedSection from "../spacedSection/spacedSection";
 import LxtButton from "../buttons/lxtButton";
 import ProductCard from "../cards/productCard";
 import "../../styles/productView.scss";
-import { stadiumData } from "../../jsons/productData";
+import {
+  productData1,
+  productData2,
+  productData3,
+  stadiumData,
+} from "../../jsons/productData";
 import ActionCard from "../cards/actionCard";
 import "../../styles/stadiumView.scss";
 import ProfileCard from "../cards/profileCard";
@@ -25,7 +30,20 @@ const footerObject = {
 };
 
 const ProductView = ({ isMobile }) => {
-  const refs = [useRef(null), useRef(null), useRef(null)];
+  const refs = [
+    {
+      ref: useRef(null),
+      data: productData1,
+    },
+    {
+      ref: useRef(null),
+      data: productData2,
+    },
+    {
+      ref: useRef(null),
+      data: productData3,
+    },
+  ];
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -33,7 +51,8 @@ const ProductView = ({ isMobile }) => {
       const scrollAmount = 30;
       refs.forEach(
         (ref) =>
-          ref.current && (ref.current.scrollTop += e.deltaY * scrollAmount)
+          ref.ref.current &&
+          (ref.ref.current.scrollTop += e.deltaY * scrollAmount)
       );
     };
 
@@ -50,11 +69,13 @@ const ProductView = ({ isMobile }) => {
       { root: null, threshold: 0.7 }
     );
 
-    refs.forEach((ref) => ref.current && observer.observe(ref.current));
+    refs.forEach((ref) => ref.ref.current && observer.observe(ref.ref.current));
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
-      refs.forEach((ref) => ref.current && observer.unobserve(ref.current));
+      refs.forEach(
+        (ref) => ref.ref.current && observer.unobserve(ref.ref.current)
+      );
     };
   }, [refs]);
 
@@ -102,15 +123,15 @@ const ProductView = ({ isMobile }) => {
           {refs.map((ref, index) => (
             <div
               className={`container-view-${index + 1} `}
-              ref={ref}
+              ref={ref.ref}
               key={index}
             >
               <div className="vertical-layer">
-                {[...Array(2)].map((_, i) => (
+                {ref.data.map((pd1, i) => (
                   <ProductCard
                     key={i}
                     footerObject={footerObject}
-                    backgroundVideo="skate.gif"
+                    backgroundVideo={pd1}
                     hoverImage="rollarskates.png"
                   />
                 ))}

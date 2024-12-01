@@ -50,3 +50,9 @@ export const stadiumData = [
     ],
   },
 ];
+
+export const productData1 = ["skate.gif", "product2.gif"];
+
+export const productData2 = ["product4.jpeg", "product3.gif"];
+
+export const productData3 = ["product5.jpeg", "product6.gif"];
