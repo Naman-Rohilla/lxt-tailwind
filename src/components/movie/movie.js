@@ -53,6 +53,12 @@ export default function Movie({ isMobile }) {
           autoPlay
           loop
         ></video> */}
+        <div className="absolute bottom-20 w-10 flex flex-col items-center left-3 space-y-4">
+          <img className="h-16" src="follow.png" />
+          <img className="h-3" src="insta.png" />
+          <img className="h-3" src="twt.png" />
+          <img className="h-3" src="fb.png" />
+        </div>
         <SpacedSection>
           <HeaderDiv className="absolute bottom-12 border-box w-3/4  space-y-2 md:space-y-6 flex flex-col">
             <span className="text-xs md:text-xl tracking-[0.25em]">

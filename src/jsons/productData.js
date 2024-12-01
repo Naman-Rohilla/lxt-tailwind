@@ -21,32 +21,41 @@ export const stadiumData = [
     heading: "Grimfield Drills",
     list: [
       "Engage, compete, and have fun while sharpening your skills.",
-      "Select your drill, and we'll handle the rest: speed, endurance, feedback, and timing in the skating rink.",
-      "Whether you're focused on depth, consistency, pace, or accuracy, your track transforms into a virtual playground!",
-    ],
-  },
-  {
-    heading: "Grimfield Drills",
-    list: [
       "Engage, compete, and have fun while sharpening your skills.",
       "Select your drill, and we'll handle the rest: speed, endurance, feedback, and timing in the skating rink.",
       "Whether you're focused on depth, consistency, pace, or accuracy, your track transforms into a virtual playground!",
     ],
   },
   {
-    heading: "Grimfield Drills",
+    heading: "Accurate Real-Time & Start Challenges",
     list: [
-      "Engage, compete, and have fun while sharpening your skills.",
-      "Select your drill, and we'll handle the rest: speed, endurance, feedback, and timing in the skating rink.",
-      "Whether you're focused on depth, consistency, pace, or accuracy, your track transforms into a virtual playground!",
+      "Eliminate disputes and distractions with precise real-time line- calling. Enhance your performance with detailed visualisations for National and RAFI races.",
+      "Eliminate disputes and distractions with precise real-time line- calling. Enhance your performance with detailed visualisations for National and RAFI races.",
+      "Effortlessly incorporate this technology into your training routine, enhancing every session with reliable, real-time data.",
     ],
   },
   {
-    heading: "Grimfield Drills",
+    heading: "Instant Feedback for Skaters",
     list: [
-      "Engage, compete, and have fun while sharpening your skills.",
-      "Select your drill, and we'll handle the rest: speed, endurance, feedback, and timing in the skating rink.",
-      "Whether you're focused on depth, consistency, pace, or accuracy, your track transforms into a virtual playground!",
+      "The best way to improve is by skating. Set your goal, start the drill, track your progress, and push yourself to surpass your target.",
+      "The best way to improve is by skating. Set your goal, start the drill, track your progress, and push yourself to surpass your target.",
+      "Access your performance metrics instantly, giving you the insights needed to refine your technique on the go.",
+    ],
+  },
+  {
+    heading: "Performance Tracking",
+    list: [
+      "Move beyond guesswork. Accurately measure your speed, track clearance, start placement, start position, and fitness data to ensure you're on the path to improvement.",
+      "Move beyond guesswork. Accurately measure your speed, track clearance, start placement, start position, and fitness data to ensure you're on the path to improvement.",
+      "Use this comprehensive data to identify areas for improvement and stay on the path to success.",
+    ],
+  },
+  {
+    heading: "Video Replays & Downloads",
+    list: [
+      "Review your last drill directly on the rink and fine-tune your technique. After practice, download your footage to relive and analyse key moments. You're the star of your own performance!",
+      "Review your last drill directly on the rink and fine-tune your technique. After practice, download your footage to relive and analyse key moments. You're the star of your own performance!",
+      "Use playback features to break down your performance, identify strengths, and pinpoint areas for improvement.",
     ],
   },
 ];
