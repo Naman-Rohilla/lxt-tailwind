@@ -16,12 +16,12 @@ export default function ActionCard({
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`action-card-view shrink-0 flex text-base flex-col w-full hover:duration-300 ease-in-out
 hover:duration-300 ease-in-out ${
+          isActive ? "opacity-100 bg-blue-800" : "opacity-80 hover:opacity-100"
+        } ${
           expanded
             ? "px-8 md:px-10 pb-20 pt-10 bg-card-color hover:bg-blue-900"
             : "px-0 md:px-4 py-3 pb-5 md:py-10 hover:bg-card-color hover:px-10"
-        } ${
-          isActive ? "opacity-100 bg-blue-800" : "opacity-80 hover:opacity-100"
-        }`}
+        } `}
       >
         <div className="action-card-heading pb-4 flex justify-between">
           {!defaultExpanded ? (
