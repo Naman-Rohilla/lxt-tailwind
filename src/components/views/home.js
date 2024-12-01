@@ -635,7 +635,7 @@ const Review = () => {
                   <span>Parents</span>
                 </span>
               </div>
-              <div className="">
+              <div className="md:space-x-6 flex md:flex-row flex-col">
                 <span className="space-x-4 flex items-center">
                   {checkboxState == 3 ? (
                     <img className="h-4 w-4" src="tickedCheckbox.png" />
