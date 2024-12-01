@@ -58,7 +58,7 @@ export default function ProfileCard({ isMobile }) {
 
   return (
     <AnimatePresence>
-      <div className="profile-card h-auto md:h-500 flex flex-col md:flex-row relative">
+      <div className="profile-card h-auto md:h-500 w-full flex flex-col md:flex-row relative">
         <div className="flex items-end w-full  justify-start">
           <motion.img
             initial={{
