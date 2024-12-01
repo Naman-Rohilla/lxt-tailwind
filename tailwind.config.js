@@ -22,6 +22,9 @@ module.exports = {
         "card-color": "#022359",
         "card-color-light": "#032863",
       },
+      height: {
+        500: "500px",
+      },
     },
   },
   plugins: [],

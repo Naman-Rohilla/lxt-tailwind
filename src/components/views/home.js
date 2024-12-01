@@ -107,14 +107,16 @@ const ProductView = ({ isMobile }) => {
             className={`flex slider-hidden-scrollbar overflow-y-scroll smooth mt-0`}
           >
             <div className="flex space-x-4">
-              {[...Array(6)].map((_, i) => (
-                <ProductCard
-                  key={i}
-                  footerObject={footerObject}
-                  backgroundVideo="skate.gif"
-                  hoverImage="rollarskates.png"
-                />
-              ))}
+              {[...productData1, ...productData2, ...productData3].map(
+                (pd, i) => (
+                  <ProductCard
+                    key={i}
+                    footerObject={footerObject}
+                    backgroundVideo={pd}
+                    hoverImage="rollarskates.png"
+                  />
+                )
+              )}
             </div>
           </div>
         </div>
@@ -707,7 +709,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Movie />
+      <Movie isMobile={isMobile} />
       <SpacedSection zIndex={0}>
         <StatisticCard cardData={statisticData} />
       </SpacedSection>

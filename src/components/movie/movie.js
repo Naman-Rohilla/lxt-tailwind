@@ -4,7 +4,7 @@ import SpacedSection from "../spacedSection/spacedSection";
 import HeaderDiv from "../animatedDiv/headerDiv";
 import ReactPlayer from "react-player";
 
-export default function Movie() {
+export default function Movie({ isMobile }) {
   return (
     <SpacedSection zIndex={0} customPadding={"px-4 md:px-6"}>
       <div className="h-screen pt-20 md:pt-24 pb-8 relative">
@@ -32,7 +32,8 @@ export default function Movie() {
             style={{
               background:
                 "linear-gradient(3.75deg, rgba(4, 44, 113, 0.8) 14.25%, #02173A 87.99%)",
-              transform: "scale(1.2)",
+              transform: isMobile ? "scale(5)" : "scale(2)",
+              objectFit: "cover",
             }}
           >
             {" "}

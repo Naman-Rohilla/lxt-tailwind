@@ -8,27 +8,37 @@ const profileData = [
   {
     description:
       "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage.",
-    imgSrc: "rahul.png",
+    imgSrc: "profile1.png",
+    scale: 1,
+    mScale: 1,
   },
   {
     description:
       "Jane1 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
     imgSrc: "rahul.png",
+    scale: 1.4,
+    mScale: 1.2,
   },
   {
     description:
       "Jane2 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
     imgSrc: "rahul.png",
+    scale: 1.4,
+    mScale: 1.2,
   },
   {
     description:
       "Jane3 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
     imgSrc: "rahul.png",
+    scale: 1.4,
+    mScale: 1.2,
   },
   {
     description:
       "Jane4 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
     imgSrc: "rahul.png",
+    scale: 1.4,
+    mScale: 1.2,
   },
 ];
 
@@ -38,7 +48,7 @@ export default function ProfileCard({ isMobile }) {
   const [previousIndex, setPreviousIndex] = useState(0);
 
   const size = profileData.length;
-  const { description, imgSrc } = profileData[currentIndex];
+  const { description, imgSrc, scale, mScale } = profileData[currentIndex];
 
   useEffect(() => {
     setPreviousIndex(currentIndex);
@@ -48,22 +58,22 @@ export default function ProfileCard({ isMobile }) {
 
   return (
     <AnimatePresence>
-      <div className="profile-card h-auto flex flex-col md:flex-row relative">
+      <div className="profile-card h-auto md:h-500 flex flex-col md:flex-row relative">
         <div className="flex items-end w-full  justify-start">
           <motion.img
             initial={{
               opacity: 0,
-              scale: isMobile ? 1.2 : 1.5,
+              scale: isMobile ? mScale : scale,
               x: isNext ? (isMobile ? -10 : -200) : isMobile ? 10 : 100,
             }}
             animate={{
               opacity: 1,
-              scale: isMobile ? 1.2 : 1.5,
+              scale: isMobile ? mScale : scale,
               x: 10,
             }}
             exit={{
               opacity: 0,
-              scale: isMobile ? 1.2 : 1.5,
+              scale: isMobile ? mScale : scale,
             }}
             transition={{
               duration: 0.8,
