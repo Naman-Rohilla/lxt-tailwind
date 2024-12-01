@@ -60,7 +60,7 @@ export default function ActionCard({
         </div>
         {expanded ? (
           <>
-            {list?.map((lt) => (
+            {list?.slice(1).map((lt) => (
               <motion.span
                 key={lt} // Add key here for list rendering
                 className="text-6xs md:text-base pt-4 md:leading-6 leading-4"

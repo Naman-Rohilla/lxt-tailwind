@@ -7,38 +7,52 @@ import AnimatedSpan from "../animatedDiv/animatedSpan";
 const profileData = [
   {
     description:
-      "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage.",
+      "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
     imgSrc: "profile1.png",
+    mobSrc: "profile1.png",
     scale: 1,
     mScale: 1,
+    customElements: "",
   },
   {
     description:
-      "Jane1 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
+      "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
     imgSrc: "rahul.png",
+    mobSrc: "rahul.png",
     scale: 1.4,
     mScale: 1.2,
+    bottomOrigin: true,
+    customElements: "",
   },
   {
     description:
-      "Jane2 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
-    imgSrc: "rahul.png",
+      "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
+    imgSrc: "profile2.jpeg",
+    mobSrc: "mobImage.png",
     scale: 1.4,
     mScale: 1.2,
+    bottomOrigin: false,
+    customElements: "rounded-tl-3xl rounded-b-3xl ",
   },
   {
     description:
-      "Jane3 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
-    imgSrc: "rahul.png",
-    scale: 1.4,
+      "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
+    imgSrc: "profile3.jpeg",
+    mobSrc: "profile3.jpeg",
+    scale: 1.2,
     mScale: 1.2,
+    bottomOrigin: false,
+    customElements: "rounded-2xl w-1/2",
   },
   {
     description:
-      "Jane4 is a visionary leader driving innovation in the tech space. She has a passion for turning dreams into reality and shaping the future of technology.",
-    imgSrc: "rahul.png",
-    scale: 1.4,
-    mScale: 1.2,
+      "Pune has been felicitated with the most prestigious Sports award of Maharashtra State - Shiv Chhatrapati Award, 'Best Skating Coach for the year 2020-2021'. He has 36 years of skating and professional coaching experience. Multiple times National & International medalist, he is the only skater in India to win in all four disciplines - Speed, Artistic Solo, Pair Skating and Roller Hockey RSFI Nationals.",
+    imgSrc: "profile5.png",
+    mobSrc: "profile5.png",
+    scale: 1.3,
+    mScale: 1.4,
+    bottomOrigin: false,
+    customElements: "w-3/5",
   },
 ];
 
@@ -48,7 +62,15 @@ export default function ProfileCard({ isMobile }) {
   const [previousIndex, setPreviousIndex] = useState(0);
 
   const size = profileData.length;
-  const { description, imgSrc, scale, mScale } = profileData[currentIndex];
+  const {
+    description,
+    imgSrc,
+    scale,
+    mScale,
+    bottomOrigin,
+    customElements,
+    mobSrc,
+  } = profileData[currentIndex];
 
   useEffect(() => {
     setPreviousIndex(currentIndex);
@@ -59,7 +81,7 @@ export default function ProfileCard({ isMobile }) {
   return (
     <AnimatePresence>
       <div className="profile-card h-auto md:h-500 w-full flex flex-col md:flex-row relative">
-        <div className="flex items-end w-full  justify-start">
+        <div className="flex items-end w-full px-5 justify-center">
           <motion.img
             initial={{
               opacity: 0,
@@ -69,7 +91,7 @@ export default function ProfileCard({ isMobile }) {
             animate={{
               opacity: 1,
               scale: isMobile ? mScale : scale,
-              x: 10,
+              x: 0,
             }}
             exit={{
               opacity: 0,
@@ -79,12 +101,14 @@ export default function ProfileCard({ isMobile }) {
               duration: 0.8,
             }}
             key={animationKey}
-            className={`profile-img object-fill h-auto transform origin-bottom-right  md:origin-bottom`}
-            src={imgSrc}
+            className={`object-contain md:object-fill transform origin-center  ${
+              bottomOrigin ? "md:origin-bottom" : "md:origin-center"
+            } ${customElements} `}
+            src={isMobile ? mobSrc : imgSrc}
             alt="Profile"
           />
         </div>
-        <div className="profile-text overflow-hidden md:overflow-visible py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
+        <div className="overflow-hidden md:overflow-visible py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
           <motion.div
             key={animationKey}
             className="flex flex-col overflow-hidden"

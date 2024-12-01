@@ -7,6 +7,7 @@ import LxtButton from "../buttons/lxtButton";
 import ProductCard from "../cards/productCard";
 import "../../styles/productView.scss";
 import {
+  announcementData,
   productData1,
   productData2,
   productData3,
@@ -157,7 +158,7 @@ const ProfileCardView = ({ isMobile }) => {
       style={{
         backgroundColor: "rgba(2, 23, 58, 0.8)",
       }}
-      className="h-auto md:h-screen w-full relative md:sticky z-10 flex items-start md:items-end py-10 md:pt-32"
+      className="h-auto md:h-screen w-full relative md:sticky z-10 flex items-start md:items-end md:pb-40 py-10 md:pt-32"
     >
       <ProfileCard isMobile={isMobile}></ProfileCard>
     </div>
@@ -322,11 +323,11 @@ const AnouncementView = () => {
     <HeaderDiv className="announcement-view relative text-white flex justify-between h-auto">
       <div className="announcement-heading flex flex-col">
         <HeaderDiv className="text-3xl md:text-5xl">Announcement</HeaderDiv>
-        <HeaderDiv className="text-lg md:text-2xl">
+        <HeaderDiv className="text-lg pt-2 md:text-2xl">
           Get Ready to Roll—Exciting Skating Event Ahead
         </HeaderDiv>
         <div className="announcement-card-container space-y-1">
-          {stadiumData?.map((sd, index) => (
+          {announcementData?.map((sd, index) => (
             <ActionCard
               key={index}
               heading={sd.heading}
@@ -383,21 +384,21 @@ const PictureView = () => {
     <>
       <div className="flex w-60 flex-col space-y-4 shrink-0">
         <img className="h-80 rounded-2xl" src="picture1.png" />
-        <img className="h-36 rounded-2xl" src="picture1.png" />
+        <img className="h-36 rounded-2xl" src="ach1.jpg" />
       </div>
       <div className="flex items-center shrink-0">
-        <img className="h-80 rounded-2xl" src="picture1.png" />
+        <img className="h-80 w-64 rounded-2xl" src="ach2.jpg" />
       </div>
       <div className="flex w-60 flex-col space-y-4 shrink-0">
-        <img className="h-36 rounded-2xl" src="picture1.png" />
-        <img className="h-80 rounded-2xl" src="picture1.png" />
+        <img className="h-36 rounded-2xl" src="ach3.jpg" />
+        <img className="h-80 rounded-2xl" src="ach10.png" />
       </div>
       <div className="flex items-center shrink-0">
-        <img className="h-80 rounded-2xl" src="picture1.png" />
+        <img className="h-80 w-64  rounded-2xl" src="ach5.jpg" />
       </div>
       <div className="flex w-60 flex-col space-y-4 shrink-0">
-        <img className="h-80 rounded-2xl" src="picture1.png" />
-        <img className="h-36 rounded-2xl" src="picture1.png" />
+        <img className="h-80 rounded-2xl" src="ach11.jpeg" />
+        <img className="h-36 rounded-2xl" src="ach7.jpeg" />
       </div>
       <div className="flex w-60 h-full items-center shrink-0">
         <img
@@ -405,12 +406,12 @@ const PictureView = () => {
           style={{
             height: "480px",
           }}
-          src="picture1.png"
+          src="profile2.jpeg"
         />
       </div>
       <div className="flex w-60 flex-col space-y-4 shrink-0">
-        <img className="h-44 rounded-2xl" src="picture1.png" />
-        <img className="h-72 rounded-2xl" src="picture1.png" />
+        <img className="h-44 rounded-2xl" src="ach6.jpg" />
+        <img className="h-72 rounded-2xl" src="ach9.jpeg" />
       </div>
     </>
   );
@@ -477,10 +478,42 @@ const NewsCardView = ({ isMobile }) => {
   return (
     <>
       <div className="flex slider-hidden-scrollbar h-auto py-4 overflow-y-hidden md:-translate-y-32 space-x-4 md:px-4 xl:overflow-hidden overflow-x-scroll">
-        <NewsCard isMobile={isMobile}></NewsCard>
-        <NewsCard isMobile={isMobile}></NewsCard>
-        <NewsCard isMobile={isMobile}></NewsCard>
-        <NewsCard isMobile={isMobile}></NewsCard>
+        <NewsCard
+          isMobile={isMobile}
+          src="news1.png"
+          heading={"Shiv Chhatrapati Award, Best Skating Coach"}
+          summary={
+            "Rahul Ramesh Rane of Pune has been felicitated with the most prestigious Sports..."
+          }
+          date={"September 7, 2024"}
+        ></NewsCard>
+        <NewsCard
+          isMobile={isMobile}
+          src="ach7.jpeg"
+          heading={"LXT has been awarded with GEO"}
+          summary={
+            "He also got a Special invite for the 'Inline Speed Skating International Seminar'..."
+          }
+          date={"June 24, 2022"}
+        ></NewsCard>
+        <NewsCard
+          isMobile={isMobile}
+          src="ach3.jpg"
+          heading={"1st FIRS International Speed Skating Seminar"}
+          summary={
+            "He also got a Special invite for the 'Inline Speed Skating International Seminar..."
+          }
+          date={"December 7, 2019"}
+        ></NewsCard>
+        <NewsCard
+          isMobile={isMobile}
+          src="ach2.jpg"
+          heading={"India Ka Khelotsav, Pune Int Sports Expo"}
+          summary={
+            "Rahul Ramesh Rane was felicitated by the legendary Milkha Singh at the closing..."
+          }
+          date={"May 8, 2016"}
+        ></NewsCard>
       </div>
     </>
   );
