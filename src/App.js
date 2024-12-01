@@ -10,9 +10,11 @@ function App() {
   useEffect(() => {
     const checkViewMode = () => {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      console.log(userAgent);
       const isMobileDevice =
         /android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent);
-      const isDesktopWidth = window.innerWidth >= 767;
+      const isDesktopWidth = window.innerWidth >= 760;
+      console.log(userAgent, window.innerWidth);
       setIsMobileDesktopView(isMobileDevice && isDesktopWidth);
     };
 
