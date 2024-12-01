@@ -9,20 +9,19 @@ function App() {
 
   useEffect(() => {
     const checkDesktopViewOnMobile = () => {
-      const isMobileDevice =
-        /android/i.test(navigator.userAgent) ||
-        /iPhone|iPad|iPod/i.test(navigator.userAgent);
-      const isDesktopViewport = window.innerWidth >= 1024; // Example breakpoint for desktop
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isDesktopDevice = /windows nt|mac os x/.test(userAgent);
+      const isDesktopViewport = window.innerWidth >= 767; // Example breakpoint for desktop
 
       // Log for debugging
       console.log("User Agent:", navigator.userAgent);
-      console.log("Is Mobile Device:", isMobileDevice);
+      console.log("Is desktop Device:", isDesktopDevice);
       console.log("Viewport Width:", window.innerWidth);
       console.log("Is Desktop Viewport:", isDesktopViewport);
       console.log("Is Desktop Viewport:", navigator.platform);
 
       // Show message if it's a mobile device simulating desktop viewport
-      setShowDesktopViewMessage(isMobileDevice && isDesktopViewport);
+      setShowDesktopViewMessage(!isDesktopDevice && !isDesktopViewport);
     };
 
     // Initial check
