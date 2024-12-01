@@ -12,7 +12,7 @@ function App() {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const isMobileDevice =
         /android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent);
-      const isDesktopWidth = window.innerWidth >= 1024;
+      const isDesktopWidth = window.innerWidth >= 767;
       setIsMobileDesktopView(isMobileDevice && isDesktopWidth);
     };
 
