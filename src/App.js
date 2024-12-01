@@ -5,36 +5,48 @@ import LxtButton from "./components/buttons/lxtButton";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [isMobileDesktopView, setIsMobileDesktopView] = useState(false);
+  const [showDesktopViewMessage, setShowDesktopViewMessage] = useState(false);
 
   useEffect(() => {
-    const checkViewMode = () => {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      console.log(userAgent);
+    const checkDesktopViewOnMobile = () => {
       const isMobileDevice =
-        /android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent);
-      const isDesktopWidth = window.innerWidth >= 760;
-      console.log(userAgent, window.innerWidth);
-      setIsMobileDesktopView(isMobileDevice && isDesktopWidth);
+        /android/i.test(navigator.userAgent) ||
+        /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const isDesktopViewport = window.innerWidth >= 1024; // Example breakpoint for desktop
+
+      // Log for debugging
+      console.log("User Agent:", navigator.userAgent);
+      console.log("Is Mobile Device:", isMobileDevice);
+      console.log("Viewport Width:", window.innerWidth);
+      console.log("Is Desktop Viewport:", isDesktopViewport);
+
+      // Show message if it's a mobile device simulating desktop viewport
+      setShowDesktopViewMessage(isMobileDevice && isDesktopViewport);
     };
 
-    checkViewMode();
-    window.addEventListener("resize", checkViewMode);
+    // Initial check
+    checkDesktopViewOnMobile();
+
+    // Listen for window resize
+    window.addEventListener("resize", checkDesktopViewOnMobile);
+
+    // Cleanup on unmount
     return () => {
-      window.removeEventListener("resize", checkViewMode);
+      window.removeEventListener("resize", checkDesktopViewOnMobile);
     };
   }, []);
   return (
     <>
-      {isMobileDesktopView && (
+      {showDesktopViewMessage ? (
         <div className="h-screen w-full flex justify-center items-center">
           <LxtButton
             text={"This content is visible on desktop only."}
             color={"red"}
           ></LxtButton>
         </div>
+      ) : (
+        <RouterProvider router={router} />
       )}
-      {!isMobileDesktopView && <RouterProvider router={router} />}
     </>
   );
 }
