@@ -19,6 +19,7 @@ function App() {
       console.log("Is Mobile Device:", isMobileDevice);
       console.log("Viewport Width:", window.innerWidth);
       console.log("Is Desktop Viewport:", isDesktopViewport);
+      console.log("Is Desktop Viewport:", navigator.platform);
 
       // Show message if it's a mobile device simulating desktop viewport
       setShowDesktopViewMessage(isMobileDevice && isDesktopViewport);
