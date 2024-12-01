@@ -75,7 +75,10 @@ export default function ProfileCard({ isMobile }) {
           />
         </div>
         <div className="profile-text overflow-hidden md:overflow-visible py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
-          <motion.div key={animationKey} className="flex flex-col">
+          <motion.div
+            key={animationKey}
+            className="flex flex-col overflow-hidden"
+          >
             <AnimatedSpan
               duration="0.7"
               isNext={isNext}

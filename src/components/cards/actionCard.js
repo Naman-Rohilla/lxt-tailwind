@@ -19,7 +19,7 @@ export default function ActionCard({
             ? "px-8 md:px-10 pb-20 pt-10 bg-card-color hover:bg-blue-900 hover:duration-300 ease-in-out"
             : "px-0 md:px-4 py-3 pb-5 md:py-10 hover:bg-card-color hover:px-10 hover:duration-300 ease-in-out"
         } ${
-          isActive ? "opacity-100 bg-blue-900" : "opacity-80 hover:opacity-100"
+          isActive ? "opacity-100 bg-blue-800" : "opacity-80 hover:opacity-100"
         }`}
       >
         <div className="action-card-heading pb-4 flex justify-between">
