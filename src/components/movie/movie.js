@@ -2,35 +2,51 @@ import { useRef } from "react";
 import LxtButton from "../buttons/lxtButton";
 import SpacedSection from "../spacedSection/spacedSection";
 import HeaderDiv from "../animatedDiv/headerDiv";
+import ReactPlayer from "react-player";
 
 export default function Movie() {
   return (
     <SpacedSection zIndex={0} customPadding={"px-4 md:px-6"}>
       <div className="h-screen pt-20 md:pt-24 pb-8 relative">
-        {/* <div
-          src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
-          className="h-screen w-full absolute z-2 top-0 left-0 bg-red-100 rounded-b-2xl rounded-tl-2xl"
-          style={{
-            background:
-              "linear-gradient(211.75deg, rgba(4, 44, 113, 0) 14.25%, #02173A 87.99%)",
-          }}
+        {/* <iframe
+          src="https://www.youtube.com/watch?v=JQbjS0_ZfJ0"
+          className="h-screen w-full absolute z-10 top-0 left-0 rounded-b-2xl rounded-tl-2xl"
           allow="autoplay; fullscreen; picture-in-picture"
         >
           {" "}
-        </div> */}
+        </iframe> */}
         <div
-          src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
-          className="h-full rounded-b-2xl rounded-tl-2xl"
-          style={{
-            background:
-              "linear-gradient(3.75deg, rgba(4, 44, 113, 0.8) 14.25%, #02173A 87.99%)",
-          }}
-          allow="autoplay; fullscreen; picture-in-picture"
+          src="https://www.youtube.com/embed/JQbjS0_ZfJ0?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&disablekb=1"
+          className="h-full w-full rounded-b-2xl rounded-tl-2xl overflow-hidden relative"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope;"
+          allowFullScreen
         >
-          {" "}
+          <ReactPlayer
+            url="https://youtu.be/hzE3Qm0szIw?si=LMTGbPIc_CurSUkX"
+            playing
+            muted
+            controls={false}
+            loop={true}
+            width="100%"
+            height="100%"
+            style={{
+              background:
+                "linear-gradient(3.75deg, rgba(4, 44, 113, 0.8) 14.25%, #02173A 87.99%)",
+              transform: "scale(1.2)",
+            }}
+          >
+            {" "}
+          </ReactPlayer>
+          <div
+            className="absolute top-0 left-0 h-full w-full"
+            style={{
+              background:
+                "linear-gradient(3.75deg, rgba(4, 44, 113, 0.8) 14.25%, #02173A 87.99%)",
+            }}
+          ></div>
         </div>
         {/* <video
-          src="intro.mp4"
+          src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
           className="h-full w-full object-cover z-1 rounded-b-2xl rounded-tl-2xl"
           muted
           autoPlay
