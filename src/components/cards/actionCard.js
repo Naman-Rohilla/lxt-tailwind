@@ -14,15 +14,15 @@ export default function ActionCard({
     <AnimatePresence>
       <motion.div
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`action-card-view shrink-0 flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out ${
+        className={`action-card-view  shrink-0 flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out ${
           isActive
             ? "opacity-100 bg-blue-800"
             : "opacity-80 bg-card-color hover:opacity-100"
         } ${
           expanded
-            ? "px-8 md:px-10 pb-20 pt-10 hover:bg-blue-900"
+            ? "px-8 md:h-auto md:px-10 pb-20 pt-10 hover:bg-blue-900"
             : "px-0 md:px-4 py-3 pb-5 md:py-10 bg-transparent hover:bg-card-color hover:px-10"
-        } `}
+        } ${expanded == "disabled" ? "h-72 md:h-auto" : "h-auto"} `}
       >
         <div className="action-card-heading pb-4 flex justify-between">
           {!defaultExpanded ? (
