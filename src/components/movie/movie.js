@@ -33,6 +33,10 @@ export default function Movie({ isMobile }) {
     setState(index);
   }
 
+  function handleRedirect(link) {
+    window.open(link, "_blank");
+  }
+
   return (
     <SpacedSection zIndex={0} customPadding={"px-4 md:px-6"}>
       <div className="h-screen pt-20 md:pt-24 pb-8 relative">
@@ -67,7 +71,7 @@ export default function Movie({ isMobile }) {
                 },
               },
             }}
-            onReady={() => setIsVideoReady(true)}
+            onPlay={() => setIsVideoReady(true)}
           >
             {" "}
           </ReactPlayer>
@@ -79,6 +83,7 @@ export default function Movie({ isMobile }) {
                 "linear-gradient(10.75deg, rgba(4, 44, 113, 0.8) 84.25%, #02173A 97.99%)",
             }}
           ></div>
+
           <div className="absolute bottom-7 md:bottom-20 right-0 pr-4 md:pr-14 2xl:pr-40">
             <div className="z-10 bg-black h-9 w-20 md:h-12 md:w-32 rounded-full flex items-center px-5 md:px-7 space-x-1">
               {Array.from(
@@ -112,9 +117,25 @@ export default function Movie({ isMobile }) {
         ></video> */}
         <div className="absolute hidden bottom-16 md:bottom-32 w-10 md:flex md:flex-col items-center right-0 2xl:left-3 space-y-4">
           <img className="h-16" src="follow.png" />
-          <img className="h-3" src="insta.png" />
+          <img
+            className="h-3 cursor-pointer"
+            src="insta.png"
+            onClick={() =>
+              handleRedirect(
+                "https://www.instagram.com/lazerxtech_rahulrane?igsh=MW51Y3JxNGtjamk3aw=="
+              )
+            }
+          />
           <img className="h-3" src="twt.png" />
-          <img className="h-3" src="fb.png" />
+          <img
+            className="h-3 cursor-pointer"
+            src="fb.png"
+            onClick={() =>
+              handleRedirect(
+                "https://www.facebook.com/share/1ATLggA8ta/?mibextid=LQQJ4d"
+              )
+            }
+          />
         </div>
         {state < movieUrl.length && (
           <div
