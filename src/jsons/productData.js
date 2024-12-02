@@ -60,11 +60,38 @@ export const stadiumData = [
   },
 ];
 
-export const productData1 = ["skate.gif", "product2.gif"];
+export const productData1 = [
+  {
+    link: "skate.gif",
+    hover: "hoverskate.jpeg",
+  },
+  {
+    link: "product2.gif",
+    hover: "hover6.jpeg",
+  },
+];
 
-export const productData2 = ["product4.jpeg", "product3.gif"];
+export const productData2 = [
+  {
+    link: "product4.jpeg",
+    hover: "hover3.jpeg",
+  },
+  {
+    link: "product3.gif",
+    hover: "hover4.jpeg",
+  },
+];
 
-export const productData3 = ["product5.jpeg", "product6.gif"];
+export const productData3 = [
+  {
+    link: "product5.jpeg",
+    hover: "hover5.png",
+  },
+  {
+    link: "product6.gif",
+    hover: "hover2.jpeg",
+  },
+];
 
 export const announcementData = [
   {

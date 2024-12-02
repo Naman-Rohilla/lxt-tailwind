@@ -138,8 +138,8 @@ const ProductView = ({ isMobile }) => {
                   <ProductCard
                     key={i}
                     footerObject={footerObject}
-                    backgroundVideo={pd}
-                    hoverImage="hoverskate.jpeg"
+                    backgroundVideo={pd.link}
+                    hoverImage={pd.hover}
                   />
                 )
               )}
@@ -159,8 +159,8 @@ const ProductView = ({ isMobile }) => {
                   <ProductCard
                     key={i}
                     footerObject={footerObject}
-                    backgroundVideo={pd1}
-                    hoverImage="hoverskate.jpeg"
+                    backgroundVideo={pd1.link}
+                    hoverImage={pd1.hover}
                   />
                 ))}
               </div>
