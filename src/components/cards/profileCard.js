@@ -86,6 +86,7 @@ export default function ProfileCard({ isMobile }) {
             initial={{
               opacity: 0,
               scale: isMobile ? mScale : scale,
+              x: isNext ? (isMobile ? -10 : -100) : isMobile ? 10 : 100,
             }}
             animate={{
               opacity: 1,
@@ -101,9 +102,7 @@ export default function ProfileCard({ isMobile }) {
             }}
             key={animationKey}
             className={`object-contain md:object-fill transform origin-center  ${
-              bottomOrigin
-                ? "origin-bottom-right md:origin-bottom"
-                : "md:origin-center"
+              bottomOrigin ? "md:origin-bottom" : "md:origin-center"
             } ${customElements} `}
             src={isMobile ? mobSrc : imgSrc}
             alt="Profile"
