@@ -53,22 +53,26 @@ export default function Movie({ isMobile }) {
           autoPlay
           loop
         ></video> */}
-        <div className="absolute bottom-20 w-10 flex flex-col items-center left-3 space-y-4">
+        <div className="absolute bottom-32 w-10 flex flex-col items-center right-0 md:left-3 space-y-4">
           <img className="h-16" src="follow.png" />
           <img className="h-3" src="insta.png" />
           <img className="h-3" src="twt.png" />
           <img className="h-3" src="fb.png" />
         </div>
         <SpacedSection>
-          <HeaderDiv className="absolute bottom-12 border-box w-3/4  space-y-2 md:space-y-6 flex flex-col">
-            <span className="text-xs md:text-xl tracking-[0.25em]">
+          <HeaderDiv className="absolute bottom-24 border-box w-3/4  space-y-2 md:space-y-3 flex flex-col">
+            <span className="text-xs md:text-xl font-extralight tracking-[0.25em]">
               DREAM BUILDER
             </span>
-            <span className="text-xl md:text-8xl">Rahul Rane</span>
-            <span className="text-lg md:text-4xl">
-              Managing Director at LAZERXTECH
+            <span className="text-xl md:text-9xl">
+              <span className="font-extrabold">Rahul</span>{" "}
+              <span className="font-extralight">Rane</span>
             </span>
-            <span className="text-xs md:text-xl w-full md:w-1/2">
+            <span className="text-lg md:text-4xl">
+              <span className="font-extralight">Managing Director at </span>
+              <span className="font-extrabold">LAZERXTECH</span>
+            </span>
+            <span className="text-xs md:text-xl w-full md:w-1/2 font-extralight">
               They are there to serve as an adviser, an assessor, a counsellor,
               a demonstrator, friend, mentor, an endless fountain of wisdom and
               knowledge, role model, your manager and your number one supporter.

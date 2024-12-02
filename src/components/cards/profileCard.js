@@ -86,7 +86,7 @@ export default function ProfileCard({ isMobile }) {
             initial={{
               opacity: 0,
               scale: isMobile ? mScale : scale,
-              x: isNext ? (isMobile ? -10 : -200) : isMobile ? 10 : 100,
+              x: isNext ? (isMobile ? -10 : -100) : isMobile ? 10 : 100,
             }}
             animate={{
               opacity: 1,
@@ -98,7 +98,7 @@ export default function ProfileCard({ isMobile }) {
               scale: isMobile ? mScale : scale,
             }}
             transition={{
-              duration: 0.8,
+              duration: 1,
             }}
             key={animationKey}
             className={`object-contain md:object-fill transform origin-center  ${
@@ -111,7 +111,7 @@ export default function ProfileCard({ isMobile }) {
         <div className="overflow-hidden md:overflow-visible py-10 w-full md:w-3/4 px-5 lg:px-14 flex flex-col justify-between">
           <motion.div
             key={animationKey}
-            className="flex flex-col overflow-hidden"
+            className="flex flex-col overflow-hidden font-extralight"
           >
             <AnimatedSpan
               duration="0.7"
@@ -119,14 +119,15 @@ export default function ProfileCard({ isMobile }) {
               isMobile={isMobile}
               className="text-4xl lg:text-6xl"
             >
-              <strong>Rahul</strong> Rane
+              <span className="font-extrabold">Rahul</span> Rane
             </AnimatedSpan>
             <AnimatedSpan
               duration="1"
               isNext={isNext}
               className="text-md lg:text-3xl pt-2"
             >
-              Managing Director at <strong>LAZERXTECH</strong>
+              Managing Director at{" "}
+              <span className="font-extrabold">LAZERXTECH</span>
             </AnimatedSpan>
             <AnimatedSpan
               duration="1.1"

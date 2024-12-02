@@ -84,13 +84,38 @@ const ProductView = ({ isMobile }) => {
     <HeaderDiv className="product-card-view relative md:sticky h-auto md:h-screen flex flex-col justify-start md:justify-between md:flex-row pt-0 md:pt-24">
       <div className="pt-10 md:pt-28 text-3xl xl:text-5xl w-auto flex flex-col">
         <span className="font-extralight">
-          Transform <strong>Skater</strong>
+          Transform{" "}
+          <span
+            style={{
+              color: "#0C6AB0",
+            }}
+            className="font-extrabold"
+          >
+            Skater
+          </span>
         </span>
         <span className="font-extralight">
-          with Advanced <strong>Coaching</strong>
+          with Advanced{" "}
+          <span
+            style={{
+              color: "#0C6AB0",
+            }}
+            className="font-extrabold"
+          >
+            Coaching
+          </span>
         </span>
         <span className="font-extralight">
-          and<strong> Equipment</strong>
+          and
+          <span
+            style={{
+              color: "#0C6AB0",
+            }}
+            className="font-extrabold"
+          >
+            {" "}
+            Equipment
+          </span>
         </span>
         <span className="text-sm xl:text-lg  mt-5">
           Effectively highlights the focus on enhancing a skater's abilities
@@ -283,8 +308,16 @@ const StadiumView = ({ isMobile }) => {
         </div>
         <div className="stadium-slider-view min-h-screen h-auto w-full relative md:w-1/2">
           <div className="stadium-slider-container px-4 xl:px-40">
-            <HeaderDiv className="pt-10 md:pt-24 text-2xl md:text-5xl">
-              RR <strong>LXT RINK</strong>
+            <HeaderDiv className="pt-10 md:pt-24 text-2xl font-extralight md:text-6xl">
+              RR <span className="font-extrabold">LXT</span>{" "}
+              <span
+                className="font-extrabold"
+                style={{
+                  color: "#0C6AB0",
+                }}
+              >
+                Rink
+              </span>
             </HeaderDiv>
             <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll slider-hidden-scrollbar">
               {stadiumData?.map((sd, index) => (
@@ -322,8 +355,17 @@ const AnouncementView = () => {
   return (
     <HeaderDiv className="announcement-view relative text-white flex justify-between h-auto">
       <div className="announcement-heading flex flex-col">
-        <HeaderDiv className="text-3xl md:text-5xl">Announcement</HeaderDiv>
-        <HeaderDiv className="text-lg pt-2 md:text-2xl">
+        <HeaderDiv className="text-3xl md:text-5xl font-extrabold">
+          Announce
+          <span
+            style={{
+              color: "#0C6AB0",
+            }}
+          >
+            ment
+          </span>
+        </HeaderDiv>
+        <HeaderDiv className="text-lg pt-2 md:text-2xl font-extralight">
           Get Ready to Roll—Exciting Skating Event Ahead
         </HeaderDiv>
         <div className="announcement-card-container space-y-1">
@@ -420,7 +462,16 @@ const PictureView = () => {
 const AchievementView = () => {
   return (
     <HeaderDiv className="flex flex-col">
-      <strong className="text-4xl md:text-6xl">Achievement</strong>
+      <span className="text-4xl md:text-6xl font-extrabold">
+        Achieve
+        <span
+          style={{
+            color: "#0C6AB0",
+          }}
+        >
+          ment
+        </span>
+      </span>
       <span className="text-sm md:text-lg pt-4">
         Honored for Consistent Excellence in Skating and Cycling Performances
       </span>
