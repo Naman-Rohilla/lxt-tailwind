@@ -86,7 +86,6 @@ export default function ProfileCard({ isMobile }) {
             initial={{
               opacity: 0,
               scale: isMobile ? mScale : scale,
-              x: isNext ? (isMobile ? -10 : -100) : isMobile ? 10 : 100,
             }}
             animate={{
               opacity: 1,
@@ -98,11 +97,13 @@ export default function ProfileCard({ isMobile }) {
               scale: isMobile ? mScale : scale,
             }}
             transition={{
-              duration: 1,
+              duration: 2,
             }}
             key={animationKey}
             className={`object-contain md:object-fill transform origin-center  ${
-              bottomOrigin ? "md:origin-bottom" : "md:origin-center"
+              bottomOrigin
+                ? "origin-bottom-right md:origin-bottom"
+                : "md:origin-center"
             } ${customElements} `}
             src={isMobile ? mobSrc : imgSrc}
             alt="Profile"
@@ -113,32 +114,43 @@ export default function ProfileCard({ isMobile }) {
             key={animationKey}
             className="flex flex-col overflow-hidden font-extralight"
           >
-            <AnimatedSpan
+            <soan
               duration="0.7"
               isNext={isNext}
               isMobile={isMobile}
               className="text-4xl lg:text-6xl"
             >
               <span className="font-extrabold">Rahul</span> Rane
-            </AnimatedSpan>
-            <AnimatedSpan
+            </soan>
+            <soan
               duration="1"
               isNext={isNext}
               className="text-md lg:text-3xl pt-2"
             >
               Managing Director at{" "}
               <span className="font-extrabold">LAZERXTECH</span>
-            </AnimatedSpan>
-            <AnimatedSpan
-              duration="1.1"
+            </soan>
+            <motion.span
               isNext={isNext}
               className="text-xs lg:text-xl pt-2"
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+              }}
+              transition={{
+                duration: 1.1,
+              }}
             >
               {description}
-            </AnimatedSpan>
-            <AnimatedSpan isNext={isNext} duration="1.4" className="pt-2">
+            </motion.span>
+            <soan isNext={isNext} duration="1.4" className="pt-2">
               Read More
-            </AnimatedSpan>
+            </soan>
           </motion.div>
           <SliderControl
             currentIndex={currentIndex}
