@@ -1,10 +1,38 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import LxtButton from "../buttons/lxtButton";
 import SpacedSection from "../spacedSection/spacedSection";
 import HeaderDiv from "../animatedDiv/headerDiv";
 import ReactPlayer from "react-player";
 
+const movieUrl = [
+  "https://youtu.be/hzE3Qm0szIw?si=LMTGbPIc_CurSUkX",
+  "https://youtu.be/nd4D-hcyEAQ?si=J1OfQGNuljIRZQvl",
+  "https://youtu.be/WFl39V88KyM?si=5mUv2v_aoCdyRPxq",
+  "https://youtu.be/TmfVBdC85yU?si=lmgelF34RgzZCAIw",
+];
+
 export default function Movie({ isMobile }) {
+  const [state, setState] = useState(1);
+  const [isVideoReady, setIsVideoReady] = useState(false);
+
+  let link = movieUrl[state - 1];
+
+  function increamentState() {
+    if (state < movieUrl.length) {
+      setState(state + 1);
+    }
+  }
+
+  function decreamentState() {
+    if (state > 1) {
+      setState(state - 1);
+    }
+  }
+
+  function updateState(index) {
+    setState(index);
+  }
+
   return (
     <SpacedSection zIndex={0} customPadding={"px-4 md:px-6"}>
       <div className="h-screen pt-20 md:pt-24 pb-8 relative">
@@ -15,14 +43,9 @@ export default function Movie({ isMobile }) {
         >
           {" "}
         </iframe> */}
-        <div
-          src="https://www.youtube.com/embed/JQbjS0_ZfJ0?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&disablekb=1"
-          className="h-full w-full rounded-b-2xl rounded-tl-2xl overflow-hidden relative"
-          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope;"
-          allowFullScreen
-        >
+        <div className="h-full w-full rounded-b-2xl rounded-tl-2xl overflow-hidden relative">
           <ReactPlayer
-            url="https://youtu.be/hzE3Qm0szIw?si=LMTGbPIc_CurSUkX"
+            url={link}
             playing
             muted
             controls={false}
@@ -30,21 +53,55 @@ export default function Movie({ isMobile }) {
             width="100%"
             height="100%"
             style={{
-              background:
-                "linear-gradient(3.75deg, rgba(4, 44, 113, 0.8) 14.25%, #02173A 87.99%)",
-              transform: isMobile ? "scale(5)" : "scale(2)",
+              transform: isMobile ? "scale(5)" : "scale(1.5)",
               objectFit: "cover",
+              display: isVideoReady ? "" : "none",
             }}
+            config={{
+              youtube: {
+                playerVars: {
+                  modestbranding: 1,
+                  showinfo: 0,
+                  disablekb: 1,
+                  rel: 0,
+                },
+              },
+            }}
+            onReady={() => setIsVideoReady(true)}
           >
             {" "}
           </ReactPlayer>
+
           <div
             className="absolute top-0 left-0 h-full w-full"
             style={{
               background:
-                "linear-gradient(3.75deg, rgba(4, 44, 113, 0.8) 14.25%, #02173A 87.99%)",
+                "linear-gradient(10.75deg, rgba(4, 44, 113, 0.8) 84.25%, #02173A 97.99%)",
             }}
           ></div>
+          <div className="absolute bottom-7 md:bottom-20 right-0 pr-4 md:pr-14 2xl:pr-40">
+            <div className="z-10 bg-black h-9 w-20 md:h-12 md:w-32 rounded-full flex items-center px-5 md:px-7 space-x-1">
+              {Array.from(
+                { length: movieUrl.length },
+                (_, index) => index + 1
+              ).map((num) => (
+                <>
+                  {state == num ? (
+                    <span
+                      key={num}
+                      className="h-1 md:h-1.5 w-4 md:w-8 bg-white rounded-full"
+                    ></span>
+                  ) : (
+                    <span
+                      key={num}
+                      onClick={() => updateState(num)}
+                      className="h-1 md:h-1.5 w-1 md:w-1.5 bg-gray-50 rounded-full"
+                    ></span>
+                  )}
+                </>
+              ))}
+            </div>
+          </div>
         </div>
         {/* <video
           src="https://www.youtube.com/watch?v=OOevVQwQ-LM"
@@ -53,14 +110,33 @@ export default function Movie({ isMobile }) {
           autoPlay
           loop
         ></video> */}
-        <div className="absolute bottom-32 w-10 flex flex-col items-center right-0 md:left-3 space-y-4">
+        <div className="absolute hidden bottom-16 md:bottom-32 w-10 md:flex md:flex-col items-center right-0 2xl:left-3 space-y-4">
           <img className="h-16" src="follow.png" />
           <img className="h-3" src="insta.png" />
           <img className="h-3" src="twt.png" />
           <img className="h-3" src="fb.png" />
         </div>
+        {state < movieUrl.length && (
+          <div
+            onClick={() => increamentState()}
+            className="absolute md:flex hidden right-14 bottom-1/2 "
+          >
+            <img src="arrowright.svg" className="arrow p-4 rounded-full" />
+          </div>
+        )}
+        {state > 1 && (
+          <div
+            onClick={() => decreamentState()}
+            className="absolute md:flex hidden left-14 bottom-1/2 "
+          >
+            <img
+              src="arrowright.svg"
+              className="arrow p-4 rotate-180 rounded-full"
+            />
+          </div>
+        )}
         <SpacedSection>
-          <HeaderDiv className="absolute bottom-24 border-box w-3/4  space-y-2 md:space-y-3 flex flex-col">
+          <HeaderDiv className="absolute bottom-7 md:bottom-24 border-box w-3/4  space-y-2 md:space-y-3 flex flex-col">
             <span className="text-xs md:text-xl font-extralight tracking-[0.25em]">
               DREAM BUILDER
             </span>

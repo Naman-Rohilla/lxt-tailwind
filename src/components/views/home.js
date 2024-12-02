@@ -139,7 +139,7 @@ const ProductView = ({ isMobile }) => {
                     key={i}
                     footerObject={footerObject}
                     backgroundVideo={pd}
-                    hoverImage="rollarskates.png"
+                    hoverImage="hoverskate.jpeg"
                   />
                 )
               )}
@@ -160,7 +160,7 @@ const ProductView = ({ isMobile }) => {
                     key={i}
                     footerObject={footerObject}
                     backgroundVideo={pd1}
-                    hoverImage="rollarskates.png"
+                    hoverImage="hoverskate.jpeg"
                   />
                 ))}
               </div>
@@ -649,8 +649,8 @@ const Review = () => {
             </span>
           </span>
         </div>
-        <div className="flex md:flex-row flex-col justify-between">
-          <div className="text-xs flex space-x-4 items-center">
+        <div className="flex md:flex-row flex-col">
+          <div className="text-xs flex w-full space-x-4 items-center">
             <span>Auguest 30, 2024</span>
             <div className="flex space-x-1">
               <Star rating={1} id={1}></Star>
@@ -660,7 +660,7 @@ const Review = () => {
               <Star rating={0.6} id={2}></Star>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full flex justify-center md:justify-end">
             <SliderControl
               currentIndex={currentIndex}
               setCurrentIndex={setCurrentIndex}

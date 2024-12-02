@@ -9,3 +9,12 @@
 .background-prime-color {
   background-color: #02173a;
 }
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.arrow:hover {
+  background-color: red;
+  transition: 0.4s ease-in-out;
+}
