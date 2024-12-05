@@ -11,6 +11,9 @@ module.exports = {
         "5xs": "0.5rem",
         "6xs": "0.6rem",
         "7xs": "0.7rem",
+        "10xl": "9rem",
+        "11xl": "10rem",
+        "12xl": "11rem",
       },
       scale: {
         170: "1.7",
@@ -21,6 +24,8 @@ module.exports = {
         "red-theme": "#ff0000",
         "card-color": "#022359",
         "card-color-light": "#032863",
+        "blue-light": "#0184d8",
+        "blue-medium": "#01599f",
       },
       height: {
         500: "500px",
