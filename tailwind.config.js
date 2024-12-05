@@ -14,6 +14,7 @@ module.exports = {
         "10xl": "9rem",
         "11xl": "10rem",
         "12xl": "11rem",
+        "22xl": "22rem",
       },
       scale: {
         170: "1.7",
