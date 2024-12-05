@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import LxtButton from "../buttons/lxtButton";
 // import "./navbar.scss";
 import menuItems from "../../jsons/menuItems";
@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 export default function Navbar() {
   const textButton = "BOOK A RINK";
+
+  const location = useLocation();
 
   return (
     <SpacedSection position={"fixed"} zIndex={200}>
@@ -18,7 +20,11 @@ export default function Navbar() {
           {menuItems.map((mt) => (
             <Link
               to={mt.redirect}
-              className="item hover:-translate-y-1 duration-300 ease-in-out hover:text-red-theme"
+              className={`item hover:-translate-y-1 hover:border-red-theme duration-300 ease-in-out hover:text-red-theme  ${
+                location.pathname == mt.redirect
+                  ? "text-blue-500 border-b-2 pb-2 border-blue-500"
+                  : ""
+              }`}
               exact
             >
               {mt.link}

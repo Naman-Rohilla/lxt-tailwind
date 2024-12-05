@@ -3,9 +3,6 @@ import HeaderDiv from "../animatedDiv/headerDiv";
 import ProfileCard from "../cards/profileCard";
 import SpacedSection from "../spacedSection/spacedSection";
 
-// text-12xl
-
-// text-6xl
 const HeaderView = () => {
   return (
     <>
@@ -98,7 +95,7 @@ export default function About() {
       >
         <StickyTextView></StickyTextView>
       </SpacedSection>
-      <SpacedSection customStyling="">
+      <SpacedSection backgroundColor="transparent">
         <CardView></CardView>
       </SpacedSection>
       <SpacedSection
