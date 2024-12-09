@@ -719,11 +719,14 @@ export default function Home() {
   return (
     <>
       <Movie isMobile={isMobile} />
-      <SpacedSection zIndex={0}>
+      <SpacedSection
+        zIndex={0}
+        customStyling="-translate-y-10 md:-translate-y-0"
+      >
         <StatisticCard cardData={statisticData} />
       </SpacedSection>
 
-      <SpacedSection>
+      <SpacedSection customStyling="-translate-y-10 md:-translate-y-0">
         <ProductView isMobile={isMobile}></ProductView>
         <ProfileCardView isMobile={isMobile}></ProfileCardView>
       </SpacedSection>
