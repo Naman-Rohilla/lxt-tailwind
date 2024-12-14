@@ -57,7 +57,7 @@ const LineAnimation = ({
             }}
             animate={{ y: isMobile ? 30 : 0 }}
             transition={{
-              delay: spanDelay,
+              delay: spanDelay - 2,
             }}
             className="absolute -top-28 flex flex-col"
           >
@@ -85,7 +85,7 @@ const LineAnimation = ({
             y: isMobile ? -12 : -24,
           }}
           transition={{
-            delay: spanDelay,
+            delay: spanDelay - 2,
           }}
           style={{
             color: "#3b5ff0",
@@ -127,7 +127,7 @@ const LineAnimation = ({
           transition={{
             delay: spanDelay - 2,
           }}
-          className={`${end || start ? "invisible" : ""} relative`}
+          className={`${start ? "invisible" : ""} relative`}
         >
           <motion.div
             initial={{ opacity: 0 }}
@@ -175,7 +175,7 @@ const LineAnimation = ({
             y: 20,
           }}
           transition={{
-            delay: spanDelay,
+            delay: spanDelay - 2,
           }}
           style={{
             color: "#3b5ff0",
@@ -303,21 +303,46 @@ export default function About() {
         <div
           style={{
             height: "665px",
-            background:
-              "linear-gradient(135deg, #22caed 0%, #22caed 25%, #3b5ff0 50%, #3b5ff0 75%,#22caed 100%)",
+            background: "linear-gradient(180deg, #22caed, #3b5ff0)",
           }}
-          className="flex flex-col justify-center items-center px-4 md:px-24 rounded-b-2xl rounded-tl-2xl"
+          className="flex flex-col justify-center items-center px-4 md:px-24 rounded-b-2xl rounded-tl-2xl relative overflow-hidden"
         >
-          <div className="text-lg md:text-3xl -translate-y-10 tracking-widest font-semibold text-center">
+          <div className="text-lg md:text-3xl -translate-y-10 tracking-widest font-semibold text-center z-10">
             GROUP OF COMPANIES SINCE 1989
           </div>
           <div
-            className="bg-white shadow-xl w-full -translate-y-3 flex justify-between"
+            style={{
+              background: "linear-gradient(180deg, #22caed, #3b5ff0)",
+            }}
+            className="absolute rounded-full h-44 w-44 left-0 bottom-0 translate-x-8 -translate-y-2 shadow-md blur-md"
+          ></div>
+
+          <div
+            style={{
+              background: "linear-gradient(180deg, #22caed, #3b5ff0)",
+            }}
+            className="absolute rounded-full h-80 w-80 right-0 top-0 -translate-x-2 -translate-y-12 shadow-md blur-lg"
+          ></div>
+          <div
+            className="bg-white shadow-xl w-full -translate-y-3 flex justify-between relative"
             style={{
               height: "450px",
               borderRadius: "30px 0px 30px 30px",
+              zIndex: 100,
             }}
           >
+            <div
+              style={{
+                background: "linear-gradient(180deg, #22caed, #3b5ff0)",
+              }}
+              className="absolute rounded-full h-12 w-12 -translate-x-6 md:h-20 md:w-20 left-0 top-0 md:-translate-x-10 md:translate-y-16 shadow-md"
+            ></div>
+            <div
+              style={{
+                background: "linear-gradient(180deg, #22caed, #3b5ff0)",
+              }}
+              className="absolute rounded-full h-16 w-16 translate-x-6 translate-y-6 md:h-36 md:w-36 right-0 bottom-0 md:translate-x-16 md:translate-y-10 shadow-md"
+            ></div>
             <img
               src="rahul.png"
               className="w-1/2 xl:block hidden scale-125 origin-bottom -translate-x-16 filter drop-shadow-2xl"
@@ -339,45 +364,46 @@ export default function About() {
                   spanDelay={3}
                   lineDelay={2}
                   duration={1}
-                  top={true}
                   isMobile={isMobile}
-                  text={"Hyper Wheels USA (Distributer) "}
-                  year={1990}
+                  text={
+                    "started dealing in skate products without any company information"
+                  }
+                  year={1989}
                 />
                 <LineAnimation
                   spanDelay={5}
                   lineDelay={4}
                   duration={1}
                   isMobile={isMobile}
-                  text={"RCTeamToppers (Partnership)"}
-                  year={1991}
+                  top={true}
+                  text={"Hyper Wheels USA (Distributer) "}
+                  year={1990}
                 />
                 <LineAnimation
                   spanDelay={7}
                   lineDelay={6}
                   duration={1}
-                  top={true}
                   isMobile={isMobile}
-                  text={"Team Topper Skating Academy (MD)"}
-                  year={1996}
+                  text={"RCTeamToppers (Partnership)"}
+                  year={1991}
                 />
                 <LineAnimation
                   spanDelay={9}
                   lineDelay={8}
                   duration={1}
                   isMobile={isMobile}
-                  text={"Roxa Skates Italy (Distributor)"}
-                  year={1997}
+                  top={true}
+                  text={"Team Topper Skating Academy (MD)"}
+                  year={1996}
                 />
                 <LineAnimation
                   spanDelay={11}
                   lineDelay={10}
                   duration={1}
                   end={true}
-                  text={"Team Topper Skating Academy (MD)"}
-                  isMobile={isMobile}
+                  text={"Roxa Skates Italy (Distributor)"}
                   year={1997}
-                  top={true}
+                  isMobile={isMobile}
                 />
               </div>
               <div
