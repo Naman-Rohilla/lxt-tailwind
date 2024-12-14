@@ -269,6 +269,7 @@ const StickyTextView = () => {
 
 export default function About() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -277,6 +278,11 @@ export default function About() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const reloadAnimation = () => {
+    setAnimationKey((prevKey) => prevKey + 1);
+  };
+
   return (
     <>
       <SpacedSection customStyling="pt-10 md:-pt-4 flex items-end justify-center translate-y-24 md:translate-y-40">
@@ -348,7 +354,10 @@ export default function About() {
               className="w-1/2 xl:block hidden scale-125 origin-bottom -translate-x-16 filter drop-shadow-2xl"
             />
             <div className="w-full xl:w-1/2 text-black flex flex-col items-center justify-center">
-              <div className="w-full overflow-hidden flex justify-start xl:-translate-x-20 -translate-y-10 px-4 md:px-4">
+              <div
+                key={animationKey}
+                className="w-full overflow-hidden flex justify-start xl:-translate-x-20 -translate-y-10 px-4 md:px-4"
+              >
                 <LineAnimation
                   spanDelay={1}
                   lineDelay={0}
@@ -407,7 +416,7 @@ export default function About() {
                 />
               </div>
               <div
-                onClick={() => window.location.reload()}
+                onClick={reloadAnimation}
                 style={{
                   border: "1px solid rgba(0, 0, 0, 0.1)",
                   borderRadius: "14px 0px 14px 14px",
