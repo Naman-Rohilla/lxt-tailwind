@@ -1,9 +1,9 @@
-import { delay, motion } from "framer-motion";
+import { delay, motion, useInView } from "framer-motion";
 import AchievementView from "../Achievement/achievemntView";
 import HeaderDiv from "../animatedDiv/headerDiv";
 import ProfileCard from "../cards/profileCard";
 import SpacedSection from "../spacedSection/spacedSection";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const LineAnimation = ({
   spanDelay,
@@ -15,6 +15,7 @@ const LineAnimation = ({
   isMobile,
   text,
   year,
+  isInView,
 }) => {
   return (
     <div
@@ -28,9 +29,13 @@ const LineAnimation = ({
           initial={{
             opacity: 0,
           }}
-          animate={{
-            opacity: 1,
-          }}
+          animate={
+            isInView
+              ? {
+                  opacity: 1,
+                }
+              : {}
+          }
           transition={{
             delay: spanDelay - 2,
           }}
@@ -55,7 +60,7 @@ const LineAnimation = ({
             initial={{
               y: 10,
             }}
-            animate={{ y: isMobile ? 30 : 0 }}
+            animate={isInView ? { y: isMobile ? 30 : 0 } : {}}
             transition={{
               delay: spanDelay - 2,
             }}
@@ -79,11 +84,15 @@ const LineAnimation = ({
             x: isMobile ? -8 : -10,
             y: isMobile ? -8 : -16,
           }}
-          animate={{
-            opacity: 1,
-            x: isMobile ? -8 : -10,
-            y: isMobile ? -12 : -24,
-          }}
+          animate={
+            isInView
+              ? {
+                  opacity: 1,
+                  x: isMobile ? -8 : -10,
+                  y: isMobile ? -12 : -24,
+                }
+              : {}
+          }
           transition={{
             delay: spanDelay - 2,
           }}
@@ -102,10 +111,14 @@ const LineAnimation = ({
           width: "10px",
           opacity: 0,
         }}
-        animate={{
-          width: "100%",
-          opacity: 1,
-        }}
+        animate={
+          isInView
+            ? {
+                width: "100%",
+                opacity: 1,
+              }
+            : {}
+        }
         transition={{
           duration: duration,
           delay: lineDelay,
@@ -121,9 +134,13 @@ const LineAnimation = ({
           initial={{
             opacity: 0,
           }}
-          animate={{
-            opacity: 1,
-          }}
+          animate={
+            isInView
+              ? {
+                  opacity: 1,
+                }
+              : {}
+          }
           transition={{
             delay: spanDelay - 2,
           }}
@@ -131,7 +148,7 @@ const LineAnimation = ({
         >
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={isInView ? { opacity: 1 } : {}}
             delay={{ delay: spanDelay + 0.5 }}
             style={{
               border: "2px solid #22caed",
@@ -147,7 +164,7 @@ const LineAnimation = ({
           </motion.div>
           <motion.div
             initial={{ y: -10 }}
-            animate={{ y: 0 }}
+            animate={isInView ? { y: 0 } : {}}
             delay={{ delay: spanDelay + 0.5 }}
             className="absolute top-20 flex flex-col"
           >
@@ -169,11 +186,15 @@ const LineAnimation = ({
             x: isMobile ? -8 : -10,
             y: 16,
           }}
-          animate={{
-            opacity: 1,
-            x: isMobile ? -8 : -10,
-            y: 20,
-          }}
+          animate={
+            isInView
+              ? {
+                  opacity: 1,
+                  x: isMobile ? -8 : -10,
+                  y: 20,
+                }
+              : {}
+          }
           transition={{
             delay: spanDelay - 2,
           }}
@@ -270,6 +291,8 @@ const StickyTextView = () => {
 export default function About() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [animationKey, setAnimationKey] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     const handleResize = () => {
@@ -356,6 +379,7 @@ export default function About() {
             <div className="w-full xl:w-1/2 text-black flex flex-col items-center justify-center">
               <div
                 key={animationKey}
+                ref={ref}
                 className="w-full overflow-hidden flex justify-start xl:-translate-x-20 -translate-y-10 px-4 md:px-4"
               >
                 <LineAnimation
@@ -368,6 +392,7 @@ export default function About() {
                     "started dealing in skate products without any company information"
                   }
                   year={1989}
+                  isInView={isInView}
                 />
                 <LineAnimation
                   spanDelay={3}
@@ -378,6 +403,7 @@ export default function About() {
                     "started dealing in skate products without any company information"
                   }
                   year={1989}
+                  isInView={isInView}
                 />
                 <LineAnimation
                   spanDelay={5}
@@ -387,6 +413,7 @@ export default function About() {
                   top={true}
                   text={"Hyper Wheels USA (Distributer) "}
                   year={1990}
+                  isInView={isInView}
                 />
                 <LineAnimation
                   spanDelay={7}
@@ -395,6 +422,7 @@ export default function About() {
                   isMobile={isMobile}
                   text={"RCTeamToppers (Partnership)"}
                   year={1991}
+                  isInView={isInView}
                 />
                 <LineAnimation
                   spanDelay={9}
@@ -404,6 +432,7 @@ export default function About() {
                   top={true}
                   text={"Team Topper Skating Academy (MD)"}
                   year={1996}
+                  isInView={isInView}
                 />
                 <LineAnimation
                   spanDelay={11}
@@ -413,6 +442,7 @@ export default function About() {
                   text={"Roxa Skates Italy (Distributor)"}
                   year={1997}
                   isMobile={isMobile}
+                  isInView={isInView}
                 />
               </div>
               <div
@@ -421,9 +451,10 @@ export default function About() {
                   border: "1px solid rgba(0, 0, 0, 0.1)",
                   borderRadius: "14px 0px 14px 14px",
                 }}
-                className="px-6 py-2 text-gray-400 text-md font-extralight hover:text-gray-800 cursor-pointer hover:scale-110 ease-in duration-200 hover:shadow-md xl:-translate-x-20"
+                className="px-5 py-2 flex items-center space-x-2 text-gray-400 text-md font-extralight hover:text-gray-800 cursor-pointer hover:scale-110 ease-in duration-200 hover:shadow-md xl:-translate-x-20"
               >
-                Reload
+                <img src="replay.png" className="h-5 w-5" />
+                <span>Reload</span>
               </div>
             </div>
           </div>
