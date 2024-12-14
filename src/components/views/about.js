@@ -17,7 +17,12 @@ const LineAnimation = ({
   year,
 }) => {
   return (
-    <div className="flex flex-col justify-center items-end h-80">
+    <div
+      style={{
+        width: start || end ? "9%" : "20%",
+      }}
+      className="flex flex-col origin-left justify-center items-start h-80"
+    >
       {top ? (
         <motion.div
           initial={{
@@ -27,15 +32,17 @@ const LineAnimation = ({
             opacity: 1,
           }}
           transition={{
-            delay: spanDelay,
+            delay: spanDelay - 2,
           }}
-          className={`${end ? "invisible" : ""} relative w-auto h-6 md:h-auto`}
+          className={`${
+            start ? "invisible" : ""
+          } relative w-auto h-6 md:h-auto`}
         >
           <div
             style={{
               border: "2px solid #22caed",
             }}
-            className="translate-y-4 md:translate-y-2.5 translate-x-3 h-4 w-4 md:h-5 md:w-5 flex justify-center items-center  rounded-full bg-transparent"
+            className="translate-y-4 md:translate-y-2.5  h-4 w-4 md:h-5 md:w-5 flex justify-center items-center  rounded-full bg-transparent"
           >
             <div
               style={{
@@ -52,15 +59,15 @@ const LineAnimation = ({
             transition={{
               delay: spanDelay,
             }}
-            className="absolute -top-28 translate-x-2 flex flex-col"
+            className="absolute -top-28 flex flex-col"
           >
-            <span className="w-20 md:-translate-x-4 -translate-x-5 font-light text-gray-800 text-center text-5xs md:text-xs">
+            <span className="w-20 -translate-x-8 font-light text-gray-800 text-center text-5xs md:text-xs">
               <span>{text}</span>
             </span>
             <span>
               <img
                 src="arrowUp.png"
-                className="origin-bottom translate-x-2 w-6 h-10"
+                className="origin-bottom w-6 h-10 -translate-x-0.5"
               />
             </span>
           </motion.div>
@@ -69,12 +76,12 @@ const LineAnimation = ({
         <motion.span
           initial={{
             opacity: 0,
-            x: isMobile ? 8 : "",
+            x: isMobile ? -8 : -10,
             y: isMobile ? -8 : -16,
           }}
           animate={{
             opacity: 1,
-            x: isMobile ? 8 : "",
+            x: isMobile ? -8 : -10,
             y: isMobile ? -12 : -24,
           }}
           transition={{
@@ -84,7 +91,7 @@ const LineAnimation = ({
             color: "#3b5ff0",
           }}
           className={`${
-            end ? "invisible" : ""
+            start ? "invisible" : ""
           } h-5 w-5 rounded-full -translate-y-5  font-bold text-xs md:text-base`}
         >
           {year}
@@ -96,14 +103,7 @@ const LineAnimation = ({
           opacity: 0,
         }}
         animate={{
-          width:
-            start || end
-              ? isMobile
-                ? "30px"
-                : "70px"
-              : isMobile
-              ? "60px"
-              : "120px",
+          width: "100%",
           opacity: 1,
         }}
         transition={{
@@ -125,9 +125,9 @@ const LineAnimation = ({
             opacity: 1,
           }}
           transition={{
-            delay: spanDelay,
+            delay: spanDelay - 2,
           }}
-          className={`${end ? "invisible" : ""} relative`}
+          className={`${end || start ? "invisible" : ""} relative`}
         >
           <motion.div
             initial={{ opacity: 0 }}
@@ -136,7 +136,7 @@ const LineAnimation = ({
             style={{
               border: "2px solid #22caed",
             }}
-            className="-translate-y-2 md:-translate-y-2.5 translate-x-3 h-4 w-4 md:h-5 md:w-5 flex justify-center items-center rounded-full bg-transparent"
+            className="-translate-y-2 md:-translate-y-2.5 h-4 w-4 md:h-5 md:w-5 flex justify-center items-center rounded-full bg-transparent"
           >
             <div
               style={{
@@ -149,15 +149,15 @@ const LineAnimation = ({
             initial={{ y: -10 }}
             animate={{ y: 0 }}
             delay={{ delay: spanDelay + 0.5 }}
-            className="absolute top-20 translate-x-2 flex flex-col"
+            className="absolute top-20 flex flex-col"
           >
             <span>
               <img
                 src="arrowUp.png"
-                className="origin-top translate-x-2 rotate-180 w-6 h-10"
+                className="origin-top rotate-180 w-6 h-10 -translate-x-1 md:translate-x-0"
               />
             </span>
-            <span className="w-20 md:w-32 md:-translate-x-10 -translate-x-5 -translate-y-8 font-light text-gray-800 text-center text-5xs md:text-xs">
+            <span className="w-20 md:w-32 -translate-x-8 md:-translate-x-12 -translate-y-8 font-light text-gray-800 text-center text-5xs md:text-xs">
               {text}
             </span>
           </motion.div>
@@ -166,12 +166,12 @@ const LineAnimation = ({
         <motion.span
           initial={{
             opacity: 0,
-            x: isMobile ? 8 : "",
+            x: isMobile ? -8 : -10,
             y: 16,
           }}
           animate={{
             opacity: 1,
-            x: isMobile ? 8 : "",
+            x: isMobile ? -8 : -10,
             y: 20,
           }}
           transition={{
@@ -180,9 +180,7 @@ const LineAnimation = ({
           style={{
             color: "#3b5ff0",
           }}
-          className={`${
-            end ? "invisible" : ""
-          } h-5 w-5 rounded-full translate-y-3 font-bold text-xs md:text-base`}
+          className={`h-5 w-5 rounded-full translate-y-3 font-bold text-xs md:text-base`}
         >
           {year}
         </motion.span>
@@ -325,7 +323,7 @@ export default function About() {
               className="w-1/2 xl:block hidden scale-125 origin-bottom -translate-x-16 filter drop-shadow-2xl"
             />
             <div className="w-full xl:w-1/2 text-black flex flex-col items-center justify-center">
-              <div className="w-full flex justify-start xl:-translate-x-20 -translate-y-10 px-4 md:px-0">
+              <div className="w-full overflow-hidden flex justify-start xl:-translate-x-20 -translate-y-10 px-4 md:px-4">
                 <LineAnimation
                   spanDelay={1}
                   lineDelay={0}
@@ -376,7 +374,10 @@ export default function About() {
                   lineDelay={10}
                   duration={1}
                   end={true}
+                  text={"Team Topper Skating Academy (MD)"}
                   isMobile={isMobile}
+                  year={1997}
+                  top={true}
                 />
               </div>
               <div
