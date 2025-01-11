@@ -85,7 +85,7 @@ const StadiumView = ({ isMobile, inHome = false }) => {
               </HeaderDiv>
             ) : (
               <>
-                <HeaderDiv className="pt-10 md:pt-24 text-2xl font-extralight md:text-6xl space-x-5 flex">
+                <HeaderDiv className="pt-10 md:pt-24 text-2xl font-extralight md:text-6xl space-x-1 md:space-x-5 flex">
                   <span className="text-white">Infrastructure</span>
                   <span
                     className="font-extrabold"
@@ -96,7 +96,7 @@ const StadiumView = ({ isMobile, inHome = false }) => {
                     Advantages
                   </span>
                 </HeaderDiv>
-                <HeaderDiv className="pt-10 md:pt-2 text-2xl font-extralight md:text-6xl space-x-5 flex">
+                <HeaderDiv className="pt-1 md:pt-2 text-2xl font-extralight md:text-6xl space-x-1 md:space-x-5 flex">
                   <span className="text-white">and other</span>
                   <span
                     className="font-extrabold"

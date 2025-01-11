@@ -5,7 +5,7 @@ const menuItems = [
   },
   {
     link: "RR LXT Rink",
-    redirect: "/rr",
+    redirect: "/rr-lxt-rink",
   },
   {
     link: "Anouncement",
