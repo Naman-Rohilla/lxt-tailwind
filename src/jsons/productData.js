@@ -116,3 +116,100 @@ export const announcementData = [
     ],
   },
 ];
+
+export const rinkData = [
+  {
+    heading: "Professional Skating & Cycling Tracks",
+    highlightList: [
+      "200-Meter Coated Banked Track",
+      "250/275-Meter Road Circuit",
+    ],
+    list: [
+      "Ideal for professional skating competitions and practice.",
+      "Multi-purpose road circuit designed for both skating and cycling enthusiasts, ensuring smooth rides and advanced training experiences.",
+    ],
+  },
+  {
+    heading: "High-Quality Lighting & Power Back-Up",
+    highlightList: ["100-Watt LED Lights", "Generator Back-Up"],
+    list: [
+      "Ensures clear vision for night-time activities.",
+      "Guarantees uninterrupted activities even during power outages.",
+    ],
+  },
+  {
+    heading: "Ample Spectator & Participant Facilities",
+    highlightList: [
+      "500-People Audience Area",
+      "100-People Balcony with Lush Green Grass",
+    ],
+    list: [
+      "Spacious seating for spectators to enjoy events.",
+      "Elevated view for a premium spectator experience amidst greenery.",
+    ],
+  },
+  {
+    heading: "Extensive Parking Facilities",
+    highlightList: [
+      "100+ Car Parking Area Around the Track",
+      "Cycling Parking Stand for 50 Cycles",
+    ],
+    list: [
+      "Convenient parking for event attendees and participants.",
+      "Dedicated parking space for cycling enthusiasts.",
+    ],
+  },
+  {
+    heading: "High-Altitude Training Benefits",
+    highlightList: ["560 Meters Above Sea Level"],
+    list: [
+      "Provides natural high-altitude advantages, boosting endurance and performance.",
+    ],
+  },
+  {
+    heading: "Pollution-Free Environment",
+    highlightList: ["Pollution Free"],
+    list: [
+      "Surrounded by clean, green surroundings, ensuring a healthy and refreshing training atmosphere.",
+    ],
+  },
+  {
+    heading: "Comprehensive Amenities",
+    highlightList: [
+      "Clean, Separate Toilets for Males & Females",
+      "Changing Rooms & Store Rooms",
+      "24-Hour Water Supply",
+    ],
+    list: [
+      "Maintains hygiene and convenience for all visitors.",
+      "Essential facilities for skaters and cyclists to store their gear and prepare for activities.",
+      "Ensures hydration and convenience at all times.",
+    ],
+  },
+  {
+    heading: "Administrative & Support Services",
+    highlightList: [
+      "Administrative Office with Electricity Back-Up",
+      "Canteen Arrangements",
+    ],
+    list: [
+      "Smooth operations and support for managing events.",
+      "Food and beverage facilities for participants and visitors.",
+    ],
+  },
+  {
+    heading: "Cross-Training & Speed Training",
+    highlightList: ["Skate Gym for Cross-Training", "Speed Training Devices"],
+    list: [
+      "Enhances overall athletic performance through specialised workouts.",
+      "Advanced tools for skaters to improve their speed and agility.",
+    ],
+  },
+  {
+    heading: "Encouraging Excellence",
+    highlightList: ["Training with National Medalists"],
+    list: [
+      "Opportunities to learn and compete with top skaters from India and abroad, fostering confidence and skill development.",
+    ],
+  },
+];

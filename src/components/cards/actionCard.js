@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function ActionCard({
   heading,
+  highlightList,
   list,
   defaultExpanded = "disabled",
   isActive,
@@ -60,19 +61,45 @@ export default function ActionCard({
         </div>
         {expanded ? (
           <>
-            {list?.slice(1).map((lt) => (
-              <motion.span
-                key={lt} // Add key here for list rendering
-                className="text-6xs md:text-base pt-4 md:leading-6 leading-4"
-                style={{ color: "#84BED6" }}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5 }}
-              >
-                {lt}
-              </motion.span>
-            ))}
+            {highlightList != undefined ? (
+              <>
+                {list?.slice().map((lt, index) => (
+                  <motion.span
+                    key={lt} // Add key here for list rendering
+                    className="text-6xs md:text-base pt-4 md:leading-6 leading-4 flex"
+                    style={{ color: "#84BED6" }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <div className="h-2 w-2 rounded-full bg-white mt-2"></div>{" "}
+                    <span className="pl-3">
+                      <span className="font-bold text-white">
+                        {highlightList[index]}
+                      </span>
+                      : {lt}
+                    </span>
+                  </motion.span>
+                ))}
+              </>
+            ) : (
+              <>
+                {list?.slice(1).map((lt) => (
+                  <motion.span
+                    key={lt} // Add key here for list rendering
+                    className="text-6xs md:text-base pt-4 md:leading-6 leading-4"
+                    style={{ color: "#84BED6" }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {lt}
+                  </motion.span>
+                ))}
+              </>
+            )}
           </>
         ) : (
           <>

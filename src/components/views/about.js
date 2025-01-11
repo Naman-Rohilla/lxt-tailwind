@@ -4,6 +4,7 @@ import HeaderDiv from "../animatedDiv/headerDiv";
 import ProfileCard from "../cards/profileCard";
 import SpacedSection from "../spacedSection/spacedSection";
 import { useEffect, useRef, useState } from "react";
+import HeaderView from "../animatedDiv/headerView";
 
 const LineAnimation = ({
   spanDelay,
@@ -210,21 +211,6 @@ const LineAnimation = ({
   );
 };
 
-const HeaderView = () => {
-  return (
-    <>
-      <HeaderDiv className="flex flex-col">
-        <span className="text-6xl md:text-12xl leading-none font-extrabold bg-gradient-to-b  from-40% from-blue-light   to-black bg-clip-text text-transparent">
-          ABOUT US
-        </span>
-        <span className="text-xl -translate-y-4 md:-translate-y-14 leading-none md:text-6xl flex justify-center font-extrabold">
-          Let me to introduce myself
-        </span>
-      </HeaderDiv>
-    </>
-  );
-};
-
 const CardView = () => {
   return (
     <HeaderDiv
@@ -309,7 +295,10 @@ export default function About() {
   return (
     <>
       <SpacedSection customStyling="pt-10 md:-pt-4 flex items-end justify-center translate-y-24 md:translate-y-40">
-        <HeaderView></HeaderView>
+        <HeaderView
+          heading={"ABOUT US"}
+          subheading={"Let me to introduce myself"}
+        ></HeaderView>
       </SpacedSection>
       <SpacedSection
         position="sticky"

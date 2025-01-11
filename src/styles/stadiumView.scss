@@ -29,41 +29,6 @@
       }
     }
 
-    .iphone-view {
-      z-index: 2;
-
-      .iphone {
-        position: relative;
-        float: right;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-
-        img {
-          height: 700px;
-          width: 350px;
-          position: absolute;
-          z-index: 1;
-          top: $primary-margin;
-        }
-
-        video {
-          height: 700px;
-          width: 350px;
-          position: absolute;
-          top: $primary-margin;
-          z-index: 2;
-          border-radius: 65px;
-          padding: 25px;
-        }
-
-        .iphone-button {
-          padding-top: $primary-margin + 700;
-          padding-right: 60px;
-        }
-      }
-    }
-
     .stadium-slider-view {
       z-index: 3;
 

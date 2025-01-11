@@ -14,7 +14,7 @@ import {
   stadiumData,
 } from "../../jsons/productData";
 import ActionCard from "../cards/actionCard";
-import "../../styles/stadiumView.scss";
+
 import ProfileCard from "../cards/profileCard";
 import "../../styles/announcementView.scss";
 import FullRoundedButton from "../buttons/fullRoundedButton";
@@ -23,6 +23,7 @@ import SliderControl from "../cards/sliderControls";
 import { AnimatePresence, motion } from "framer-motion";
 import HeaderDiv from "../animatedDiv/headerDiv";
 import AchievementView from "../Achievement/achievemntView";
+import StadiumView from "./stadiumView";
 
 const footerObject = {
   heading: "Beginner",
@@ -188,167 +189,6 @@ const ProfileCardView = ({ isMobile }) => {
     >
       <ProfileCard isMobile={isMobile}></ProfileCard>
     </div>
-  );
-};
-
-const IphoneView = () => {
-  return (
-    <div className="iphone-view pr-10 md:pr-10 lg:pr-40 2xl:pr-80 h-screen w-1/2 sticky top-0 items-start hidden md:block">
-      <div className="iphone">
-        <img src="iphone.png" alt="iPhone" />
-        <video
-          src="iphone.mp4"
-          autoPlay
-          loop
-          muted
-          style={{ objectFit: "cover" }}
-        />
-        <div className="iphone-button">
-          <LxtButton text={"BOOK A TICKET"} color="red" />
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const WatchShopView = ({ isMobile }) => {
-  return (
-    <SpacedSection
-      position="sticky"
-      customStyling="watch-shop-view sticky top-0 w-full md:w-screen flex py-10 md:py-24"
-    >
-      {isMobile ? (
-        <>
-          <div className="flex flex-col w-full items-center space-y-5">
-            <span className="text-5xl text-red-500">Shop Live</span>
-            <img width={"60%"} src="watchshop/watch5.png" />
-            <video className="mobile-video object-cover" autoPlay loop muted>
-              <source src="watchshop/watch6.mp4"></source>
-            </video>
-            <LxtButton
-              text={"Watch & Shop"}
-              color={"red"}
-              customStyling="text-lg py-3 px-6"
-            />
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="img-left relative">
-            <video className="h-full object-cover" autoPlay loop muted>
-              <source src="watchshop/watch6.mp4"></source>
-            </video>
-            <img src="watchshop/live.png" />
-          </div>
-          <div className="img-center">
-            <img width={"100%"} height={220} src="watchshop/watch2.png" />
-            <span className="text-shop">Shop Live</span>
-            <img width={"60%"} src="watchshop/watch5.png" />
-            <span
-              style={{
-                fontSize: "1rem",
-              }}
-            >
-              <LxtButton text={"Watch & Shop"} color={"red"} />
-            </span>
-            <img width={"100%"} height={150} src="watchshop/watch1.png" />
-          </div>
-          <div className="img-right">
-            <img className="h-full" src="watchshop/watch4.png" />
-            <img />
-          </div>
-        </>
-      )}
-    </SpacedSection>
-  );
-};
-
-const StadiumView = ({ isMobile }) => {
-  const [inViewIndex, setInViewIndex] = useState(null);
-  const cardRefs = useRef([]);
-
-  useEffect(() => {
-    if (!stadiumData || stadiumData.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = entry.target.getAttribute("data-index");
-          if (entry.isIntersecting) {
-            console.log("Setting inViewIndex to:", index);
-            setInViewIndex(Number(index));
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    cardRefs.current.forEach((card) => {
-      console.log("Observing card:", card);
-      card && observer.observe(card);
-    });
-
-    return () => {
-      cardRefs.current.forEach((card) => card && observer.unobserve(card));
-    };
-  }, [stadiumData]);
-  return (
-    <>
-      <HeaderDiv className="stadium-view min-h-screen h-auto w-full relative flex justify-between">
-        <div className="stadium-background h-screen sticky top-0">
-          <div className="stadium-background-color">
-            <img
-              style={{
-                height: "100vh",
-                width: "100vw",
-              }}
-              src="stadium.png"
-            />
-            <div className="stadium-background-color"></div>
-          </div>
-        </div>
-        <div className="stadium-slider-view min-h-screen h-auto w-full relative md:w-1/2">
-          <div className="stadium-slider-container px-4 xl:px-40">
-            <HeaderDiv className="pt-10 md:pt-24 text-2xl font-extralight md:text-6xl">
-              RR <span className="font-extrabold">LXT</span>{" "}
-              <span
-                className="font-extrabold"
-                style={{
-                  color: "#0C6AB0",
-                }}
-              >
-                Rink
-              </span>
-            </HeaderDiv>
-            <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll slider-hidden-scrollbar">
-              {stadiumData?.map((sd, index) => (
-                <div
-                  data-index={index}
-                  key={index}
-                  ref={(el) => (cardRefs.current[index] = el)}
-                  className="w-full shrink-0"
-                >
-                  <ActionCard
-                    heading={sd.heading}
-                    list={sd.list}
-                    isActive={index === inViewIndex}
-                  />
-                </div>
-              ))}
-            </div>
-            <span className="stadium-button">
-              <LxtButton
-                text={"READ MORE"}
-                color="transparent"
-                borderColor="white"
-              />
-            </span>
-          </div>
-          <WatchShopView isMobile={isMobile} />
-        </div>
-        <IphoneView />
-      </HeaderDiv>
-    </>
   );
 };
 
@@ -732,7 +572,7 @@ export default function Home() {
       </SpacedSection>
 
       <div className="about-card-view top-0 min-h-screen h-top w-full flex flex-col items-end border-box">
-        <StadiumView isMobile={isMobile} />
+        <StadiumView isMobile={isMobile} inHome={true} />
       </div>
       <SpacedSection>
         <AnouncementView></AnouncementView>
