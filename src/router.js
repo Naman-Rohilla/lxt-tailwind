@@ -3,6 +3,7 @@ import Root from "./root";
 import Home from "./components/views/home";
 import About from "./components/views/about";
 import StadiumView from "./components/views/stadiumView";
+import AnouncementView from "./components/views/anouncementView";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/anouncement",
-        element: <About />,
+        path: "/announcement",
+        element: <AnouncementView />,
       },
       {
         path: "/rr-lxt-rink",

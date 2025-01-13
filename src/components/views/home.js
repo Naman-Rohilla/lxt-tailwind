@@ -7,23 +7,19 @@ import LxtButton from "../buttons/lxtButton";
 import ProductCard from "../cards/productCard";
 import "../../styles/productView.scss";
 import {
-  announcementData,
   productData1,
   productData2,
   productData3,
-  stadiumData,
 } from "../../jsons/productData";
-import ActionCard from "../cards/actionCard";
 
 import ProfileCard from "../cards/profileCard";
-import "../../styles/announcementView.scss";
-import FullRoundedButton from "../buttons/fullRoundedButton";
 import NewsCard from "../cards/newsCard";
 import SliderControl from "../cards/sliderControls";
-import { AnimatePresence, motion } from "framer-motion";
 import HeaderDiv from "../animatedDiv/headerDiv";
 import AchievementView from "../Achievement/achievemntView";
 import StadiumView from "./stadiumView";
+import AnouncementView from "./anouncementView";
+import FreedomView from "./freedomView";
 
 const footerObject = {
   heading: "Beginner",
@@ -189,76 +185,6 @@ const ProfileCardView = ({ isMobile }) => {
     >
       <ProfileCard isMobile={isMobile}></ProfileCard>
     </div>
-  );
-};
-
-const AnouncementView = () => {
-  return (
-    <HeaderDiv className="announcement-view relative text-white flex justify-between h-auto">
-      <div className="announcement-heading flex flex-col">
-        <HeaderDiv className="text-3xl md:text-5xl font-extrabold">
-          Announce
-          <span
-            style={{
-              color: "#0C6AB0",
-            }}
-          >
-            ment
-          </span>
-        </HeaderDiv>
-        <HeaderDiv className="text-lg pt-2 md:text-2xl font-extralight">
-          Get Ready to Roll—Exciting Skating Event Ahead
-        </HeaderDiv>
-        <div className="announcement-card-container space-y-1">
-          {announcementData?.map((sd, index) => (
-            <ActionCard
-              key={index}
-              heading={sd.heading}
-              list={sd.list}
-              defaultExpanded={false}
-            ></ActionCard>
-          ))}
-        </div>
-        <span className="pt-2">
-          <LxtButton
-            text={"KNOW MORE"}
-            color={"transparent"}
-            borderColor="white"
-          />
-        </span>
-      </div>
-      <div className="hidden md:flex"></div>
-      <div className="flex absolute top-0 w-1/2 right-0 items-center pl-4 pt-14 hidden md:flex">
-        <img width={"100%"} src="race.png" />
-      </div>
-    </HeaderDiv>
-  );
-};
-
-const FreedomView = () => {
-  return (
-    <HeaderDiv className="py-10 md:py-40">
-      <div className="bg-card-color hover:bg-blue-900 hover:duration-300 rounded-2xl h-auto md:h-96 w-auto p-4 py-6 md:p-10 flex flex-col md:flex-row justify-between">
-        <div className="flex flex-col justify-between w-full items-center md:items-start md:w-2/5 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-          <div className="flex flex-col">
-            <strong>Skate to Freedom,</strong>
-            <strong>Live with Passion</strong>
-          </div>
-          <span className="py-5 text-xl text-center md:text-start lg:text-3xl xl:text-4xl font-extralight">
-            Push your limits with the support of a world-class coach and academy
-          </span>
-          <span className="pb-6 md:pb-0">
-            <LxtButton text={"START TODAY"} color={"red"} />
-          </span>
-        </div>
-        <div className="w-full h-80  flex justify-center md:w-1/2 xl:h-full object-cover overflow-hidden rounded-2xl">
-          <img
-            src="feedomskating.png"
-            className="object-cover md:w-full px-1 py-2  md:-translate-y-10  md:py-0 scale-125 rounded-2xl"
-          />
-        </div>
-      </div>
-    </HeaderDiv>
   );
 };
 
@@ -574,12 +500,8 @@ export default function Home() {
       <div className="about-card-view top-0 min-h-screen h-top w-full flex flex-col items-end border-box">
         <StadiumView isMobile={isMobile} inHome={true} />
       </div>
-      <SpacedSection>
-        <AnouncementView></AnouncementView>
-      </SpacedSection>
-      <SpacedSection>
-        <FreedomView></FreedomView>
-      </SpacedSection>
+
+      <AnouncementView inHome={true}></AnouncementView>
 
       <SpacedSection>
         <AchievementView></AchievementView>

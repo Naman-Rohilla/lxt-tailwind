@@ -8,8 +8,8 @@ const menuItems = [
     redirect: "/rr-lxt-rink",
   },
   {
-    link: "Anouncement",
-    redirect: "/rr",
+    link: "Announcement",
+    redirect: "/announcement",
   },
   {
     link: "Achievement",
