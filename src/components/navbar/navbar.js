@@ -13,6 +13,7 @@ export default function Navbar() {
 
   function homeNavigation() {
     navigate("/");
+    window?.scrollTo(0, 0);
   }
 
   return (
@@ -35,6 +36,9 @@ export default function Navbar() {
                   : ""
               }`}
               exact
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
               {mt.link}
             </Link>

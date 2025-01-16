@@ -8,11 +8,23 @@ import IphoneView from "./iphoneView";
 import "../../styles/stadiumView.scss";
 import HeaderView from "../animatedDiv/headerView.js";
 import SpacedSection from "../spacedSection/spacedSection.js";
+import ReactPlayer from "react-player";
 
-const StadiumView = ({ isMobile, inHome = false }) => {
+const StadiumView = ({ inHome = false }) => {
   const [inViewIndex, setInViewIndex] = useState(null);
   const cardRefs = useRef([]);
   const [showContent, setShowContent] = useState(inHome);
+  const [isVideoReady, setIsVideoReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    console.log(isMobile, "isMobile");
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!stadiumData || stadiumData.length === 0) return;
@@ -51,7 +63,37 @@ const StadiumView = ({ isMobile, inHome = false }) => {
               subheading={"Rahul Rane Rink - Infrastructure"}
             />
           </div>
-          <div className="h-[600px] w-full bg-blue-500"></div>
+          <div className="h-[400px] md:h-[600px] w-full overflow-hidden relative rounded-b-2xl rounded-tl-2xl">
+            <div className="absolute top-0 left-0 bg-card-color h-full w-full opacity-60 z-40"></div>
+            <ReactPlayer
+              url={"https://www.youtube.com/watch?v=hzE3Qm0szIw"}
+              playing
+              muted
+              controls={false}
+              loop={true}
+              width="100%"
+              height="100%"
+              zIndex="1"
+              style={{
+                transform: isMobile ? "scale(5)" : "scale(1.5)",
+                objectFit: "cover",
+                display: isVideoReady ? "" : "none",
+              }}
+              config={{
+                youtube: {
+                  playerVars: {
+                    modestbranding: 1,
+                    showinfo: 0,
+                    disablekb: 1,
+                    rel: 0,
+                  },
+                },
+              }}
+              onPlay={() => setIsVideoReady(true)}
+            >
+              {" "}
+            </ReactPlayer>
+          </div>
         </SpacedSection>
       )}
       <HeaderDiv className="stadium-view h-auto w-full relative flex justify-between">
@@ -147,13 +189,15 @@ const StadiumView = ({ isMobile, inHome = false }) => {
                 </>
               )}
             </div>
-            <span className="stadium-button">
-              <LxtButton
-                text={"READ MORE"}
-                color="transparent"
-                borderColor="white"
-              />
-            </span>
+            {inHome && (
+              <span className="stadium-button">
+                <LxtButton
+                  text={"READ MORE"}
+                  color="transparent"
+                  borderColor="white"
+                />
+              </span>
+            )}
           </div>
           {showContent && <WatchShopView isMobile={isMobile} />}
         </div>

@@ -492,7 +492,7 @@ export default function Home() {
       </SpacedSection>
 
       <div className="about-card-view top-0 min-h-screen h-top w-full flex flex-col items-end border-box">
-        <StadiumView isMobile={isMobile} inHome={true} />
+        <StadiumView inHome={true} />
       </div>
 
       <AnouncementView inHome={true} isMobile={isMobile}></AnouncementView>
