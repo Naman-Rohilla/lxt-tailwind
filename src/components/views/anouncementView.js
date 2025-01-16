@@ -8,12 +8,23 @@ import {
 } from "../../jsons/productData";
 import SpacedSection from "../spacedSection/spacedSection";
 import HeaderView from "../animatedDiv/headerView";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FreedomView from "./freedomView";
+import { AnimatePresence, motion } from "framer-motion";
 
 const AnouncementView = ({ inHome = false }) => {
   const [selectedType, setSelectedType] = useState("All");
   const [openNav, setOpenNav] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    console.log(isMobile, "isMobile");
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <SpacedSection customStyling={`${inHome ? "" : "pt-24"}`}>
@@ -111,9 +122,18 @@ const AnouncementView = ({ inHome = false }) => {
                     {announcementTypeData.map((atd, index) => (
                       <>
                         {atd.name == selectedType ? (
-                          <span className="bg-blue-800 rounded-2xl pl-2">
-                            {atd.name}
-                          </span>
+                          <AnimatePresence>
+                            <motion.span
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              transition={{
+                                duration: 0.5,
+                              }}
+                              className="bg-blue-800 rounded-b-lg rounded-tl-lg pl-4 py-2 focus:duration-300 ease-in-out"
+                            >
+                              {atd.name}
+                            </motion.span>
+                          </AnimatePresence>
                         ) : (
                           <span
                             onClick={() => setSelectedType(atd.name)}
@@ -180,7 +200,9 @@ const AnouncementView = ({ inHome = false }) => {
                 }
               })
               .filter((ad1, index) => {
-                if (index < 5) {
+                if (isMobile) {
+                  return ad1;
+                } else if (index < 5) {
                   return ad1;
                 }
               })
@@ -193,13 +215,15 @@ const AnouncementView = ({ inHome = false }) => {
                 ></ActionCard>
               ))}
           </div>
-          <span className="pt-2">
-            <LxtButton
-              text={"KNOW MORE"}
-              color={"transparent"}
-              borderColor="white"
-            />
-          </span>
+          {inHome && (
+            <span className="pt-2">
+              <LxtButton
+                text={"KNOW MORE"}
+                color={"transparent"}
+                borderColor="white"
+              />
+            </span>
+          )}
         </div>
         <div className="hidden md:flex flex-col pt-10">
           {!inHome && (

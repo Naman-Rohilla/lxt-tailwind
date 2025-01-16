@@ -468,12 +468,14 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    console.log(isMobile, "isMobile");
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <>
       <Movie isMobile={isMobile} />
@@ -493,7 +495,7 @@ export default function Home() {
         <StadiumView isMobile={isMobile} inHome={true} />
       </div>
 
-      <AnouncementView inHome={true}></AnouncementView>
+      <AnouncementView inHome={true} isMobile={isMobile}></AnouncementView>
 
       <SpacedSection>
         <AchievementView></AchievementView>

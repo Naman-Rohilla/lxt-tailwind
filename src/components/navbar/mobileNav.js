@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function MobileNavbar() {
   const navigate = useNavigate();
+
+  const [openMenu, setOpenMenu] = useState(false);
 
   const location = useLocation();
 
@@ -47,9 +50,37 @@ export default function MobileNavbar() {
         <img src="redo.png" className="h-7 w-8" />
         <span>RR LXT LINK</span>
       </div>
-      <div className="flex text-7xs space-y-1 flex-col items-center">
+      <div
+        onClick={() => setOpenMenu(!openMenu)}
+        className="flex text-7xs space-y-1 flex-col items-center relative"
+      >
         <img src="more.png" className="h-6 w-7" />
-        <span>MORE</span>
+        <span className={`${openMenu ? "text-red-500" : "text-white"}`}>
+          MORE
+        </span>
+        {openMenu && (
+          <div className="absolute bottom-[50px] rounded-b-xl rounded-tl-xl right-0 bg-card-color h-40 w-40 flex flex-col pt-2">
+            <span
+              onClick={() => handleNavigation("/announcement")}
+              className={`p-2 px-4 ${
+                location.pathname == "/announcement"
+                  ? "text-red-500 "
+                  : "text-white"
+              }`}
+            >
+              Announcement
+            </span>
+            <span onClick={() => handleNavigation("/rr")} className="p-2 px-4">
+              Achievement
+            </span>
+            <span onClick={() => handleNavigation("/rr")} className="p-2 px-4">
+              Media
+            </span>
+            <span onClick={() => handleNavigation("/rr")} className="p-2 px-4">
+              Contact Us
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
