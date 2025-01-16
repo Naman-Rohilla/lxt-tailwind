@@ -26,6 +26,16 @@ const AnouncementView = ({ inHome = false }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const announcementStats = announcementTypeData.map((atd) => {
+    const filteredAnnouncements = announcementData.filter((ad) =>
+      ad.type.includes(atd.name)
+    );
+    return {
+      name: atd.name,
+      count: filteredAnnouncements.length,
+    };
+  });
+
   return (
     <SpacedSection customStyling={`${inHome ? "" : "pt-24"}`}>
       {inHome ? (
@@ -119,7 +129,7 @@ const AnouncementView = ({ inHome = false }) => {
                     </svg>
                   </div>
                   <div className="h-auto bg-white w-80 absolute right-0 top-0 mt-10 z-10 rounded-b-2xl rounded-tl-2xl flex flex-col text-sm font-light px-6 py-4 space-y-2">
-                    {announcementTypeData.map((atd, index) => (
+                    {announcementStats.map((atd, index) => (
                       <>
                         {atd.name == selectedType ? (
                           <AnimatePresence>
@@ -164,18 +174,24 @@ const AnouncementView = ({ inHome = false }) => {
                 zIndex: 999,
               }}
             >
-              {announcementTypeData.map((atd, index) => (
+              {announcementStats.map((atd, index) => (
                 <>
                   {atd.name == selectedType ? (
-                    <span className="bg-blue-800 rounded-full px-6 py-2">
+                    <span className="bg-blue-800 rounded-full px-4 py-2">
                       {atd.name}
+                      {atd.name == "All"
+                        ? " (" + announcementData.length + ")"
+                        : " (" + atd.count + ")"}
                     </span>
                   ) : (
                     <span
                       onClick={() => setSelectedType(atd.name)}
-                      className="cursor-default hover:bg-blue-800 hover:text-white hover:duration-300 ease-in-out border text-blue-800 border-blue-800 rounded-full px-6 py-2"
+                      className="cursor-default hover:bg-blue-800 hover:text-white hover:duration-300 ease-in-out border text-blue-800 border-blue-800 rounded-full px-4 py-2"
                     >
                       {atd.name}
+                      {atd.name == "All"
+                        ? " (" + announcementData.length + ")"
+                        : " (" + atd.count + ")"}
                     </span>
                   )}
                 </>
