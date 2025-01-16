@@ -351,14 +351,6 @@ const Review = () => {
               <Star rating={0.6} id={2}></Star>
             </div>
           </div>
-          <div className="w-full flex justify-center md:justify-end">
-            <SliderControl
-              currentIndex={currentIndex}
-              setCurrentIndex={setCurrentIndex}
-              size={5}
-              setAnimationKey={setAnimationKey}
-            ></SliderControl>
-          </div>
         </div>
         <div></div>
       </div>
