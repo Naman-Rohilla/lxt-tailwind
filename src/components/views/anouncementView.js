@@ -221,6 +221,7 @@ const AnouncementView = ({ inHome = false }) => {
                 text={"KNOW MORE"}
                 color={"transparent"}
                 borderColor="white"
+                navigationLink="/announcement"
               />
             </span>
           )}

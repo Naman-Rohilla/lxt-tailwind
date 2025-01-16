@@ -195,6 +195,7 @@ const StadiumView = ({ inHome = false }) => {
                   text={"READ MORE"}
                   color="transparent"
                   borderColor="white"
+                  navigationLink="/rr-lxt-rink"
                 />
               </span>
             )}

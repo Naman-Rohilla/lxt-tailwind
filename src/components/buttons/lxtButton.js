@@ -1,12 +1,27 @@
+import { useNavigate } from "react-router-dom";
+
 export default function LxtButton({
   text,
   color,
   borderColor = "none",
   customStyling = "",
   disableResponsive = false,
+  navigationLink = "none",
 }) {
+  const navigate = useNavigate();
+
+  function handleNavigation() {
+    console.log("entered");
+    if (navigationLink != "none") {
+      console.log(navigationLink, "navigationLink");
+      navigate(navigationLink);
+      window?.scrollTo(0, 0);
+    }
+  }
+
   return (
     <button
+      onClick={() => handleNavigation()}
       className={`lxt-button border-box ${customStyling} ${
         disableResponsive
           ? "py-3.5 px-12 text-lg "
