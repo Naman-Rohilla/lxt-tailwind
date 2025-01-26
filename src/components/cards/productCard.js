@@ -1,17 +1,19 @@
 import "./productCard.scss";
 
 export default function ProductCard({
-  cardHeight = 350,
-  cardWidth = 250,
   footerEnable = true,
   footerObject,
   backgroundVideo,
   hoverImage,
   checkoutButtonEnable = true,
+  key,
 }) {
   return (
     <>
-      <div className="product-card rounded-b-xl w-60 md:w-40 xl:w-60 relative rounded-tl-xl object-contain h-80 xl:h-80  mt-5">
+      <div
+        key={key}
+        className="product-card rounded-b-xl w-60 md:w-40 xl:w-60 relative rounded-tl-xl object-contain h-80 xl:h-80  mt-5"
+      >
         {backgroundVideo && (
           <img
             className="background-video rounded-b-xl rounded-tl-xl absolute top-0 left-0 w-60 h-full"

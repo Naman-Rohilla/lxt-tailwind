@@ -9,6 +9,7 @@ import "../../styles/stadiumView.scss";
 import HeaderView from "../animatedDiv/headerView.js";
 import SpacedSection from "../spacedSection/spacedSection.js";
 import ReactPlayer from "react-player";
+import Tracker from "../buttons/tracker.js";
 
 const StadiumView = ({ inHome = false }) => {
   const [inViewIndex, setInViewIndex] = useState(null);
@@ -159,7 +160,10 @@ const StadiumView = ({ inHome = false }) => {
                       data-index={index}
                       key={index}
                       ref={(el) => (cardRefs.current[index] = el)}
-                      className="w-full shrink-0"
+                      className="w-full"
+                      style={{
+                        flexShrink: 0.04,
+                      }}
                     >
                       <ActionCard
                         heading={sd.heading}
@@ -190,7 +194,18 @@ const StadiumView = ({ inHome = false }) => {
               )}
             </div>
             {inHome && (
-              <span className="stadium-button">
+              <div className="flex shink-0 justify-center pb-6 space-x-2">
+                {stadiumData.map((sd, i) => (
+                  <Tracker
+                    theme={"blue"}
+                    index={i}
+                    isActive={i == inViewIndex}
+                  ></Tracker>
+                ))}
+              </div>
+            )}
+            {inHome && (
+              <span className="stadium-button float-right">
                 <LxtButton
                   text={"READ MORE"}
                   color="transparent"

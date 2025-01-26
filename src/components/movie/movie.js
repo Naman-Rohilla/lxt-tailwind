@@ -40,13 +40,6 @@ export default function Movie({ isMobile }) {
   return (
     <SpacedSection zIndex={0} customPadding={"px-4 md:px-6"}>
       <div className="h-screen pt-20 md:pt-24 pb-20 md:pb-8 md:pt-8 relative">
-        {/* <iframe
-          src="https://www.youtube.com/watch?v=JQbjS0_ZfJ0"
-          className="h-screen w-full absolute z-10 top-0 left-0 rounded-b-2xl rounded-tl-2xl"
-          allow="autoplay; fullscreen; picture-in-picture"
-        >
-          {" "}
-        </iframe> */}
         <div className="h-full w-full rounded-b-2xl rounded-tl-2xl overflow-hidden relative">
           <ReactPlayer
             url={link}

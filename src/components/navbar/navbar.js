@@ -3,7 +3,6 @@ import LxtButton from "../buttons/lxtButton";
 // import "./navbar.scss";
 import menuItems from "../../jsons/menuItems";
 import SpacedSection from "../spacedSection/spacedSection";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
   const textButton = "BOOK A RINK";

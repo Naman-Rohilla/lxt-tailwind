@@ -14,12 +14,12 @@ import {
 
 import ProfileCard from "../cards/profileCard";
 import NewsCard from "../cards/newsCard";
-import SliderControl from "../cards/sliderControls";
 import HeaderDiv from "../animatedDiv/headerDiv";
 import AchievementView from "../Achievement/achievemntView";
 import StadiumView from "./stadiumView";
 import AnouncementView from "./anouncementView";
-import FreedomView from "./freedomView";
+import { getMostVisibleIndex } from "../../utils/getMostVisibleIndex";
+import Tracker from "../buttons/tracker";
 
 const footerObject = {
   heading: "Beginner",
@@ -43,6 +43,26 @@ const ProductView = ({ isMobile }) => {
       data: productData3,
     },
   ];
+
+  const [visibleIndex, setVisibleIndex] = useState(0);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const container = containerRef.current;
+      const index = getMostVisibleIndex(container, ".product-card");
+      setVisibleIndex(index);
+    };
+
+    const container = containerRef.current;
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  console.log(visibleIndex, "visibleIndex");
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -128,17 +148,26 @@ const ProductView = ({ isMobile }) => {
       {isMobile ? (
         <div className="gallery-view pt-0 top-0">
           <div
-            className={`flex slider-hidden-scrollbar overflow-y-scroll smooth mt-0`}
+            ref={containerRef}
+            className={`flex slider-hidden-scrollbar overflow-x-scroll py-2 smooth mt-0`}
           >
             <div className="flex space-x-4">
               {[...productData1, ...productData2, ...productData3].map(
                 (pd, i) => (
-                  <ProductCard
-                    key={i}
-                    footerObject={footerObject}
-                    backgroundVideo={pd.link}
-                    hoverImage={pd.hover}
-                  />
+                  <div
+                    className={`${
+                      visibleIndex == i
+                        ? "scale-105 ease-in-out duration-300 opacity-100"
+                        : "opacity-60"
+                    }`}
+                  >
+                    <ProductCard
+                      key={i}
+                      footerObject={footerObject}
+                      backgroundVideo={pd.link}
+                      hoverImage={pd.hover}
+                    />
+                  </div>
                 )
               )}
             </div>
@@ -167,7 +196,14 @@ const ProductView = ({ isMobile }) => {
         </div>
       )}
       {isMobile && (
-        <div className="text-lxt-button mt-4">
+        <div className="flex pt-5 justify-center space-x-2">
+          {[...productData1, ...productData2, ...productData3].map((pd, i) => (
+            <Tracker index={i} isActive={visibleIndex == i} />
+          ))}
+        </div>
+      )}
+      {isMobile && (
+        <div className="text-lxt-button mt-4 flex justify-end">
           <LxtButton text="BOOK A CLASS" color="red" />
         </div>
       )}
@@ -217,11 +253,35 @@ const NewsView = () => {
 };
 
 const NewsCardView = ({ isMobile }) => {
+  const [visibleIndex, setVisibleIndex] = useState(0);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const container = containerRef.current;
+      const index = getMostVisibleIndex(container, ".news-card");
+      setVisibleIndex(index);
+    };
+
+    const container = containerRef.current;
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  console.log(visibleIndex, "visi news");
+
   return (
     <>
-      <div className="flex slider-hidden-scrollbar h-auto py-4 overflow-y-hidden md:-translate-y-32 space-x-4 md:px-4 xl:overflow-hidden overflow-x-scroll">
+      <div
+        ref={containerRef}
+        className="flex slider-hidden-scrollbar h-auto py-4 overflow-y-hidden md:-translate-y-32 space-x-4 md:px-4 xl:overflow-hidden overflow-x-scroll"
+      >
         <NewsCard
           isMobile={isMobile}
+          isActive={visibleIndex == 0}
           src="news1.png"
           heading={"Shiv Chhatrapati Award, Best Skating Coach"}
           summary={
@@ -231,6 +291,7 @@ const NewsCardView = ({ isMobile }) => {
         ></NewsCard>
         <NewsCard
           isMobile={isMobile}
+          isActive={visibleIndex == 1}
           src="ach7.jpeg"
           heading={"LXT has been awarded with GEO"}
           summary={
@@ -240,6 +301,7 @@ const NewsCardView = ({ isMobile }) => {
         ></NewsCard>
         <NewsCard
           isMobile={isMobile}
+          isActive={visibleIndex == 2}
           src="ach3.jpg"
           heading={"1st FIRS International Speed Skating Seminar"}
           summary={
@@ -249,6 +311,7 @@ const NewsCardView = ({ isMobile }) => {
         ></NewsCard>
         <NewsCard
           isMobile={isMobile}
+          isActive={visibleIndex == 3}
           src="ach2.jpg"
           heading={"India Ka Khelotsav, Pune Int Sports Expo"}
           summary={
@@ -256,6 +319,11 @@ const NewsCardView = ({ isMobile }) => {
           }
           date={"May 8, 2016"}
         ></NewsCard>
+      </div>
+      <div className="flex justify-center pt-5 space-x-2">
+        {Array.from({ length: 4 }, (_, i) => i).map((i) => (
+          <Tracker theme="blue" index={i} isActive={i == visibleIndex} />
+        ))}
       </div>
     </>
   );
@@ -294,9 +362,6 @@ const Star = ({ rating, maxRating = 1, id }) => {
 };
 
 const Review = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [animationKey, setAnimationKey] = useState(0);
-
   const [checkboxState, setCheckboxState] = useState(0);
 
   function handleCheckbox(index) {
@@ -371,7 +436,7 @@ const Review = () => {
           zIndex: "100",
           position: "relative",
         }}
-        className="h-auto w-full background-primary-color p-4 md:p-10 space-y-4"
+        className="h-auto w-full background-primary-color p-4 md:p-10 space-y-4 mt-10 md:mt-0"
       >
         <span className="text-xl md:text-3xl lg:text-4xl font-bold">
           My Journey with Rahul Sir and RR LXT Rink
@@ -456,7 +521,9 @@ const Review = () => {
                 </span>
               </div>
             </div>
-            <LxtButton text={"SEND"} color={"red"}></LxtButton>
+            <div className="flex w-full justify-end">
+              <LxtButton text={"SEND"} color={"red"}></LxtButton>
+            </div>
           </div>
         </form>
       </div>

@@ -1,6 +1,22 @@
-export default function NewsCard({ isMobile, src, heading, summary, date }) {
+export default function NewsCard({
+  isMobile,
+  src,
+  heading,
+  summary,
+  date,
+  isActive,
+}) {
   return (
-    <div className="shrink-[0.05] bg-card-color md:shrink w-96 md:w-auto flex flex-col hover:bg-blue-900 hover:scale-105 rounded-2xl hover:duration-300 hover:ease-in-out">
+    <div
+      className={
+        "news-card shrink-[0.05]  md:shrink w-96 md:w-auto flex flex-col hover:bg-blue-900 hover:scale-105 rounded-2xl hover:duration-300 hover:ease-in-out " +
+        `${
+          isActive
+            ? "bg-blue-900 scale-105 duration-300 ease-in-out"
+            : "bg-card-color"
+        }`
+      }
+    >
       <div
         style={{
           height: isMobile ? "auto" : "auto",

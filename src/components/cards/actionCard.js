@@ -15,7 +15,7 @@ export default function ActionCard({
     <AnimatePresence>
       <motion.div
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`action-card-view  shrink-0 flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out ${
+        className={`action-card-view flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out ${
           isActive
             ? "opacity-100 bg-blue-800"
             : "opacity-80 bg-card-color hover:opacity-100"
