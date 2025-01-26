@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Tracker({ theme = "red", index, isActive }) {
+export default function Tracker({ theme, index, isActive }) {
   return (
     <AnimatePresence>
       {isActive ? (
@@ -15,7 +15,7 @@ export default function Tracker({ theme = "red", index, isActive }) {
           exit={{
             x: 0,
           }}
-          className={`h-2 w-8 rounded-full bg-${theme}-500 ease-in`}
+          className={`h-2 w-8 rounded-full ${theme} ease-in`}
         ></motion.span>
       ) : (
         <motion.span

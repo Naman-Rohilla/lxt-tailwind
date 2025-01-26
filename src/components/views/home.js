@@ -200,7 +200,11 @@ const ProductView = ({ isMobile }) => {
       {isMobile && (
         <div className="flex pt-5 justify-center space-x-2">
           {[...productData1, ...productData2, ...productData3].map((pd, i) => (
-            <Tracker theme="red" index={i} isActive={visibleIndex == i} />
+            <Tracker
+              theme={"bg-red-500"}
+              index={i}
+              isActive={visibleIndex == i}
+            />
           ))}
         </div>
       )}
@@ -325,7 +329,11 @@ const NewsCardView = ({ isMobile }) => {
       {isMobile && (
         <div className="flex justify-center pt-5 space-x-2">
           {Array.from({ length: 4 }, (_, i) => i).map((i) => (
-            <Tracker theme="blue" index={i} isActive={i == visibleIndex} />
+            <Tracker
+              theme={"bg-blue-500"}
+              index={i}
+              isActive={i == visibleIndex}
+            />
           ))}
         </div>
       )}

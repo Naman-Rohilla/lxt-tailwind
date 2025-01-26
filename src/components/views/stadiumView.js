@@ -197,7 +197,7 @@ const StadiumView = ({ inHome = false }) => {
               <div className="flex shink-0 justify-center pb-6 space-x-2">
                 {stadiumData.map((sd, i) => (
                   <Tracker
-                    theme={"blue"}
+                    theme={"bg-blue-500"}
                     index={i}
                     isActive={i == inViewIndex}
                   ></Tracker>
