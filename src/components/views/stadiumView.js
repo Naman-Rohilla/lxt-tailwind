@@ -152,7 +152,13 @@ const StadiumView = ({ inHome = false }) => {
                 </HeaderDiv>
               </>
             )}
-            <div className="flex text-white flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-28 pt-10 md:pt-24 pb-10 overflow-x-scroll slider-hidden-scrollbar">
+            <div
+              className={`flex text-white ${
+                showContent
+                  ? "flex-row space-x-4 pt-10 pb-10"
+                  : "flex-col pt-10 space-y-5"
+              } md:flex-col md:space-x-0 md:space-y-28  md:pt-24  overflow-x-scroll slider-hidden-scrollbar`}
+            >
               {showContent ? (
                 <>
                   {stadiumData?.map((sd, index) => (
