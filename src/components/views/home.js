@@ -55,11 +55,13 @@ const ProductView = ({ isMobile }) => {
     };
 
     const container = containerRef.current;
-    container.addEventListener("scroll", handleScroll);
+    if (container) {
+      container?.addEventListener("scroll", handleScroll);
 
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        container?.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   console.log(visibleIndex, "visibleIndex");
@@ -79,9 +81,9 @@ const ProductView = ({ isMobile }) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            window.addEventListener("wheel", handleWheel);
+            window?.addEventListener("wheel", handleWheel);
           } else {
-            window.removeEventListener("wheel", handleWheel);
+            window?.removeEventListener("wheel", handleWheel);
           }
         });
       },
@@ -198,7 +200,7 @@ const ProductView = ({ isMobile }) => {
       {isMobile && (
         <div className="flex pt-5 justify-center space-x-2">
           {[...productData1, ...productData2, ...productData3].map((pd, i) => (
-            <Tracker index={i} isActive={visibleIndex == i} />
+            <Tracker theme="red" index={i} isActive={visibleIndex == i} />
           ))}
         </div>
       )}
@@ -320,11 +322,13 @@ const NewsCardView = ({ isMobile }) => {
           date={"May 8, 2016"}
         ></NewsCard>
       </div>
-      <div className="flex justify-center pt-5 space-x-2">
-        {Array.from({ length: 4 }, (_, i) => i).map((i) => (
-          <Tracker theme="blue" index={i} isActive={i == visibleIndex} />
-        ))}
-      </div>
+      {isMobile && (
+        <div className="flex justify-center pt-5 space-x-2">
+          {Array.from({ length: 4 }, (_, i) => i).map((i) => (
+            <Tracker theme="blue" index={i} isActive={i == visibleIndex} />
+          ))}
+        </div>
+      )}
     </>
   );
 };

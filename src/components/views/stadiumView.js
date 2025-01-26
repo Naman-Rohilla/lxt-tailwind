@@ -23,8 +23,8 @@ const StadiumView = ({ inHome = false }) => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window?.addEventListener("resize", handleResize);
+    return () => window?.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -193,7 +193,7 @@ const StadiumView = ({ inHome = false }) => {
                 </>
               )}
             </div>
-            {inHome && (
+            {inHome && isMobile && (
               <div className="flex shink-0 justify-center pb-6 space-x-2">
                 {stadiumData.map((sd, i) => (
                   <Tracker

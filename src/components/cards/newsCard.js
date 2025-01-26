@@ -11,7 +11,7 @@ export default function NewsCard({
       className={
         "news-card shrink-[0.05]  md:shrink w-96 md:w-auto flex flex-col hover:bg-blue-900 hover:scale-105 rounded-2xl hover:duration-300 hover:ease-in-out " +
         `${
-          isActive
+          isMobile && isActive
             ? "bg-blue-900 scale-105 duration-300 ease-in-out"
             : "bg-card-color"
         }`
