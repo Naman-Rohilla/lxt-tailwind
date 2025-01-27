@@ -45,7 +45,12 @@ export default function Navbar() {
           <LxtButton text={textButton} color="red" borderColor={"none"} />
         </div>
         <div className="flex md:hidden">
-          <LxtButton text={textButton} color="red" borderColor={"none"} />
+          <LxtButton
+            text={textButton}
+            color="red"
+            borderColor={"none"}
+            shiningEffect={true}
+          />
         </div>
       </div>
     </SpacedSection>

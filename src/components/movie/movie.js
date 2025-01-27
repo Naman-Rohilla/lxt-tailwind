@@ -5,10 +5,10 @@ import HeaderDiv from "../animatedDiv/headerDiv";
 import ReactPlayer from "react-player";
 
 const movieUrl = [
-  "https://youtu.be/hzE3Qm0szIw?si=LMTGbPIc_CurSUkX",
-  "https://youtu.be/nd4D-hcyEAQ?si=J1OfQGNuljIRZQvl",
-  "https://youtu.be/WFl39V88KyM?si=5mUv2v_aoCdyRPxq",
-  "https://youtu.be/TmfVBdC85yU?si=lmgelF34RgzZCAIw",
+  "https://res.cloudinary.com/djdyzefbx/video/upload/v1737960454/Lxt_Speed_Skating_Banked_Track_and_Road_circuit_2023_1_dodks5.mp4",
+  "https://res.cloudinary.com/djdyzefbx/video/upload/v1737961211/Rahul_Rane_3rd_Aug_2012_China_Race_press_conference_-_The_LAZERXTECH_Family_with_RAHUL_RANE_480p_h264_dzzcp4.mp4",
+  "https://res.cloudinary.com/djdyzefbx/video/upload/v1737962987/RAHUL_RANE_PAIR_SKATING_SOLO_GROUP_DANCE_ON_SKATE_1994_-_The_LAZERXTECH_Family_with_RAHUL_RANE_360p_h264_ku28xr.mp4",
+  "https://res.cloudinary.com/djdyzefbx/video/upload/v1737963131/Zee_24_Taas_News_03_June_2013_02min_31sec_08_19am_Roller_Sketing_ring_in_Pune_-_The_LAZERXTECH_Family_with_RAHUL_RANE_360p_h264_p1n09o.mp4",
 ];
 
 export default function Movie({ isMobile }) {

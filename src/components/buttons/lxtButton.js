@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./lxtButton.scss";
 
 export default function LxtButton({
   text,
@@ -7,6 +8,7 @@ export default function LxtButton({
   customStyling = "",
   disableResponsive = false,
   navigationLink = "none",
+  shiningEffect = false,
 }) {
   const navigate = useNavigate();
 
@@ -32,7 +34,7 @@ export default function LxtButton({
         border: `1px solid ${borderColor}`,
       }}
     >
-      {text}
+      <span className={`${shiningEffect ? "shining-text" : ""}`}>{text}</span>
     </button>
   );
 }
