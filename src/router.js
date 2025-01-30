@@ -4,6 +4,8 @@ import Home from "./components/views/home";
 import About from "./components/views/about";
 import StadiumView from "./components/views/stadiumView";
 import AnouncementView from "./components/views/anouncementView";
+import NotFound from "./components/views/notFound";
+import CommingSoon from "./components/views/comingSoon";
 
 const router = createBrowserRouter([
   {
@@ -26,10 +28,14 @@ const router = createBrowserRouter([
         path: "/rr-lxt-rink",
         element: <StadiumView />,
       },
-      // {
-      //   path: "movie",
-      //   element: <Movie />,
-      // },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+      {
+        path: "/comming-soon",
+        element: <CommingSoon />,
+      },
     ],
   },
 ]);

@@ -31,23 +31,29 @@ export default function ActionCard({
               {expanded ? (
                 <h2 className="flex justify-between w-full">
                   <strong className="text-xl md:text-2xl">{heading}</strong>
-                  <img
-                    height={30}
-                    width={30}
-                    onClick={() => setExpanded(!expanded)}
-                    src="arrowdown.png"
-                  />
-                </h2>
-              ) : (
-                <>
-                  <strong className="text-xl md:text-2xl">{heading}</strong>
-                  <strong onClick={() => setExpanded(!expanded)}>
+                  <strong className="shrink-0">
                     <img
                       height={30}
                       width={30}
                       onClick={() => setExpanded(!expanded)}
                       src="arrowdown.png"
-                      className="rotate-180"
+                      className="shrink-0"
+                    />
+                  </strong>
+                </h2>
+              ) : (
+                <>
+                  <strong className="text-xl md:text-2xl">{heading}</strong>
+                  <strong
+                    className="shrink-0"
+                    onClick={() => setExpanded(!expanded)}
+                  >
+                    <img
+                      height={30}
+                      width={30}
+                      onClick={() => setExpanded(!expanded)}
+                      src="arrowdown.png"
+                      className="rotate-180 "
                     />
                   </strong>
                 </>
@@ -73,7 +79,7 @@ export default function ActionCard({
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <div className="h-2 w-2 rounded-full bg-white mt-2"></div>{" "}
+                    <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white mt-1.5 md:mt-2 shrink-0"></div>{" "}
                     <span className="pl-3">
                       <span className="font-bold text-white">
                         {highlightList[index]}

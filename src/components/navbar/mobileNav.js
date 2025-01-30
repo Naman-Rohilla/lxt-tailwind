@@ -70,13 +70,22 @@ export default function MobileNavbar() {
             >
               Announcement
             </span>
-            <span onClick={() => handleNavigation("/rr")} className="p-2 px-4">
+            <span
+              onClick={() => handleNavigation("/comming-soon")}
+              className="p-2 px-4"
+            >
               Achievement
             </span>
-            <span onClick={() => handleNavigation("/rr")} className="p-2 px-4">
+            <span
+              onClick={() => handleNavigation("/comming-soon")}
+              className="p-2 px-4"
+            >
               Media
             </span>
-            <span onClick={() => handleNavigation("/rr")} className="p-2 px-4">
+            <span
+              onClick={() => handleNavigation("/comming-soon")}
+              className="p-2 px-4"
+            >
               Contact Us
             </span>
           </div>

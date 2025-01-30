@@ -89,7 +89,7 @@ const AnouncementView = ({ inHome = false }) => {
             />
             <img
               src="/watchshop/watch5.png"
-              className="h-auto absolute top-0 left-0 origin-bottom -translate-x-5 w-60 pt-24 -rotate-90 flex md:hidden"
+              className="absolute top-0 left-0 origin-bottom -translate-x-5 w-60 pt-24 -rotate-90 flex md:hidden"
             />
           </div>
 

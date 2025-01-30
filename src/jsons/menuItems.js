@@ -13,15 +13,15 @@ const menuItems = [
   },
   {
     link: "Achievement",
-    redirect: "/rr",
+    redirect: "/comming-soon",
   },
   {
     link: "Media",
-    redirect: "/rr",
+    redirect: "/comming-soon",
   },
   {
     link: "Contact Us",
-    redirect: "/rr",
+    redirect: "/comming-soon",
   },
 ];
 
