@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./actionCard.scss";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function ActionCard({
+export default function ExpandedCard({
   heading,
   highlightList,
   list,
@@ -15,23 +15,17 @@ export default function ActionCard({
     <AnimatePresence>
       <motion.div
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`action-card-view relative flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out ${
-          isActive
-            ? "opacity-100 bg-blue-800"
-            : "opacity-80 bg-card-color hover:opacity-100"
-        } ${
-          expanded
-            ? "px-8 md:h-auto md:px-10 pb-20 pt-10 hover:bg-blue-900"
-            : "px-0 md:px-4 py-3 pb-5 md:py-10 bg-transparent hover:bg-card-color hover:px-10"
-        } ${expanded == "disabled" ? "h-72 md:h-auto" : "h-auto"}`}
+        className={`action-card-view relative flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out py-4 px-2 ${
+          expanded ? "bg-blue-900 px-4 md:px-8 md:py-8" : ""
+        }  `}
       >
-        <div className="action-card-heading pb-4 flex justify-between">
+        <div className="action-card-heading pb-1 flex justify-between">
           {!defaultExpanded ? (
             <>
               {expanded ? (
                 <h2 className="flex justify-between w-full">
                   <strong className="text-xl md:text-2xl">{heading}</strong>
-                  <strong className="shrink-0 absolute top-0 right-0 bg-red-100">
+                  <strong className="shrink-0 absolute right-0 top-0 py-4 px-2">
                     <img
                       height={30}
                       width={30}
@@ -45,7 +39,7 @@ export default function ActionCard({
                 <>
                   <strong className="text-xl md:text-2xl">{heading}</strong>
                   <strong
-                    className="shrink-0"
+                    className="shrink-0 absolute right-0 top-0 py-4 px-2"
                     onClick={() => setExpanded(!expanded)}
                   >
                     <img
@@ -72,7 +66,7 @@ export default function ActionCard({
                 {list?.slice().map((lt, index) => (
                   <motion.span
                     key={lt} // Add key here for list rendering
-                    className="text-6xs md:text-base pt-4 md:leading-6 leading-4 flex"
+                    className="text-lg pt-1 md:leading-6 flex"
                     style={{ color: "#84BED6" }}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -94,7 +88,7 @@ export default function ActionCard({
                 {list?.slice(1).map((lt) => (
                   <motion.span
                     key={lt} // Add key here for list rendering
-                    className="text-6xs md:text-base pt-4 md:leading-6 leading-4"
+                    className="text-base md:text-lg md:pt-2"
                     style={{ color: "#84BED6" }}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}

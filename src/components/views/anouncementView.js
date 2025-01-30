@@ -11,6 +11,7 @@ import HeaderView from "../animatedDiv/headerView";
 import { useEffect, useState } from "react";
 import FreedomView from "./freedomView";
 import { AnimatePresence, motion } from "framer-motion";
+import ExpandedCard from "../cards/expandedCard";
 
 const AnouncementView = ({ inHome = false }) => {
   const [selectedType, setSelectedType] = useState("All");
@@ -200,9 +201,9 @@ const AnouncementView = ({ inHome = false }) => {
           </div>
         </>
       )}
-      <HeaderDiv className="announcement-view relative text-white flex justify-between h-auto">
+      <HeaderDiv className="announcement-view relative text-white flex justify-between h-auto space-x-10">
         <div className="announcement-heading flex flex-col">
-          <div className="announcement-card-container space-y-1">
+          <div className="announcement-card-container space-y-8">
             {announcementData
               ?.filter((ad, id) => {
                 if (inHome) {
@@ -223,16 +224,16 @@ const AnouncementView = ({ inHome = false }) => {
                 }
               })
               .map((sd, index) => (
-                <ActionCard
+                <ExpandedCard
                   key={index}
                   heading={sd.heading}
                   list={sd.list}
                   defaultExpanded={false}
-                ></ActionCard>
+                ></ExpandedCard>
               ))}
           </div>
           {inHome && (
-            <span className="pt-2">
+            <span className="pt-2 md:pt-8">
               <LxtButton
                 text={"KNOW MORE"}
                 color={"transparent"}
@@ -242,7 +243,7 @@ const AnouncementView = ({ inHome = false }) => {
             </span>
           )}
         </div>
-        <div className="hidden md:flex flex-col pt-10">
+        <div className="hidden md:flex flex-col pt-10 space-y-8">
           {!inHome && (
             <>
               {announcementData
@@ -259,18 +260,18 @@ const AnouncementView = ({ inHome = false }) => {
                   }
                 })
                 .map((sd, index) => (
-                  <ActionCard
+                  <ExpandedCard
                     key={index}
                     heading={sd.heading}
                     list={sd.list}
                     defaultExpanded={false}
-                  ></ActionCard>
+                  ></ExpandedCard>
                 ))}
             </>
           )}
         </div>
         {inHome && (
-          <div className="flex absolute top-0 w-1/2 right-0 items-center pl-4 pt-14 hidden md:flex">
+          <div className="flex absolute -top-20 w-1/2 right-0 items-center pl-4 hidden md:flex">
             <img width={"100%"} src="race.png" />
           </div>
         )}
