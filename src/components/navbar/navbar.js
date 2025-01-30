@@ -30,7 +30,8 @@ export default function Navbar() {
             <Link
               to={mt.redirect}
               className={`item hover:-translate-y-1 hover:border-red-theme duration-300 ease-in-out hover:text-red-theme  ${
-                location.pathname == mt.redirect
+                location.pathname == mt.redirect &&
+                location.pathname != "/comming-soon"
                   ? "text-blue-500 border-b-2 pb-2 border-blue-500"
                   : ""
               }`}
