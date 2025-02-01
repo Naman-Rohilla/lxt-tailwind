@@ -10,7 +10,7 @@ export default function StatisticCard({ cardData }) {
   return (
     <>
       <HeaderDiv
-        autoSlide={true}
+        autoSlide={false}
         style={{
           backgroundColor: "#022359",
         }}
@@ -31,7 +31,7 @@ export default function StatisticCard({ cardData }) {
                 >
                   <div className="flex">
                     <img src={sc.icon} className="md:h-10 md:w-10 h-8 w-8" />
-                    <div className="pl-2 xl:pl-5 font-bold md:text-base text-xs">
+                    <div className="custom-heading pl-2 xl:pl-5 font-bold md:text-lg text-xs">
                       {sc.heading}
                     </div>
                   </div>

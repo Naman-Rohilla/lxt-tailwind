@@ -169,6 +169,8 @@ const ProductView = ({ isMobile }) => {
                       footerObject={footerObject}
                       backgroundVideo={pd.link}
                       hoverImage={pd.hover}
+                      redirect={pd?.redirect}
+                      isMobile={isMobile}
                     />
                   </div>
                 )
@@ -191,6 +193,8 @@ const ProductView = ({ isMobile }) => {
                     footerObject={footerObject}
                     backgroundVideo={pd1.link}
                     hoverImage={pd1.hover}
+                    redirect={pd1?.redirect}
+                    isMobile={isMobile}
                   />
                 ))}
               </div>

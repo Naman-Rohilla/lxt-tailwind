@@ -1,12 +1,7 @@
-.scroll-container {
-  animation: slideCard 10s linear infinite backwards;
-}
-
-@keyframes slideCard {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.custom-heading {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

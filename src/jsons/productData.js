@@ -1,3 +1,5 @@
+import { redirect } from "react-router-dom";
+
 const footerObject = {
   heading: "Beginner",
   colorHeading: "Quad Skating",
@@ -64,10 +66,13 @@ export const productData1 = [
   {
     link: "skate.gif",
     hover: "hoverskate.jpeg",
+    redirect:
+      "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt---quad-skates-full-packages/o4c/product/-Nl92PN8xtTufltSfdCm",
   },
   {
     link: "product2.gif",
     hover: "hover6.jpeg",
+    redirect: "https://www.lazerxtech.com/inline-frames.html",
   },
 ];
 
@@ -75,10 +80,14 @@ export const productData2 = [
   {
     link: "product4.jpeg",
     hover: "hover3.jpeg",
+    redirect:
+      "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt---skating-and-cycling-helmets/70q/product/-NPvo1tw-ZLkGeAC0efW",
   },
   {
     link: "product3.gif",
     hover: "hover4.jpeg",
+    redirect:
+      "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt----inline-skate-full-package-/9ow/product/-NbIpNhLfEzS87yNp-AI",
   },
 ];
 
@@ -86,10 +95,13 @@ export const productData3 = [
   {
     link: "product5.jpeg",
     hover: "hover5.png",
+    redirect: "https://www.lazerxtech.com/skin-suits.html",
   },
   {
     link: "product6.gif",
     hover: "hover2.jpeg",
+    redirect:
+      "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt---skate-bearings--accessories/8wy/product/-NdUbDArJvgKJDnaMg3J",
   },
 ];
 

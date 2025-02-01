@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./productCard.scss";
 
 export default function ProductCard({
@@ -7,12 +8,26 @@ export default function ProductCard({
   hoverImage,
   checkoutButtonEnable = true,
   key,
+  redirect,
+  isMobile,
 }) {
+  const [count, setCount] = useState(0);
+
+  function handleCount() {
+    if (count > 1) {
+      setCount(0);
+      return;
+    }
+    setCount(count + 1);
+    return;
+  }
+
   return (
     <>
       <div
         key={key}
         className="product-card rounded-b-xl w-60 md:w-40 xl:w-60 relative rounded-tl-xl object-contain h-80 xl:h-80  mt-5"
+        onClick={() => handleCount()}
       >
         {backgroundVideo && (
           <img
@@ -33,9 +48,27 @@ export default function ProductCard({
             }}
             className="flex justify-center absolute w-full"
           >
-            <dic className="bg-red-100 px-4 text-sm py-2 hover-button">
-              Quick Checkout
-            </dic>
+            {isMobile ? (
+              <>
+                {count > 0 && (
+                  <a
+                    href={redirect}
+                    target="_blank"
+                    className="bg-red-100 px-4 text-sm py-2 hover-button cursor-pointer"
+                  >
+                    Quick Checkout
+                  </a>
+                )}
+              </>
+            ) : (
+              <a
+                href={redirect}
+                target="_blank"
+                className="bg-red-100 px-4 text-sm py-2 hover-button cursor-pointer"
+              >
+                Quick Checkout
+              </a>
+            )}
           </div>
         )}
         {footerEnable && (

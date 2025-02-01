@@ -21,6 +21,7 @@
   .hover-button {
     background-color: #b83d3d;
     opacity: 0;
+    display: none;
     border-radius: 3px;
     transition: transform 1s ease, opacity 1s ease;
     text-transform: uppercase;
@@ -39,7 +40,7 @@
 
     .hover-button {
       transform: translateY(-10%);
-
+      display: flex;
       opacity: 1;
     }
   }

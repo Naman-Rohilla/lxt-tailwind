@@ -24,3 +24,7 @@ yarn-error.log*
 
 # environment variables
 .env
+
+#firebase
+.firebase/**
+firebase-debug.log
