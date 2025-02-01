@@ -67,7 +67,7 @@ export default function AchievementView() {
       <div className="h-auto content-box slider-hidden-scrollbar overflow-x-auto flex flex-nowrap space-x-5 md:py-10">
         <PictureView></PictureView>
       </div>
-      <div className="flex justify-end pt-10">
+      <div className="flex justify-end pt-10 md:justify-start">
         <LxtButton
           text="DISCOVER MORE"
           color="transparent"

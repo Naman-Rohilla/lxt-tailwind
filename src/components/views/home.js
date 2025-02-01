@@ -20,6 +20,7 @@ import StadiumView from "./stadiumView";
 import AnouncementView from "./anouncementView";
 import { getMostVisibleIndex } from "../../utils/getMostVisibleIndex";
 import Tracker from "../buttons/tracker";
+import "../../App.css";
 
 const footerObject = {
   heading: "Beginner",
@@ -586,16 +587,13 @@ export default function Home() {
           In the News
         </div>
         <NewsCardView isMobile={isMobile}></NewsCardView>
-        <div className="my-6 md:-translate-y-24 md:my-10 md:my-0 float-right">
+        <div className="my-6 md:-translate-y-24 md:my-10 md:my-0 float-right md:float-left">
           <LxtButton
             text="DISCOVER MORE"
             color="transparent"
             borderColor="white"
           ></LxtButton>
         </div>
-      </SpacedSection>
-      <SpacedSection customStyling="mt-24">
-        <Review></Review>
       </SpacedSection>
     </>
   );

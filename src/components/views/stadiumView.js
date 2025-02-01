@@ -153,11 +153,7 @@ const StadiumView = ({ inHome = false }) => {
               </>
             )}
             <div
-              className={`flex text-white ${
-                showContent
-                  ? "flex-row space-x-4 pt-10 pb-10"
-                  : "flex-col pt-10 space-y-5"
-              } md:flex-col md:space-x-0 md:space-y-28  md:pt-24  overflow-x-scroll slider-hidden-scrollbar`}
+              className={`flex text-white ${"flex-row space-x-4 pt-10 pb-10 md:flex-col md:pt-10 md:space-y-5"} md:flex-col md:space-x-0 md:space-y-28  md:pt-24  overflow-x-scroll slider-hidden-scrollbar`}
             >
               {showContent ? (
                 <>
@@ -186,7 +182,10 @@ const StadiumView = ({ inHome = false }) => {
                       data-index={index}
                       key={index}
                       ref={(el) => (cardRefs.current[index] = el)}
-                      className="w-full shrink-0"
+                      className="w-full"
+                      style={{
+                        flexShrink: 0.012,
+                      }}
                     >
                       <ActionCard
                         heading={rd.heading}
@@ -199,6 +198,19 @@ const StadiumView = ({ inHome = false }) => {
                 </>
               )}
             </div>
+            {!inHome && isMobile && (
+              <div className="flex justify-center pt-0 space-x-2">
+                {Array.from({ length: rinkData?.length }, (_, i) => i).map(
+                  (i) => (
+                    <Tracker
+                      theme={"bg-blue-500"}
+                      index={i}
+                      isActive={i == inViewIndex}
+                    />
+                  )
+                )}
+              </div>
+            )}
             {inHome && isMobile && (
               <div className="flex shink-0 justify-center pb-6 space-x-2">
                 {stadiumData.map((sd, i) => (
@@ -211,7 +223,7 @@ const StadiumView = ({ inHome = false }) => {
               </div>
             )}
             {inHome && (
-              <span className="stadium-button float-right">
+              <span className="stadium-button float-right md:float-left">
                 <LxtButton
                   text={"READ MORE"}
                   color="transparent"

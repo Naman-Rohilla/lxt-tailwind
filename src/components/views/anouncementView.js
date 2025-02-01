@@ -233,7 +233,7 @@ const AnouncementView = ({ inHome = false }) => {
               ))}
           </div>
           {inHome && (
-            <span className="pt-2 md:pt-8">
+            <span className="pt-2 md:pt-8 flex justify-end md:justify-start">
               <LxtButton
                 text={"KNOW MORE"}
                 color={"transparent"}
