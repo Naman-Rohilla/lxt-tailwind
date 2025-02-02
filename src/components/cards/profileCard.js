@@ -8,8 +8,10 @@ const profileData = [
   {
     description:
       "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
-    imgSrc: "profile1.png",
-    mobSrc: "profile1.png",
+    imgSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503204/profile1_3_11zon_lsufig.png",
+    mobSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503204/profile1_3_11zon_lsufig.png",
     scale: 1,
     mScale: 1,
     customElements: "",
@@ -17,8 +19,10 @@ const profileData = [
   {
     description:
       "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
-    imgSrc: "rahul.png",
-    mobSrc: "rahul.png",
+    imgSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738504019/rahul_4_11zon_rbmlho.png",
+    mobSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738504019/rahul_4_11zon_rbmlho.png",
     scale: 1.4,
     mScale: 1.2,
     bottomOrigin: true,
@@ -27,8 +31,10 @@ const profileData = [
   {
     description:
       "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
-    imgSrc: "profile2.jpeg",
-    mobSrc: "mobImage.png",
+    imgSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503204/profile2_4_11zon_h7qugl.jpg",
+    mobSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738504018/mobImage_1_11zon_r45exi.png",
     scale: 1.4,
     mScale: 1.2,
     bottomOrigin: false,
@@ -37,8 +43,10 @@ const profileData = [
   {
     description:
       "A skating coach plays many roles: advisor, mentor, trainer, and unwavering supporter. From teaching the basics to guiding advanced training, they shape skaters' journeys at every stage. Coaches are dedicated to turning dreams into reality, standing by their students as both teacher and cheerleader.",
-    imgSrc: "profile3.jpeg",
-    mobSrc: "profile3.jpeg",
+    imgSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503205/profile3_1_11zon_eialum.jpg",
+    mobSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503205/profile3_1_11zon_eialum.jpg",
     scale: 1.2,
     mScale: 1.2,
     bottomOrigin: false,
@@ -47,8 +55,10 @@ const profileData = [
   {
     description:
       "Pune has been felicitated with the most prestigious Sports award of Maharashtra State - Shiv Chhatrapati Award, 'Best Skating Coach for the year 2020-2021'. He has 36 years of skating and professional coaching experience. Multiple times National & International medalist, he is the only skater in India to win in all four disciplines - Speed, Artistic Solo, Pair Skating and Roller Hockey RSFI Nationals.",
-    imgSrc: "profile5.png",
-    mobSrc: "profile5.png",
+    imgSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503206/profile5_5_11zon_sdhuhu.png",
+    mobSrc:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503206/profile5_5_11zon_sdhuhu.png",
     scale: 1.3,
     mScale: 1.4,
     bottomOrigin: false,

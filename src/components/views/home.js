@@ -255,7 +255,7 @@ const NewsView = () => {
         <div className="h-full w-full flex justify-end absolute right-0 top-0">
           <img
             className="h-full w-1/2 scale-y-125 -translate-y-16 pr-4"
-            src="news-cropped.png"
+            src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504019/news-cropped_2_11zon_jf8hqh.png"
           />
         </div>
       </HeaderDiv>
@@ -293,7 +293,7 @@ const NewsCardView = ({ isMobile }) => {
         <NewsCard
           isMobile={isMobile}
           isActive={visibleIndex == 0}
-          src="news1.png"
+          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504020/news1_3_11zon_zpfgwb.png"
           heading={"Shiv Chhatrapati Award, Best Skating Coach"}
           summary={
             "Rahul Ramesh Rane of Pune has been felicitated with the most prestigious Sports..."
@@ -303,7 +303,7 @@ const NewsCardView = ({ isMobile }) => {
         <NewsCard
           isMobile={isMobile}
           isActive={visibleIndex == 1}
-          src="ach7.jpeg"
+          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738499994/ach7-min_tckckh.jpg"
           heading={"LXT has been awarded with GEO"}
           summary={
             "He also got a Special invite for the 'Inline Speed Skating International Seminar'..."
@@ -313,7 +313,7 @@ const NewsCardView = ({ isMobile }) => {
         <NewsCard
           isMobile={isMobile}
           isActive={visibleIndex == 2}
-          src="ach3.jpg"
+          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach3-min_u9kqov.jpg"
           heading={"1st FIRS International Speed Skating Seminar"}
           summary={
             "He also got a Special invite for the 'Inline Speed Skating International Seminar..."
@@ -323,7 +323,7 @@ const NewsCardView = ({ isMobile }) => {
         <NewsCard
           isMobile={isMobile}
           isActive={visibleIndex == 3}
-          src="ach2.jpg"
+          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
           heading={"India Ka Khelotsav, Pune Int Sports Expo"}
           summary={
             "Rahul Ramesh Rane was felicitated by the legendary Milkha Singh at the closing..."

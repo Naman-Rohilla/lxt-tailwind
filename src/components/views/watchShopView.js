@@ -11,9 +11,12 @@ const WatchShopView = ({ isMobile }) => {
         <>
           <div className="flex flex-col w-full items-center space-y-5">
             <span className="text-5xl text-red-500">Shop Live</span>
-            <img width={"60%"} src="watchshop/watch5.png" />
+            <img
+              width={"60%"}
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738500741/watch5_6_11zon_kdmvvz.png"
+            />
             <video className="mobile-video object-cover" autoPlay loop muted>
-              <source src="watchshop/watch6.mp4"></source>
+              <source src="https://res.cloudinary.com/djdyzefbx/video/upload/v1738501443/watch6_e2qhdu.mp4"></source>
             </video>
             <LxtButton
               text={"Watch & Shop"}
@@ -26,14 +29,21 @@ const WatchShopView = ({ isMobile }) => {
         <>
           <div className="img-left relative">
             <video className="h-full object-cover" autoPlay loop muted>
-              <source src="watchshop/watch6.mp4"></source>
+              <source src="https://res.cloudinary.com/djdyzefbx/video/upload/v1738501443/watch6_e2qhdu.mp4"></source>
             </video>
-            <img src="watchshop/live.png" />
+            <img src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738500740/live_1_11zon_p77csc.png" />
           </div>
           <div className="img-center">
-            <img width={"100%"} height={220} src="watchshop/watch2.png" />
+            <img
+              width={"100%"}
+              height={220}
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738500742/watch2_3_11zon_hetgpt.png"
+            />
             <span className="text-shop">Shop Live</span>
-            <img width={"60%"} src="watchshop/watch5.png" />
+            <img
+              width={"60%"}
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738500741/watch5_6_11zon_kdmvvz.png"
+            />
             <span
               style={{
                 fontSize: "1rem",
@@ -41,10 +51,17 @@ const WatchShopView = ({ isMobile }) => {
             >
               <LxtButton text={"Watch & Shop"} color={"red"} />
             </span>
-            <img width={"100%"} height={150} src="watchshop/watch1.png" />
+            <img
+              width={"100%"}
+              height={150}
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738500741/watch1_2_11zon_dolc8r.png"
+            />
           </div>
           <div className="img-right">
-            <img className="h-full" src="watchshop/watch4.png" />
+            <img
+              className="h-full"
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738500741/watch4_5_11zon_yhapj4.png"
+            />
             <img />
           </div>
         </>

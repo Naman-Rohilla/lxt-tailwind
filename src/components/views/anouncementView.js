@@ -85,11 +85,11 @@ const AnouncementView = ({ inHome = false }) => {
               </span>
             </div>
             <img
-              src="rahul3.png"
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738499129/muhvamxi9jqbocxyc6hn.png"
               className="h-[1275px] w-full md:w-auto -translate-y-6 md:-translate-y-20"
             />
             <img
-              src="/watchshop/watch5.png"
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738500741/watch5_6_11zon_kdmvvz.png"
               className="absolute top-0 left-0 origin-bottom -translate-x-5 w-60 pt-24 -rotate-90 flex md:hidden"
             />
           </div>
@@ -272,7 +272,10 @@ const AnouncementView = ({ inHome = false }) => {
         </div>
         {inHome && (
           <div className="flex absolute -top-20 w-1/2 right-0 items-center pl-4 hidden md:flex">
-            <img width={"100%"} src="race.png" />
+            <img
+              width={"100%"}
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738503706/race_5_11zon_dko8r4.png"
+            />
           </div>
         )}
       </HeaderDiv>

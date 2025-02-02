@@ -49,12 +49,7 @@ export default function Navbar() {
         </div>
         <div className="flex md:hidden">
           <a href="https://lxtskates.catalog.to/" target="_blank">
-            <LxtButton
-              text={textButton}
-              color="red"
-              borderColor={"none"}
-              shiningEffect={true}
-            />
+            <LxtButton text={textButton} color="red" borderColor={"none"} />
           </a>
         </div>
       </div>

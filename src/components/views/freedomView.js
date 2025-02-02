@@ -19,7 +19,7 @@ const FreedomView = () => {
         </div>
         <div className="w-full h-80  flex justify-center md:w-1/2 xl:h-full object-cover overflow-hidden rounded-2xl">
           <img
-            src="feedomskating.png"
+            src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738503702/feedomskating_1_11zon_hakepc.png"
             className="object-cover md:w-full px-1 py-2  md:-translate-y-10  md:py-0 scale-125 rounded-2xl"
           />
         </div>

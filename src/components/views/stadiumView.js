@@ -106,7 +106,7 @@ const StadiumView = ({ inHome = false }) => {
                   height: "100vh",
                   width: "100vw",
                 }}
-                src="stadium.png"
+                src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504025/stadium_7_11zon_qtichi.png"
               />
               <div className="stadium-background-color"></div>
             </div>

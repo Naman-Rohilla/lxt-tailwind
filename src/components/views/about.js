@@ -220,7 +220,7 @@ const CardView = () => {
       className="bg-card-color flex md:flex-row flex-col"
     >
       <img
-        src="profile1.png"
+        src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738503204/profile1_3_11zon_lsufig.png"
         className="origin-bottom md:scale-110  md:translate-x-20"
       />
       <div className="h-full md:h-auto flex flex-col items-center justify-center w-full">
@@ -362,7 +362,7 @@ export default function About() {
               className="absolute rounded-full h-16 w-16 translate-x-6 translate-y-6 md:h-36 md:w-36 right-0 bottom-0 md:translate-x-16 md:translate-y-10 shadow-md"
             ></div>
             <img
-              src="rahul.png"
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504019/rahul_4_11zon_rbmlho.png"
               className="w-1/2 xl:block hidden scale-125 origin-bottom -translate-x-16 filter drop-shadow-2xl"
             />
             <div className="w-full xl:w-1/2 text-black flex flex-col items-center justify-center">

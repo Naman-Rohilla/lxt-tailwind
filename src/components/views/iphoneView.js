@@ -7,7 +7,7 @@ const IphoneView = () => {
       <div className="iphone">
         <img src="iphone.png" alt="iPhone" />
         <video
-          src="iphone.mp4"
+          src="https://res.cloudinary.com/djdyzefbx/video/upload/v1738504450/iphone_ug3ukp.mp4"
           autoPlay
           loop
           muted

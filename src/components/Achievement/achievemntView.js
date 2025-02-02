@@ -17,7 +17,7 @@ const PictureView = ({ state }) => {
           src={`${
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/rswsb09rkiej3ppah2md.jpg"
-              : "picture1.png"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
           }`}
         />
         <img
@@ -25,7 +25,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/q8dbtqpd6jv1akdnt34g.jpg"
-              : "ach1.jpg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499992/ach1-min_dnofzn.jpg"
           }
         />
       </div>
@@ -38,7 +38,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/d4xtbf8epjj9vxzlyaw9.jpg"
-              : "ach2.jpg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
           }
         />
       </div>
@@ -48,7 +48,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/nw76ubtp91pwrys0lxgx.jpg"
-              : "ach3.jpg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach3-min_u9kqov.jpg"
           }
         />
         <img
@@ -56,7 +56,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/c6kcdo9zpukuawjqv7sy.jpg"
-              : "ach10.png"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738500469/ach10_11zon_ws7p58.png"
           }
         />
       </div>
@@ -69,7 +69,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/f75quc5vhkcqnfebe7in.jpg"
-              : "ach5.jpg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach5-min_gbqznh.jpg"
           }
         />
       </div>
@@ -79,7 +79,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394849/n6ph3h1o7slxborlme2k.jpg"
-              : "ach11.jpeg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499995/ach11-min_dkpkxq.jpg"
           }
         />
         <img
@@ -87,7 +87,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/cxzte5df3up5svbll568.jpg"
-              : "ach7.jpeg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499994/ach7-min_tckckh.jpg"
           }
         />
       </div>
@@ -100,7 +100,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/fyhtroz7a96bcbwsgqei.jpg"
-              : "profile2.jpeg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503204/profile2_4_11zon_h7qugl.jpg"
           }
         />
       </div>
@@ -110,7 +110,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/dlecnf80qlcrlpq9yuet.jpg"
-              : "ach6.jpg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach6-min_txi8q4.jpg"
           }
         />
         <img
@@ -118,7 +118,7 @@ const PictureView = ({ state }) => {
           src={
             state
               ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738395535/WhatsApp_Image_2025-02-01_at_12.33.37_PM_1_tfnr21.jpg"
-              : "ach9.jpeg"
+              : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738500205/ach9-min_hjtvdg.jpg"
           }
         />
       </div>

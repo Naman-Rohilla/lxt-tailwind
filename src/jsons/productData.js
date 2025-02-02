@@ -64,28 +64,32 @@ export const stadiumData = [
 
 export const productData1 = [
   {
-    link: "skate.gif",
-    hover: "hoverskate.jpeg",
+    link: "https://res.cloudinary.com/djdyzefbx/image/upload/v1738502494/skate_wyne0s.gif",
+    hover:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738501634/hoverskate-min_ivcsde.jpg",
     redirect:
       "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt---quad-skates-full-packages/o4c/product/-Nl92PN8xtTufltSfdCm",
   },
   {
-    link: "product2.gif",
-    hover: "hover6.jpeg",
+    link: "https://res.cloudinary.com/djdyzefbx/image/upload/v1738502492/product2_coxwhe.gif",
+    hover:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738501633/hover6-min_uftnal.jpg",
     redirect: "https://www.lazerxtech.com/inline-frames.html",
   },
 ];
 
 export const productData2 = [
   {
-    link: "product4.jpeg",
-    hover: "hover3.jpeg",
+    link: "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503702/product4_3_11zon_ce3ooy.jpg",
+    hover:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738501630/hover3-min_up8cgz.jpg",
     redirect:
       "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt---skating-and-cycling-helmets/70q/product/-NPvo1tw-ZLkGeAC0efW",
   },
   {
-    link: "product3.gif",
-    hover: "hover4.jpeg",
+    link: "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503164/product3_1_aybjjq.gif",
+    hover:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738501633/hover4-min_heam7q.jpg",
     redirect:
       "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt----inline-skate-full-package-/9ow/product/-NbIpNhLfEzS87yNp-AI",
   },
@@ -93,13 +97,15 @@ export const productData2 = [
 
 export const productData3 = [
   {
-    link: "product5.jpeg",
-    hover: "hover5.png",
+    link: "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503706/product5_4_11zon_wnbkyk.jpg",
+    hover:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738501658/hover5_11zon_ycqqbr.png",
     redirect: "https://www.lazerxtech.com/skin-suits.html",
   },
   {
-    link: "product6.gif",
-    hover: "hover2.jpeg",
+    link: "https://res.cloudinary.com/djdyzefbx/image/upload/v1738502493/product6_dguwob.gif",
+    hover:
+      "https://res.cloudinary.com/djdyzefbx/image/upload/v1738501626/hover2-min_mhxxno.jpg",
     redirect:
       "https://lxtskates.catalog.to/s/gallery/lxt-skates-/lxt---skate-bearings--accessories/8wy/product/-NdUbDArJvgKJDnaMg3J",
   },

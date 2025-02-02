@@ -37,7 +37,7 @@ export default function Footer() {
         <FooterForm></FooterForm>
         <img
           className="absolute top-0 right-0 h-72 xl:h-80 -translate-y-24"
-          src="skate2.png"
+          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504023/skate2_6_11zon_yibc5o.png"
         ></img>
       </SpacedSection>
       <SpacedSection
@@ -48,12 +48,12 @@ export default function Footer() {
           <div className="form-footer hidden relative rounded-2xl md:flex space-x-4 justify-center w-auto shrink-0">
             <img
               className="absolute left-0 h-64 xl:h-80 xl:w-80 scale-175"
-              src="skate1.png"
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504023/skate1_5_11zon_vopqan.png"
             ></img>
             <FooterForm></FooterForm>
             <img
               className="absolute right-0 h-64 xl:h-80"
-              src="skate2.png"
+              src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504023/skate2_6_11zon_yibc5o.png"
             ></img>
           </div>
           <div className="footer-nav flex flex-col space-y-6 md:space-y-0 md:space-x-10 md:flex-row w-full justify-center pt-12">
