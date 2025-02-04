@@ -36,15 +36,22 @@
   .footer-end {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-block: 40px;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.7);
   }
 }
 
 @media screen and (max-width: 850px) {
   .footer-container {
     height: auto;
+  }
+
+  .footer-end {
+    flex-direction: column;
+    align-items: start;
+    justify-items: center;
   }
 }
 

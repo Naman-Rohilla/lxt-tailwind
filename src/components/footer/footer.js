@@ -69,8 +69,9 @@ export default function Footer() {
             skilled, responsible, and caring athletes.
           </div>
           <div className="footer-divider"></div>
-          <div className="footer-end">
-            © Rahul Rane 2024, All Rights Reserved
+          <div className="footer-end space-y-2 md:space-y-0">
+            <span>© Rahul Rane 2024, All Rights Reserved</span>
+            <span>Design Created by: JalebiDesignStudio</span>
           </div>
         </div>
       </SpacedSection>
