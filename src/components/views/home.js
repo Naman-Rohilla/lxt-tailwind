@@ -581,9 +581,7 @@ export default function Home() {
 
       <AnouncementView inHome={true} isMobile={isMobile}></AnouncementView>
 
-      <SpacedSection>
-        <AchievementView></AchievementView>
-      </SpacedSection>
+      <AchievementView inHome={true}></AchievementView>
 
       <SpacedSection>
         <NewsView></NewsView>

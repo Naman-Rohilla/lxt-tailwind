@@ -1,9 +1,9 @@
 import HeaderDiv from "../animatedDiv/headerDiv";
 import LxtButton from "../buttons/lxtButton";
 
-const FreedomView = () => {
+const FreedomView = ({ padding = "40" }) => {
   return (
-    <HeaderDiv className="py-10 md:py-40">
+    <HeaderDiv className={"py-10 " + ` md:py-${padding}`}>
       <div className="bg-card-color hover:bg-blue-900 hover:duration-300 rounded-2xl h-auto md:h-96 w-auto p-4 py-6 md:p-10 flex flex-col md:flex-row justify-between">
         <div className="flex flex-col justify-between w-full items-center md:items-start md:w-2/5 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           <div className="flex flex-col">

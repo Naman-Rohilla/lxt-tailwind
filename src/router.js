@@ -6,6 +6,7 @@ import StadiumView from "./components/views/stadiumView";
 import AnouncementView from "./components/views/anouncementView";
 import NotFound from "./components/views/notFound";
 import CommingSoon from "./components/views/comingSoon";
+import AchievementView from "./components/Achievement/achievemntView";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/rr-lxt-rink",
         element: <StadiumView />,
+      },
+      {
+        path: "/achievement",
+        element: <AchievementView />,
       },
       {
         path: "*",

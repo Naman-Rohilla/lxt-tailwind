@@ -13,7 +13,7 @@ const menuItems = [
   },
   {
     link: "Achievement",
-    redirect: "/comming-soon",
+    redirect: "/achievement",
   },
   {
     link: "Media",
