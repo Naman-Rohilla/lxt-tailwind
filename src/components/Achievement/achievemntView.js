@@ -497,7 +497,12 @@ export default function AchievementView({ inHome = false }) {
                   skating
                 </span>
                 <span className="pt-4 md:pt-10 md:mb-10 mb-4 flex justify-center md:justify-start">
-                  <LxtButton text={"READ MORE"} color={"red"}></LxtButton>
+                  <a
+                    href="https://republicnewsindia.com/the-inspiring-journey-of-rahul-rane-from-skating-coach-to-a-successful-entrepreneur/"
+                    target="_blank"
+                  >
+                    <LxtButton text={"READ MORE"} color={"red"}></LxtButton>
+                  </a>
                 </span>
               </div>
               <img
@@ -588,7 +593,9 @@ export default function AchievementView({ inHome = false }) {
         )}
 
         <div className="relative">
-          <div className="h-screen absolute mt-10 z-10 w-full bg-gradient-to-r from-gray-900/40 via-transparent to-gray-900/40"></div>
+          {!inHome && (
+            <div className="h-screen absolute mt-10 z-10 w-full bg-gradient-to-r from-gray-900/40 via-transparent to-gray-900/40"></div>
+          )}
           <div
             className={
               "h-auto content-box slider-hidden-scrollbar flex flex-nowrap space-x-5 relative  " +
@@ -604,6 +611,7 @@ export default function AchievementView({ inHome = false }) {
               text="DISCOVER MORE"
               color="transparent"
               borderColor="white"
+              navigationLink="/achievement"
             ></LxtButton>
           </div>
         )}
