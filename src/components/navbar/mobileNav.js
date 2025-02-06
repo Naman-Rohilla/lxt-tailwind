@@ -81,7 +81,7 @@ export default function MobileNavbar() {
               Achievement
             </span>
             <span
-              onClick={() => handleNavigation("/news")}
+              onClick={() => handleNavigation("/comming-soon")}
               className="p-2 px-4"
             >
               Media
