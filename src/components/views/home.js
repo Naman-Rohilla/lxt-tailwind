@@ -21,6 +21,7 @@ import AnouncementView from "./anouncementView";
 import { getMostVisibleIndex } from "../../utils/getMostVisibleIndex";
 import Tracker from "../buttons/tracker";
 import "../../App.css";
+import News from "./news";
 
 const footerObject = {
   heading: "Beginner",
@@ -232,117 +233,6 @@ const ProfileCardView = ({ isMobile }) => {
     >
       <ProfileCard isMobile={isMobile}></ProfileCard>
     </div>
-  );
-};
-
-const NewsView = () => {
-  return (
-    <>
-      <HeaderDiv
-        className="rounded-2xl mt-48 md:flex justify-between relative hidden"
-        style={{
-          backgroundColor: "#0C6AB0",
-          height: "55vh",
-        }}
-      >
-        <div className="flex flex-col w-1/2 pt-20 text-6xl pl-10">
-          <span className="font-extrabold">In the News</span>
-          <span className="font-extralight pt-10 text-2xl w-1/2 lg:w-full lg:text-4xl">
-            Stay updated with the latest headlines, stories, and achievements
-            making waves in the skating community and beyond.
-          </span>
-        </div>
-        <div className="h-full w-full flex justify-end absolute right-0 top-0">
-          <img
-            className="h-full w-1/2 scale-y-125 -translate-y-16 pr-4"
-            src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504019/news-cropped_2_11zon_jf8hqh.png"
-          />
-        </div>
-      </HeaderDiv>
-    </>
-  );
-};
-
-const NewsCardView = ({ isMobile }) => {
-  const [visibleIndex, setVisibleIndex] = useState(0);
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const container = containerRef.current;
-      const index = getMostVisibleIndex(container, ".news-card");
-      setVisibleIndex(index);
-    };
-
-    const container = containerRef.current;
-    container.addEventListener("scroll", handleScroll);
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  console.log(visibleIndex, "visi news");
-
-  return (
-    <>
-      <div
-        ref={containerRef}
-        className="flex slider-hidden-scrollbar h-auto py-4 overflow-y-hidden md:-translate-y-32 space-x-4 md:px-4 xl:overflow-hidden overflow-x-scroll"
-      >
-        <NewsCard
-          isMobile={isMobile}
-          isActive={visibleIndex == 0}
-          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504020/news1_3_11zon_zpfgwb.png"
-          heading={"Shiv Chhatrapati Award, Best Skating Coach"}
-          summary={
-            "Rahul Ramesh Rane of Pune has been felicitated with the most prestigious Sports..."
-          }
-          date={"September 7, 2024"}
-        ></NewsCard>
-        <NewsCard
-          isMobile={isMobile}
-          isActive={visibleIndex == 1}
-          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738499994/ach7-min_tckckh.jpg"
-          heading={"LXT has been awarded with GEO"}
-          summary={
-            "He also got a Special invite for the 'Inline Speed Skating International Seminar'..."
-          }
-          date={"June 24, 2022"}
-        ></NewsCard>
-        <NewsCard
-          isMobile={isMobile}
-          isActive={visibleIndex == 2}
-          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach3-min_u9kqov.jpg"
-          heading={"1st FIRS International Speed Skating Seminar"}
-          summary={
-            "He also got a Special invite for the 'Inline Speed Skating International Seminar..."
-          }
-          date={"December 7, 2019"}
-        ></NewsCard>
-        <NewsCard
-          isMobile={isMobile}
-          isActive={visibleIndex == 3}
-          src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
-          heading={"India Ka Khelotsav, Pune Int Sports Expo"}
-          summary={
-            "Rahul Ramesh Rane was felicitated by the legendary Milkha Singh at the closing..."
-          }
-          date={"May 8, 2016"}
-        ></NewsCard>
-      </div>
-      {isMobile && (
-        <div className="flex justify-center pt-5 space-x-2">
-          {Array.from({ length: 4 }, (_, i) => i).map((i) => (
-            <Tracker
-              theme={"bg-blue-500"}
-              index={i}
-              isActive={i == visibleIndex}
-            />
-          ))}
-        </div>
-      )}
-    </>
   );
 };
 
@@ -583,20 +473,7 @@ export default function Home() {
 
       <AchievementView inHome={true}></AchievementView>
 
-      <SpacedSection>
-        <NewsView></NewsView>
-        <div className="md:hidden mt-10 mb-5 text-3xl font-bold">
-          In the News
-        </div>
-        <NewsCardView isMobile={isMobile}></NewsCardView>
-        <div className="my-6 md:-translate-y-24 md:my-10 md:my-0 float-right md:float-left">
-          <LxtButton
-            text="DISCOVER MORE"
-            color="transparent"
-            borderColor="white"
-          ></LxtButton>
-        </div>
-      </SpacedSection>
+      <News inHome={true} isMobile={isMobile} />
     </>
   );
 }

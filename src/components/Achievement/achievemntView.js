@@ -599,7 +599,11 @@ export default function AchievementView({ inHome = false }) {
           <div
             className={
               "h-auto content-box slider-hidden-scrollbar flex flex-nowrap space-x-5 relative  " +
-              `${inHome ? "md:py-10 overflow-x-auto" : "pt-10 -translate-x-20"}`
+              `${
+                inHome
+                  ? "md:py-10 overflow-x-auto"
+                  : "pt-10 -translate-x-20 md:translate-x-0"
+              }`
             }
           >
             <PictureView state={state} inHome={inHome}></PictureView>

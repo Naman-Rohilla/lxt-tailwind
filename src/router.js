@@ -7,6 +7,7 @@ import AnouncementView from "./components/views/anouncementView";
 import NotFound from "./components/views/notFound";
 import CommingSoon from "./components/views/comingSoon";
 import AchievementView from "./components/Achievement/achievemntView";
+import News from "./components/views/news";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/achievement",
         element: <AchievementView />,
+      },
+      {
+        path: "/news",
+        element: <News />,
       },
       {
         path: "*",
