@@ -89,10 +89,12 @@ export default function MobileNavbar() {
               Media
             </span>
             <span
-              onClick={() => handleNavigation("/comming-soon")}
-              className="p-2 px-4"
+              onClick={() => handleNavigation("/contact")}
+              className={`p-2 px-4 ${
+                location.pathname == "/contact" ? "text-red-500 " : "text-white"
+              }`}
             >
-              Contact Us
+              Media
             </span>
           </div>
         )}
