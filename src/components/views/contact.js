@@ -9,7 +9,7 @@ export default function Contact() {
         <span>Contact Us</span>
       </div>
       <HeaderDiv className="bg-white shadow-2xl w-full h-auto md:h-72 my-5 rounded-b-2xl rounded-tl-2xl md:rounded-b-3xl md:rounded-tl-3xl">
-        <div className="text-black font-extrabold pt-4 md:t-8 px-4 md:px-10 text-md md:text-3xl">
+        <div className="text-black font-extrabold pt-4 md:pt-8 px-4 md:px-10 text-md md:text-3xl">
           LXT SPEED SKATING TRACK & ROAD , KASARSAI
         </div>
         <div className="text-black  pt-4 px-4 md:px-10 md:text-2xl text-sm flex md:items-center">
@@ -153,7 +153,7 @@ export default function Contact() {
             }}
           ></div>
         </div>
-        <div className="text-black  pt-4 px-4 md:px-10 text-sm flex flex-col md:flex-row md:items-center md:space-x-4 pb-4 md:pb-0 space-y-2 md:space-y-2">
+        <div className="text-black  pt-4 px-4 md:px-10 text-sm flex flex-col md:flex-row md:items-center md:space-x-4 pb-4 md:pb-0 space-y-2 md:space-y-0">
           <div className="flex items-center">
             <span>
               <svg
