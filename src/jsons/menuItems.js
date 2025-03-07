@@ -17,11 +17,11 @@ const menuItems = [
   },
   {
     link: "Media",
-    redirect: "/comming-soon",
+    redirect: "/news",
   },
   {
     link: "Contact Us",
-    redirect: "/comming-soon",
+    redirect: "/contact",
   },
 ];
 

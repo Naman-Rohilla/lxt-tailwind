@@ -8,6 +8,7 @@ import NotFound from "./components/views/notFound";
 import CommingSoon from "./components/views/comingSoon";
 import AchievementView from "./components/Achievement/achievemntView";
 import News from "./components/views/news";
+import Contact from "./components/views/contact";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/news",
         element: <News />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "*",
