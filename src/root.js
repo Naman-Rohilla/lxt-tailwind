@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/navbar";
 import { useEffect, useState } from "react";
 import Footer from "./components/footer/footer";
 import MobileNavbar from "./components/navbar/mobileNav";
+import { Analytics } from "@vercel/analytics/next";
 
 function Root() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -21,6 +22,7 @@ function Root() {
       <Outlet />
       <Footer />
       {isMobile && <MobileNavbar></MobileNavbar>}
+      <Analytics />
     </>
   );
 }
