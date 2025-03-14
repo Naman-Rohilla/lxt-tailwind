@@ -505,10 +505,7 @@ export default function AchievementView({ inHome = false }) {
                   </a>
                 </span>
               </div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/c0bd/bb6b/b98e27238e95d4f0412d963a03cf1350?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Df8rK0TUOBt6ck5YnQLb1misehmSwzjXbFT88OtbmOaKC0vx3L0MR1y4DbRwa4dxnwm2EDeP5l--bN9vTNRkBK9mqT1jcG77yZ2CV09Jv0ubajIsxAuUsheMKb9oZHFJWkB7z1jfJMf0Ng6Wihjnt7Ze7BXlAe65rYtH~HYpU~W1Uvw02VG8z4Gz2VVnnVoIxrUlz6Kqkj5qX9ydAp3tj9NVNKR94mUv0mbkF1EoLDBLyzHTPjrjTAO0AQp8m80IDjLUe3iDo5diykrBIFYL2rSqFiAyrtrWBhxV~WsLQdITTzGgy9rIfmdqTcT2IEyI4lcevGaeJm6ZCpZykDVdew__"
-                className="h-[500px] md:h-[830px]"
-              />
+              <img src="rahul3.png" className="h-[510px] md:h-[820px]" />
             </div>
           </>
         )}
