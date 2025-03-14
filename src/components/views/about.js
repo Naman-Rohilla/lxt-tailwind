@@ -462,9 +462,9 @@ export default function About() {
           </span>
         </div>
       </SpacedSection>
-      <SpacedSection backgroundColor="transparent" customStyling="pt-40">
+      {/* <SpacedSection backgroundColor="transparent" customStyling="pt-40">
         <AchievementView></AchievementView>
-      </SpacedSection>
+      </SpacedSection> */}
     </>
   );
 }
