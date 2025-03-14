@@ -191,6 +191,7 @@ export default function News({ inHome = false, isMobile }) {
               text="DISCOVER MORE"
               color="transparent"
               borderColor="white"
+              navigationLink="/contact"
             ></LxtButton>
           </div>
         )}
