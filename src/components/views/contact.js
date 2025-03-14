@@ -191,8 +191,14 @@ export default function Contact() {
           </div>
         </div>
       </HeaderDiv>
+
       <div className="h-full w-full">
-        <img src="map.png" className="pt-2 md:h-full h-52" />
+        <a
+          href="https://www.google.com/maps/place/LXT+SPEED+SKATING+TRACK+%26+ROAD+,+KASARSAI/@18.6393032,73.6778203,17z/data=!4m14!1m7!3m6!1s0x3bc2ba9732b0c7ed:0xd82cd1127a25229e!2sSant+Tukaram+Sugar+Factory!8m2!3d18.6393032!4d73.6803952!16s%2Fg%2F1hc5c_rs3!3m5!1s0x3bc2bb70ee73b641:0xceb9906b6be6910c!8m2!3d18.636611!4d73.679557!16s%2Fg%2F11ghts4j_3?entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+        >
+          <img src="map.png" className="pt-2 md:h-full h-52" />
+        </a>
       </div>
     </SpacedSection>
   );
