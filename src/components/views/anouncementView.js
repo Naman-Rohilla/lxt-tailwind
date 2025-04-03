@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import FreedomView from "./freedomView";
 import { AnimatePresence, motion } from "framer-motion";
 import ExpandedCard from "../cards/expandedCard";
+import SummerText from "../animatedDiv/summerText";
 
 const AnouncementView = ({ inHome = false }) => {
   const [selectedType, setSelectedType] = useState("All");
@@ -54,6 +55,7 @@ const AnouncementView = ({ inHome = false }) => {
           <HeaderDiv className="text-lg pt-2 md:text-2xl font-extralight">
             Get Ready to Roll—Exciting Skating Event Ahead
           </HeaderDiv>
+          <SummerText />
         </>
       ) : (
         <>
@@ -80,6 +82,7 @@ const AnouncementView = ({ inHome = false }) => {
               <span className="pt-2 text-2xl ">
                 In fond remembrance of Rahul Sir on his birthday.
               </span>
+              <SummerText color="#0065B3" />
               <span className="pt-4 md:pt-10 mb-10 md:mb-0">
                 <LxtButton text={"RESGISTER NOW"} color={"red"}></LxtButton>
               </span>
@@ -201,6 +204,7 @@ const AnouncementView = ({ inHome = false }) => {
           </div>
         </>
       )}
+
       <HeaderDiv className="announcement-view relative text-white flex justify-between h-auto space-x-10">
         <div className="announcement-heading flex flex-col">
           <div className="announcement-card-container space-y-8">
