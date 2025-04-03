@@ -6,6 +6,7 @@ const SummerText = ({ color = "white" }) => {
       className="text-lg pt-1 text-light md:text-xl flex items-center text-bold"
       style={{
         color: { color },
+        zIndex: 999,
       }}
     >
       LXT Summer Camp
