@@ -9,7 +9,7 @@ const SummerText = ({ color = "white" }) => {
         zIndex: 999,
       }}
     >
-      LXT Summer Camp
+      LXT Speed Skating Summer Camp & Speed Clinic 2025
       <a
         href="https://res.cloudinary.com/djdyzefbx/image/upload/v1743690131/LXT_Speed_Skating_Summer_Camp_Speed_Clinic_2025_ffxqqu.pdf"
         download="Lxt_Summer_Camp.pdf"
