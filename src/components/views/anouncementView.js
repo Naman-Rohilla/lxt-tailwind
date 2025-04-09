@@ -161,9 +161,7 @@ const AnouncementView = ({ inHome = false }) => {
                 </>
               )}
             </span>
-            <SummerText color="#0065B3" />
           </HeaderDiv>
-
           <div className="relative h-14 hidden md:block">
             <div
               className="bg-white rounded-full w-full h-14 mt-5  relative"
