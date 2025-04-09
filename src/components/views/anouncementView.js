@@ -74,7 +74,7 @@ const AnouncementView = ({ inHome = false }) => {
             <span className="hidden md:flex"></span>
             <div className="flex flex-col justify-center px-5 bottom-0 md:top-0 md:px-60 md:pt-20 absolute text-[#0065B3]">
               <span className="text-6xl md:text-8xl w-full font-bold">
-                23<sup>nd</sup> LXT
+                23<sup>rd</sup> LXT
               </span>
               <span className="text-5xl md:text-8xl w-full font-bold">
                 UNITED RACE
