@@ -225,12 +225,17 @@ const CardView = () => {
         className="origin-bottom md:scale-110  md:translate-x-20"
       />
       <div className="h-full md:h-auto flex flex-col items-center justify-center w-full">
-        <span className="text-7xl md:text-9xl font-bold">Rahul Rane</span>
-        <span className="text-xl md:text-4xl tracking-wider">
-          Managing Director at LAZERXTECH
-        </span>
-        <div className="w-full mr-5 md:mr-28 flex justify-end">
-          <img src="/lxtlogo.png" className="h-10 md:h-14 mt-12"></img>
+        <div>
+          <div className="text-6xl md:text-9xl xl:text-8xl font-bold font-mono space-x-5 flex">
+            <span>Rahul</span>
+            <span>Rane</span>
+          </div>
+          <span className="text-xl md:text-4xl xl:text-2xl tracking-wider flex justify-center">
+            Managing Director at LAZERXTECH
+          </span>
+          <div className="flex justify-end">
+            <img src="/lxtlogo.png" className="h-10 md:h-14 mt-12"></img>
+          </div>
         </div>
       </div>
     </HeaderDiv>
