@@ -229,8 +229,8 @@ const CardView = () => {
         <span className="text-xl md:text-4xl tracking-wider">
           Managing Director at LAZERXTECH
         </span>
-        <div className="w-full mr-28 flex justify-end">
-          <img src="/lxtlogo.png" className="h-14 mt-12"></img>
+        <div className="w-full mr-5 md:mr-28 flex justify-end">
+          <img src="/lxtlogo.png" className="h-10 md:h-14 mt-12"></img>
         </div>
       </div>
     </HeaderDiv>
