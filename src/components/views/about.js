@@ -5,6 +5,7 @@ import ProfileCard from "../cards/profileCard";
 import SpacedSection from "../spacedSection/spacedSection";
 import { useEffect, useRef, useState } from "react";
 import HeaderView from "../animatedDiv/headerView";
+import SummerText from "../animatedDiv/summerText";
 
 const LineAnimation = ({
   spanDelay,
@@ -228,6 +229,9 @@ const CardView = () => {
         <span className="text-xl md:text-4xl tracking-wider">
           Managing Director at LAZERXTECH
         </span>
+        <div className="w-full mr-28 flex justify-end">
+          <img src="/lxtlogo.png" className="h-14 mt-12"></img>
+        </div>
       </div>
     </HeaderDiv>
   );
@@ -461,10 +465,17 @@ export default function About() {
             Skate Bags,
           </span>
         </div>
+        <div className="pt-4">
+          <SummerText
+            text="About Rahul Rane"
+            url="https://res.cloudinary.com/djdyzefbx/raw/upload/v1744186557/about_rahul_pp2w8u.docx"
+            downloadName="about_rahul_rane.docx"
+          ></SummerText>
+        </div>
       </SpacedSection>
       <SpacedSection
         backgroundColor="transparent"
-        customStyling="pt-40"
+        customStyling="pt-10"
         customPadding=""
       >
         <AchievementView inHome={true}></AchievementView>

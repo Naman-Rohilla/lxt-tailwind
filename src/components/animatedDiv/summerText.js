@@ -1,6 +1,11 @@
 import HeaderDiv from "./headerDiv";
 
-const SummerText = ({ color = "white" }) => {
+const SummerText = ({
+  color = "white",
+  text = "LXT Speed Skating Summer Camp & Speed Clinic 2025",
+  url = "https://res.cloudinary.com/djdyzefbx/image/upload/v1743690131/LXT_Speed_Skating_Summer_Camp_Speed_Clinic_2025_ffxqqu.pdf",
+  downloadName = "Lxt_Summer_Camp.pdf",
+}) => {
   return (
     <HeaderDiv
       className="text-xs pt-2 md:pt-1 text-light md:text-xl flex items-center text-bold"
@@ -9,12 +14,8 @@ const SummerText = ({ color = "white" }) => {
         zIndex: 999,
       }}
     >
-      LXT Speed Skating Summer Camp & Speed Clinic 2025
-      <a
-        href="https://res.cloudinary.com/djdyzefbx/image/upload/v1743690131/LXT_Speed_Skating_Summer_Camp_Speed_Clinic_2025_ffxqqu.pdf"
-        download="Lxt_Summer_Camp.pdf"
-        target="_blank"
-      >
+      {text}
+      <a href={url} download={downloadName} target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           // height="20px"
