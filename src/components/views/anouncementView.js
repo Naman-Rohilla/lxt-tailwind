@@ -82,7 +82,6 @@ const AnouncementView = ({ inHome = false }) => {
               <span className="pt-2 text-2xl ">
                 In fond remembrance of Rahul Sir on his birthday.
               </span>
-              <SummerText color="#0065B3" />
               <span className="pt-4 md:pt-10 mb-10 md:mb-0">
                 <LxtButton text={"RESGISTER NOW"} color={"red"}></LxtButton>
               </span>
@@ -162,6 +161,7 @@ const AnouncementView = ({ inHome = false }) => {
                 </>
               )}
             </span>
+            <SummerText color="#0065B3" />
           </HeaderDiv>
 
           <div className="relative h-14 hidden md:block">
