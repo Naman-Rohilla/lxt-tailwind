@@ -8,7 +8,7 @@ export default function Contact() {
         <span className="text-gray-50 opacity-50">Home / </span>
         <span>Contact Us</span>
       </div>
-      <HeaderDiv className="bg-white shadow-2xl w-full h-auto md:h-72 my-5 rounded-b-2xl rounded-tl-2xl md:rounded-b-3xl md:rounded-tl-3xl">
+      <HeaderDiv className="bg-white shadow-2xl w-full h-auto md:h-60 my-5 rounded-b-2xl rounded-tl-2xl md:rounded-b-3xl md:rounded-tl-3xl">
         <div className="text-black font-extrabold pt-4 md:pt-8 px-4 md:px-10 text-md md:text-3xl">
           LXT SPEED SKATING TRACK & ROAD , KASARSAI
         </div>
@@ -49,101 +49,8 @@ export default function Contact() {
             </g>
           </svg>
           <span className="pl-1 font-extrabold text-sm md:text-2xl">
-            09689426089
+            +91 93264 50051
           </span>
-        </div>
-        <div className="text-black  pt-4 px-4 md:px-10 text-sm flex md:space-x-2 md:flex-row flex-col">
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="#5084C1"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <spam>Monday, 5:30-7:30pm</spam>
-          </div>
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="#5084C1"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <spam>Tuesday, 5:30-8:30pm</spam>
-          </div>
-          <div className="text-red-600 font-bold flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="red"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <spam>Wednesday closed</spam>
-          </div>
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="#5084C1"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <spam>Thursday, 5:30-8:30pm</spam>
-          </div>
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="#5084C1"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <spam>Friday, 5:30-7:30pm</spam>
-          </div>
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="#5084C1"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <spam>Saturday, 9-10:30am - 5:30-8:30pm</spam>
-          </div>
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="#5084C1"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <spam>Sunday, 9-10:30am - 5:30-8:30pm</spam>
-          </div>
         </div>
         <div className="mt-4 w-full px-2 md:px-10">
           <div
@@ -185,7 +92,7 @@ export default function Contact() {
             <span className="pl-1">
               Our Products{" "}
               <a href="http://www.lazerxtech.com" className="text-blue-500">
-                http://www.lazerxtech.com
+                https://lxtskates.catalog.to/
               </a>
             </span>
           </div>
