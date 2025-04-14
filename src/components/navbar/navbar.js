@@ -4,7 +4,7 @@ import LxtButton from "../buttons/lxtButton";
 import menuItems from "../../jsons/menuItems";
 import SpacedSection from "../spacedSection/spacedSection";
 
-export default function Navbar() {
+export default function Navbar({ setIsPopupOpen }) {
   const textButton = "BOOK A RINK";
 
   const location = useLocation();
@@ -43,14 +43,14 @@ export default function Navbar() {
               {mt.link}
             </Link>
           ))}
-          <a href="https://lxtskates.catalog.to/" target="_blank">
+          <span onClick={() => setIsPopupOpen(true)}>
             <LxtButton text={textButton} color="red" borderColor={"none"} />
-          </a>
+          </span>
         </div>
         <div className="flex md:hidden">
-          <a href="https://lxtskates.catalog.to/" target="_blank">
+          <span onClick={() => setIsPopupOpen(true)}>
             <LxtButton text={textButton} color="red" borderColor={"none"} />
-          </a>
+          </span>
         </div>
       </div>
     </SpacedSection>
