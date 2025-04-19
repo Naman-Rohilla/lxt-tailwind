@@ -5,7 +5,7 @@ const WatchShopView = ({ isMobile }) => {
   return (
     <SpacedSection
       position="sticky"
-      customStyling="watch-shop-view sticky top-0 w-full md:w-screen flex py-10 md:py-24"
+      customStyling="watch-shop-view sticky top-0 w-full md:w-[calc(100vw-2rem)] flex py-10 md:py-24"
     >
       {isMobile ? (
         <>

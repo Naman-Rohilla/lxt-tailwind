@@ -3,7 +3,7 @@ import "../../styles/iphoneView.scss";
 
 const IphoneView = () => {
   return (
-    <div className="iphone-view pr-10 md:pr-10 lg:pr-40 2xl:pr-80 h-screen w-1/2 sticky top-0 items-start hidden md:block">
+    <div className="iphone-view pr-10 md:pr-10 lg:pr-40 2xl:pr-80 h-screen w-1/2 sticky top-0 items-start hidden md:block max-w-[calc(100vw-2rem)]">
       <div className="iphone ">
         <img src="iphone.png" alt="iPhone" className="2xl:h-[700px] 2xl:w-[350px] md:h-[45%] md:w-[52%]" />
         <video
