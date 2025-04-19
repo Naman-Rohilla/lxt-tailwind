@@ -76,7 +76,7 @@ const AnouncementView = ({ inHome = false }) => {
                 23<sup>rd</sup> LXT
               </span>
               <span className="text-5xl md:text-8xl w-full font-bold">
-                UNITED RACE
+                RACE
               </span>
               <span className="pt-2 text-2xl ">
                 In fond remembrance of Rahul Sir on his birthday.
