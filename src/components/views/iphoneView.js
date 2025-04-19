@@ -12,9 +12,9 @@ const IphoneView = () => {
           loop
           muted
           style={{ objectFit: "cover" }}
-          className="md:h-[47%] md:-translate-y-2 md:translate-x-1 md:w-[59%] xl:w-[53%] xl:rounded-[60px] md:rounded-[3rem] 2xl:h-[700px] 2xl:w-[350px] 2xl:rounded-[65px] 2xl:-translate-y-0 2xl:translate-x-0 "
+          className="md:h-[47%] md:-translate-y-2 md:translate-x-1 md:w-[53.5%] xl:w-[52%] xl:rounded-[60px] md:rounded-[3rem] 2xl:h-[700px] 2xl:w-[350px] 2xl:rounded-[65px] 2xl:-translate-y-0 2xl:translate-x-0 "
         />
-        <div className="iphone-button md:-translate-y-72 md:translate-x-8 2xl:-translate-y-0 2xl:translate-x-0">
+        <div className="iphone-button md:-translate-y-72 md:translate-x-4 2xl:-translate-y-0 2xl:translate-x-0">
           <LxtButton text={"BOOK A TICKET"} color="red" />
         </div>
       </div>

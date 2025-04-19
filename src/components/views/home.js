@@ -160,8 +160,8 @@ const ProductView = ({ isMobile }) => {
                 (pd, i) => (
                   <div
                     className={`${visibleIndex == i
-                        ? "scale-105 ease-in-out duration-300 opacity-100"
-                        : "opacity-60"
+                      ? "scale-105 ease-in-out duration-300 opacity-100"
+                      : "opacity-60"
                       }`}
                   >
                     <ProductCard

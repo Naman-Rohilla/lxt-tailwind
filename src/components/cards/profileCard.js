@@ -111,9 +111,8 @@ export default function ProfileCard({ isMobile }) {
               duration: 2,
             }}
             key={animationKey}
-            className={`object-contain md:object-fill transform origin-center  ${
-              bottomOrigin ? "md:origin-bottom" : "md:origin-center"
-            } ${customElements} `}
+            className={`object-contain md:object-fill transform origin-center  ${bottomOrigin ? "md:origin-bottom" : "md:origin-center"
+              } ${customElements} `}
             src={isMobile ? mobSrc : imgSrc}
             alt="Profile"
           />
