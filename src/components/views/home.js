@@ -228,7 +228,7 @@ const ProfileCardView = ({ isMobile }) => {
       style={{
         backgroundColor: "rgba(2, 23, 58, 0.8)",
       }}
-      className="h-auto md:h-screen w-full relative md:sticky z-10 flex items-start md:items-end md:pb-40 py-10 md:pt-32"
+      className="h-auto md:h-screen w-full relative md:sticky z-10 flex items-start md:items-end md:py-0 py-10 md:pt-32"
     >
       <ProfileCard isMobile={isMobile}></ProfileCard>
     </div>
