@@ -159,11 +159,10 @@ const ProductView = ({ isMobile }) => {
               {[...productData1, ...productData2, ...productData3].map(
                 (pd, i) => (
                   <div
-                    className={`${
-                      visibleIndex == i
+                    className={`${visibleIndex == i
                         ? "scale-105 ease-in-out duration-300 opacity-100"
                         : "opacity-60"
-                    }`}
+                      }`}
                   >
                     <ProductCard
                       key={i}
