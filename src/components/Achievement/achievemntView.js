@@ -19,10 +19,11 @@ const PictureView = ({ state, inHome }) => {
           >
             <motion.img
               className="h-80 rounded-2xl opacity-80 md:opacity-60 md:hover:opacity-100 md:ease-in-out md:duration-200"
-              src={`${state
-                ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796976/8160ab3a-022c-442d-8336-6351a8ee67e7_apihpl.jpg"
-                : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
-                }`}
+              src={`${
+                state
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796976/8160ab3a-022c-442d-8336-6351a8ee67e7_apihpl.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
+              }`}
             />
             <img
               className="h-36 rounded-2xl md:opacity-60 md:hover:opacity-100 md:ease-in-out md:duration-200"
@@ -137,10 +138,11 @@ const PictureView = ({ state, inHome }) => {
           >
             <motion.img
               className="h-40 md:h-80 rounded-2xl opacity-80 md:duration-200"
-              src={`${state
-                ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796976/8160ab3a-022c-442d-8336-6351a8ee67e7_apihpl.jpg"
-                : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
-                }`}
+              src={`${
+                state
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796976/8160ab3a-022c-442d-8336-6351a8ee67e7_apihpl.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
+              }`}
             />
             <img
               className="h-16 md:h-36 rounded-2xl md:duration-200"
@@ -153,9 +155,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "w-64 rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -166,10 +169,11 @@ const PictureView = ({ state, inHome }) => {
             />
             <motion.img
               className="h-40 md:h-80 rounded-2xl opacity-80 md:duration-200"
-              src={`${state
-                ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/rswsb09rkiej3ppah2md.jpg"
-                : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503205/profile3_1_11zon_eialum.jpg"
-                }`}
+              src={`${
+                state
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/rswsb09rkiej3ppah2md.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503205/profile3_1_11zon_eialum.jpg"
+              }`}
             />
             <img
               className="h-16 md:h-36 rounded-2xl md:duration-200"
@@ -184,9 +188,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -206,9 +211,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -238,9 +244,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -270,9 +277,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -300,9 +308,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "w-64 rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -332,9 +341,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80 bg-white"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80 bg-white"
                 }`
               }
               src={
@@ -364,9 +374,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -378,9 +389,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -400,9 +412,10 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${state
-                  ? "w-40 md:w-80 h-36 md:h-72"
-                  : "w-32 md:w-64 h-40 md:h-80"
+                `${
+                  state
+                    ? "w-40 md:w-80 h-36 md:h-72"
+                    : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
@@ -473,13 +486,13 @@ export default function AchievementView({ inHome = false }) {
             >
               <span className="hidden md:flex"></span>
               <div className="flex flex-col justify-center px-5 bottom-0 md:top-0 md:pl-28 absolute text-[#0065B3]">
-                <span className="text-3xl text-center md:text-start md:text-7xl w-full font-extrabold uppercase">
+                <span className="text-3xl text-center md:text-start md:text-5xl 2xl:text-7xl w-full font-extrabold uppercase">
                   Chhatrapati shivaji
                 </span>
-                <span className="text-3xl md:text-7xl text-center md:text-start w-full font-extrabold uppercase">
+                <span className="text-3xl md:text-5xl 2xl:text-7xl text-center md:text-start w-full font-extrabold uppercase">
                   Maharaj Award
                 </span>
-                <span className="pt-2 text-xl text-center md:text-start md:text-4xl md:leading-[3rem] md:w-[800px]">
+                <span className="pt-2 text-xl text-center md:text-start md:text-4xl md:leading-[3rem] md:w-[600px] 2xl:w-[800px]">
                   Rahul Sir winning the Chhatrapati Shivaji Maharaj Award in
                   skating
                 </span>
@@ -578,20 +591,23 @@ export default function AchievementView({ inHome = false }) {
 
         <div className="relative">
           {!inHome && (
-            <div style={{
-              height: "1320px"
-            }} className="absolute mt-10 z-10 w-full bg-gradient-to-r from-gray-900/40 via-transparent to-gray-900/40"></div>
+            <div
+              style={{
+                height: "1320px",
+              }}
+              className="absolute mt-10 z-10 w-full bg-gradient-to-r from-gray-900/40 via-transparent to-gray-900/40"
+            ></div>
           )}
           <div
             className={
               "h-auto content-box slider-hidden-scrollbar flex flex-nowrap space-x-5 relative  " +
-              `${inHome
-                ? "md:py-10 overflow-x-auto"
-                : "pt-10 -translate-x-20 md:translate-x-0 relative"
+              `${
+                inHome
+                  ? "md:py-10 overflow-x-auto"
+                  : "pt-10 -translate-x-20 md:translate-x-0 relative"
               }`
             }
           >
-
             <PictureView state={state} inHome={inHome}></PictureView>
           </div>
         </div>

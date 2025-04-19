@@ -72,7 +72,7 @@ const AnouncementView = ({ inHome = false }) => {
             className=" h-[592px] w-full flex md:flex-row flex-col justify-between rounded-b-2xl rounded-tl-2xl relative"
           >
             <span className="hidden md:flex"></span>
-            <div className="flex flex-col justify-center px-5 bottom-0 md:top-0 md:px-60 md:pt-20 absolute text-[#0065B3]">
+            <div className="flex flex-col justify-center px-5 bottom-0 md:top-0 md:pl-20 md:pr-20 2xl:pl-60 2xl:pr-60 md:pt-20 absolute text-[#0065B3]">
               <span className="text-6xl md:text-8xl w-full font-bold">
                 23<sup>rd</sup> LXT
               </span>

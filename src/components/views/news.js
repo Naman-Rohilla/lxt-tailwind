@@ -21,9 +21,9 @@ const NewsView = ({ inHome }) => {
           height: "55vh",
         }}
       >
-        <div className="flex flex-col w-1/2 pt-20 text-6xl pl-10">
+        <div className="flex flex-col w-1/2 lg:pt-14 2xl:pt-20 md:text-3xl 2xl:text-6xl pl-10">
           <span className="font-extrabold">In the News</span>
-          <span className="font-extralight pt-10 text-2xl w-1/2 lg:w-full lg:text-4xl">
+          <span className="font-extralight lg:pt-4 2xl:pt-10 text-2xl w-1/2 lg:w-full lg:text-2xl 2xl:text-4xl">
             Stay updated with the latest headlines, stories, and achievements
             making waves in the skating community and beyond.
           </span>
@@ -111,7 +111,7 @@ export default function News({ inHome = false, isMobile }) {
     <>
       {activeNews.open && (
         <div className="fixed h-full w-full z-20 flex bg-black bg-opacity-80 justify-center items-center">
-          <div className="bg-card-color h-3/4 md:h-auto w-full mx-4 md:mx-0 md:w-3/4 overflow-scroll md:mt-24 rounded-b-2xl rounded-tl-2xl relative text-white py-10">
+          <div className="bg-card-color h-3/4 md:h-[500px] 2xl:h-auto w-full mx-4 md:mx-0 md:w-3/4 overflow-scroll md:mt-24 2xl:mt-24 rounded-b-2xl rounded-tl-2xl relative text-white py-10">
             <span
               className="absolute left-0 top-0 py-4 pl-5 pr-10 md:pr-0 cursor-pointer text-gray-300"
               onClick={() =>
