@@ -55,7 +55,6 @@ const AnouncementView = ({ inHome = false }) => {
           <HeaderDiv className="text-lg pt-2 md:text-2xl font-extralight">
             Get Ready to Roll—Exciting Skating Event Ahead
           </HeaderDiv>
-          <SummerText />
         </>
       ) : (
         <>

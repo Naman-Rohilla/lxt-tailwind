@@ -276,13 +276,14 @@ export const announcementData = [
     ],
   },
   {
-    heading: "Visakhapatnam Open Roller Skating Championship",
+    heading: "How to become a coach?",
     list: [
-      "This event will be held from August 30-September 1, 2024.",
-      "In fond remembrance of Rahul Sir on his birthday; We would like to commemorate his enduring legacy and passion for sports by organizing a Speed Skating Race on 15th September 2024.",
+      "THEY SAID I COULD BE ANYTHING I WANTED, SO I CHOSE TO...",
+      "THEY SAID I COULD BE ANYTHING I WANTED, SO I CHOSE TO..."
     ],
-    type: [announcementType.ranking, announcementType.airss],
-
+    type: [announcementType.lxt],
+    download:
+      "https://res.cloudinary.com/djdyzefbx/raw/upload/v1745058483/COACH_lffsay.docx",
   },
   {
     heading: "Visakhapatnam Open Roller Skating Championship",

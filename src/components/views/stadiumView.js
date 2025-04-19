@@ -99,7 +99,7 @@ const StadiumView = ({ inHome = false }) => {
       )}
       <HeaderDiv className="stadium-view h-auto w-full relative flex justify-between">
         {showContent && (
-          <div className="stadium-background overflow-hidden h-screen sticky top-0">
+          <div className="stadium-background h-screen sticky top-0">
             <div className="stadium-background-color">
               <img
                 style={{
