@@ -77,7 +77,7 @@ const AnouncementView = ({ inHome = false }) => {
                 23<sup>rd</sup> LXT
               </span>
               <span className="text-5xl md:text-8xl w-full font-bold">
-                RACE
+                UNITED RACE
               </span>
               <span className="pt-2 text-2xl ">
                 In fond remembrance of Rahul Sir on his birthday.
@@ -230,6 +230,7 @@ const AnouncementView = ({ inHome = false }) => {
                   key={index}
                   heading={sd.heading}
                   list={sd.list}
+                  download={sd?.download}
                   defaultExpanded={false}
                 ></ExpandedCard>
               ))}
@@ -266,6 +267,7 @@ const AnouncementView = ({ inHome = false }) => {
                     key={index}
                     heading={sd.heading}
                     list={sd.list}
+                    download={sd?.download}
                     defaultExpanded={false}
                   ></ExpandedCard>
                 ))}

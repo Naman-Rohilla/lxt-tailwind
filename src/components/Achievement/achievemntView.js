@@ -19,11 +19,10 @@ const PictureView = ({ state, inHome }) => {
           >
             <motion.img
               className="h-80 rounded-2xl opacity-80 md:opacity-60 md:hover:opacity-100 md:ease-in-out md:duration-200"
-              src={`${
-                state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/rswsb09rkiej3ppah2md.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
-              }`}
+              src={`${state
+                ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796976/8160ab3a-022c-442d-8336-6351a8ee67e7_apihpl.jpg"
+                : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
+                }`}
             />
             <img
               className="h-36 rounded-2xl md:opacity-60 md:hover:opacity-100 md:ease-in-out md:duration-200"
@@ -38,11 +37,11 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "w-64 rounded-2xl md:opacity-60 md:hover:opacity-100 md:ease-in-out md:duration-200 " +
-                `${state ? "w-80 h-72" : "w-64 h-80"}`
+                `${state ? "w-72 h-72" : "w-64 h-80"}`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/d4xtbf8epjj9vxzlyaw9.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796904/b47daff1-7f52-47b1-8573-4912a02e34a1_wqyg7g.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
               }
             />
@@ -60,7 +59,7 @@ const PictureView = ({ state, inHome }) => {
               className="h-80 rounded-2xl md:opacity-60 md:hover:opacity-100 md:ease-in-out md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/c6kcdo9zpukuawjqv7sy.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796975/2e4b9aa2-8016-4887-a0a7-a604ec2b8820_fno22q.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738500469/ach10_11zon_ws7p58.png"
               }
             />
@@ -73,7 +72,7 @@ const PictureView = ({ state, inHome }) => {
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/f75quc5vhkcqnfebe7in.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744797404/WhatsApp_Image_2025-04-06_at_6.49.05_PM_iioc1j.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach5-min_gbqznh.jpg"
               }
             />
@@ -83,7 +82,7 @@ const PictureView = ({ state, inHome }) => {
               className="h-80 rounded-2xl md:opacity-60 md:hover:opacity-100 md:ease-in-out md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394849/n6ph3h1o7slxborlme2k.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744797403/WhatsApp_Image_2025-04-06_at_6.49.04_PM_r0xsd9.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499995/ach11-min_dkpkxq.jpg"
               }
             />
@@ -104,7 +103,7 @@ const PictureView = ({ state, inHome }) => {
               }}
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/fyhtroz7a96bcbwsgqei.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744797393/ca2bfd98-14e8-44e0-81c5-4c087897242f_aefclm.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503204/profile2_4_11zon_h7qugl.jpg"
               }
             />
@@ -138,11 +137,10 @@ const PictureView = ({ state, inHome }) => {
           >
             <motion.img
               className="h-40 md:h-80 rounded-2xl opacity-80 md:duration-200"
-              src={`${
-                state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/rswsb09rkiej3ppah2md.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
-              }`}
+              src={`${state
+                ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796976/8160ab3a-022c-442d-8336-6351a8ee67e7_apihpl.jpg"
+                : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
+                }`}
             />
             <img
               className="h-16 md:h-36 rounded-2xl md:duration-200"
@@ -155,32 +153,30 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "w-64 rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
                   ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/d4xtbf8epjj9vxzlyaw9.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744988562/WhatsApp_Image_2025-04-14_at_5.31.53_PM_1_o3qmwl.jpg"
               }
             />
             <motion.img
               className="h-40 md:h-80 rounded-2xl opacity-80 md:duration-200"
-              src={`${
-                state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/rswsb09rkiej3ppah2md.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503701/picture1_2_11zon_u2rqjn.png"
-              }`}
+              src={`${state
+                ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/rswsb09rkiej3ppah2md.jpg"
+                : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503205/profile3_1_11zon_eialum.jpg"
+                }`}
             />
             <img
               className="h-16 md:h-36 rounded-2xl md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/q8dbtqpd6jv1akdnt34g.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499992/ach1-min_dnofzn.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745044455/WhatsApp_Image_2025-04-14_at_5.37.00_PM_aqsdcp.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744988578/WhatsApp_Image_2025-04-14_at_5.31.54_PM_nxtfvd.jpg"
               }
             />
           </div>
@@ -188,15 +184,14 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/d4xtbf8epjj9vxzlyaw9.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796904/b47daff1-7f52-47b1-8573-4912a02e34a1_wqyg7g.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
               }
             />
@@ -211,16 +206,15 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/d4xtbf8epjj9vxzlyaw9.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/c6kcdo9zpukuawjqv7sy.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738503702/product4_3_11zon_ce3ooy.jpg"
               }
             />
           </div>
@@ -237,22 +231,21 @@ const PictureView = ({ state, inHome }) => {
               className="h-40 md:h-80 rounded-2xl md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/c6kcdo9zpukuawjqv7sy.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744796975/2e4b9aa2-8016-4887-a0a7-a604ec2b8820_fno22q.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738500469/ach10_11zon_ws7p58.png"
               }
             />
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/f75quc5vhkcqnfebe7in.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745043992/WhatsApp_Image_2025-04-14_at_5.36.59_PM_1_trkymh.jpg"
                   : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach5-min_gbqznh.jpg"
               }
             />
@@ -260,16 +253,16 @@ const PictureView = ({ state, inHome }) => {
               className="h-16 md:h-36 rounded-2xl md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/nw76ubtp91pwrys0lxgx.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach3-min_u9kqov.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745043993/WhatsApp_Image_2025-04-14_at_5.36.59_PM_2_pijegh.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744988549/WhatsApp_Image_2025-04-14_at_5.31.26_PM_odofnf.jpg"
               }
             />
             <img
               className="h-40 md:h-80 rounded-2xl md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/c6kcdo9zpukuawjqv7sy.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738500469/ach10_11zon_ws7p58.png"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745044158/WhatsApp_Image_2025-04-14_at_5.37.27_PM_tg82cb.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744989050/WhatsApp_Image_2025-04-14_at_5.31.53_PM_3_nim3ug.jpg"
               }
             />
           </div>
@@ -277,16 +270,15 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/f75quc5vhkcqnfebe7in.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach5-min_gbqznh.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744797404/WhatsApp_Image_2025-04-06_at_6.49.05_PM_iioc1j.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744989050/WhatsApp_Image_2025-04-14_at_5.31.53_PM_4_rub7af.jpg"
               }
             />
             <img
@@ -302,22 +294,21 @@ const PictureView = ({ state, inHome }) => {
               src={
                 state
                   ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738395535/WhatsApp_Image_2025-02-01_at_12.33.37_PM_1_tfnr21.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738500205/ach9-min_hjtvdg.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744989050/WhatsApp_Image_2025-04-14_at_5.32.57_PM_n3sbod.jpg"
               }
             />
             <img
               className={
                 "w-64 rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
                   ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/f75quc5vhkcqnfebe7in.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach5-min_gbqznh.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744989050/WhatsApp_Image_2025-04-14_at_5.32.31_PM_rs3g2w.jpg"
               }
             />
           </div>
@@ -326,8 +317,8 @@ const PictureView = ({ state, inHome }) => {
               className="h-40 md:h-80 rounded-2xl md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394849/n6ph3h1o7slxborlme2k.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499995/ach11-min_dkpkxq.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744797403/WhatsApp_Image_2025-04-06_at_6.49.04_PM_r0xsd9.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1745043509/WhatsApp_Image_2025-04-14_at_5.32.31_PM_2_nblpun.jpg"
               }
             />
             <img
@@ -341,32 +332,31 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80 bg-white"
                 }`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/f75quc5vhkcqnfebe7in.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach5-min_gbqznh.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745044538/WhatsApp_Image_2025-04-14_at_5.36.59_PM_5_cubvb6.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738504019/news-cropped_2_11zon_jf8hqh.png"
               }
             />
             <img
               className="h-40 md:h-80 rounded-2xl md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394849/n6ph3h1o7slxborlme2k.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499995/ach11-min_dkpkxq.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745044158/WhatsApp_Image_2025-04-14_at_5.36.59_PM_3_h6dbc3.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1745043161/WhatsApp_Image_2025-04-14_at_5.32.57_PM_2_asq1eo.jpg"
               }
             />
             <img
               className="h-16 md:h-36 rounded-2xl md:duration-200"
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/cxzte5df3up5svbll568.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499994/ach7-min_tckckh.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745043993/WhatsApp_Image_2025-04-14_at_5.36.59_PM_v0qio3.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738395535/WhatsApp_Image_2025-02-01_at_12.33.37_PM_1_tfnr21.jpg"
               }
             />
           </div>
@@ -374,31 +364,29 @@ const PictureView = ({ state, inHome }) => {
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/d4xtbf8epjj9vxzlyaw9.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1744797393/ca2bfd98-14e8-44e0-81c5-4c087897242f_aefclm.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744989050/WhatsApp_Image_2025-04-14_at_5.32.57_PM_1_zuh3li.jpg"
               }
             />
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
                   ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394849/n6ph3h1o7slxborlme2k.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499995/ach11-min_dkpkxq.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1745043161/WhatsApp_Image_2025-04-14_at_5.31.54_PM_1_wyq7rx.jpg"
               }
             />
             <img
@@ -406,22 +394,21 @@ const PictureView = ({ state, inHome }) => {
               src={
                 state
                   ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394847/cxzte5df3up5svbll568.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499994/ach7-min_tckckh.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1744988576/WhatsApp_Image_2025-04-14_at_5.31.53_PM_2_tprcxm.jpg"
               }
             />
             <img
               className={
                 "rounded-2xl md:duration-200 " +
-                `${
-                  state
-                    ? "w-40 md:w-80 h-36 md:h-72"
-                    : "w-32 md:w-64 h-40 md:h-80"
+                `${state
+                  ? "w-40 md:w-80 h-36 md:h-72"
+                  : "w-32 md:w-64 h-40 md:h-80"
                 }`
               }
               src={
                 state
-                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1738394848/d4xtbf8epjj9vxzlyaw9.jpg"
-                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499993/ach2-min_pxjg19.jpg"
+                  ? "https://res.cloudinary.com/djdyzefbx/image/upload/v1745044158/WhatsApp_Image_2025-04-14_at_5.36.59_PM_4_ol3yij.jpg"
+                  : "https://res.cloudinary.com/djdyzefbx/image/upload/v1745043161/WhatsApp_Image_2025-04-14_at_5.32.31_PM_1_qnkegd.jpg"
               }
             />
           </div>
@@ -591,18 +578,20 @@ export default function AchievementView({ inHome = false }) {
 
         <div className="relative">
           {!inHome && (
-            <div className="h-screen absolute mt-10 z-10 w-full bg-gradient-to-r from-gray-900/40 via-transparent to-gray-900/40"></div>
+            <div style={{
+              height: "1320px"
+            }} className="absolute mt-10 z-10 w-full bg-gradient-to-r from-gray-900/40 via-transparent to-gray-900/40"></div>
           )}
           <div
             className={
               "h-auto content-box slider-hidden-scrollbar flex flex-nowrap space-x-5 relative  " +
-              `${
-                inHome
-                  ? "md:py-10 overflow-x-auto"
-                  : "pt-10 -translate-x-20 md:translate-x-0"
+              `${inHome
+                ? "md:py-10 overflow-x-auto"
+                : "pt-10 -translate-x-20 md:translate-x-0 relative"
               }`
             }
           >
+
             <PictureView state={state} inHome={inHome}></PictureView>
           </div>
         </div>

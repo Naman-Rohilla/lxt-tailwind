@@ -8,6 +8,7 @@ export default function ExpandedCard({
   list,
   defaultExpanded = "disabled",
   isActive,
+  download,
 }) {
   const [expanded, setExpanded] = useState(defaultExpanded);
 
@@ -15,9 +16,8 @@ export default function ExpandedCard({
     <AnimatePresence>
       <motion.div
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`action-card-view relative flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out py-4 px-2 ${
-          expanded ? "bg-blue-900 px-4 md:px-8 md:py-8" : ""
-        }  `}
+        className={`action-card-view relative flex text-base flex-col w-full hover:duration-300 ease-in-out hover:duration-300 ease-in-out py-4 px-2 ${expanded ? "bg-blue-900 px-4 md:px-8 md:py-8" : ""
+          }  `}
       >
         <div className="action-card-heading pb-1 flex justify-between">
           {!defaultExpanded ? (
@@ -37,7 +37,7 @@ export default function ExpandedCard({
                 </h2>
               ) : (
                 <>
-                  <strong className="text-xl md:text-2xl">{heading}</strong>
+                  <strong className="text-xl md:text-2xl flex">{heading}</strong>
                   <strong
                     className="shrink-0 absolute right-0 top-0 py-4 px-2"
                     onClick={() => setExpanded(!expanded)}
@@ -105,14 +105,25 @@ export default function ExpandedCard({
           <>
             {list && (
               <motion.span
-                className="pt-0 md:pt-2 text-lg md:text-xl"
+                className="pt-0 md:pt-2 text-lg md:text-xl flex"
                 style={{ color: "#84BED6" }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5 }}
               >
-                {list[0]}
+                {list[0]} {download && (
+                  <span> <a href={download} target="_blank">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
+                      fill="red"
+                      className="ml-2 mt-1 cursor-pointer h-4 w-4 md:h-6 md:w-6"
+                    >
+                      <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                    </svg>
+                  </a></span>
+                )}
               </motion.span>
             )}
           </>

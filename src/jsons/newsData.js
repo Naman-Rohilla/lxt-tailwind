@@ -13,7 +13,7 @@ const newsData = [
   },
   {
     src: "https://res.cloudinary.com/djdyzefbx/image/upload/v1738499994/ach7-min_tckckh.jpg",
-    heading: "LXT has been awarded with GEO",
+    heading: "LXT has been awarded with GEA",
     summary:
       "He also got a Special invite for the 'Inline Speed Skating International Seminar'...",
     date: "June 24, 2022",
