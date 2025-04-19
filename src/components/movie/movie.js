@@ -150,19 +150,19 @@ export default function Movie({ isMobile }) {
           </div>
         )}
         <SpacedSection>
-          <HeaderDiv className="absolute bottom-7 md:bottom-24 border-box w-3/4  space-y-2 md:space-y-3 flex flex-col">
-            <span className="text-xs md:text-xl font-extralight tracking-[0.25em]">
+          <HeaderDiv className="absolute bottom-7 md:bottom-16 2xl:bottom-24 border-box w-3/4  space-y-2 md:space-y-3 flex flex-col">
+            <span className="text-xs md:text-sm 2xl:text-xl font-extralight tracking-[0.25em]">
               DREAM BUILDER
             </span>
-            <span className="text-xl md:text-9xl">
+            <span className="text-xl md:text-4xl 2xl:text-9xl">
               <span className="font-extrabold">Rahul</span>{" "}
               <span className="font-extralight">Rane</span>
             </span>
-            <span className="text-lg md:text-4xl">
+            <span className="text-lg md:text-2xl 2xl:text-4xl">
               <span className="font-extralight">Managing Director at </span>
               <span className="font-extrabold">LAZERXTECH</span>
             </span>
-            <span className="text-xs md:text-xl w-full md:w-1/2 font-extralight">
+            <span className="text-xs md:text-sm 2xl:text-xl w-full md:w-1/2 font-extralight">
               They are there to serve as an adviser, an assessor, a counsellor,
               a demonstrator, friend, mentor, an endless fountain of wisdom and
               knowledge, role model, your manager and your number one supporter.
