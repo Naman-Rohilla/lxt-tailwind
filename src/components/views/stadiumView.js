@@ -104,7 +104,7 @@ const StadiumView = ({ inHome = false }) => {
               <img
                 style={{
                   height: "100vh",
-                  width: "100vw",
+                  width: "",
                 }}
                 src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738504025/stadium_7_11zon_qtichi.png"
               />
@@ -153,7 +153,7 @@ const StadiumView = ({ inHome = false }) => {
               </>
             )}
             <div
-              className={`flex text-white ${"flex-row space-x-4 pt-10 pb-10 md:flex-col md:pt-10 md:space-y-5"} md:flex-col md:space-x-0 md:space-y-28  md:pt-24  overflow-x-scroll slider-hidden-scrollbar`}
+              className={`flex text-white ${"flex-row space-x-4 pt-10 pb-10 md:flex-col md:pt-10 md:space-y-5"} md:flex-col md:space-x-0 md:space-y-28  md:pt-24  overflow-x-scroll slider-hidden-scrollbar md:overflow-hidden`}
             >
               {showContent ? (
                 <>
