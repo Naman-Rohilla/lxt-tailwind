@@ -34,16 +34,15 @@ const LineAnimation = ({
           animate={
             isInView
               ? {
-                  opacity: 1,
-                }
+                opacity: 1,
+              }
               : {}
           }
           transition={{
             delay: spanDelay - 2,
           }}
-          className={`${
-            start ? "invisible" : ""
-          } relative w-auto h-6 md:h-auto`}
+          className={`${start ? "invisible" : ""
+            } relative w-auto h-6 md:h-auto`}
         >
           <div
             style={{
@@ -89,10 +88,10 @@ const LineAnimation = ({
           animate={
             isInView
               ? {
-                  opacity: 1,
-                  x: isMobile ? -8 : -10,
-                  y: isMobile ? -12 : -24,
-                }
+                opacity: 1,
+                x: isMobile ? -8 : -10,
+                y: isMobile ? -12 : -24,
+              }
               : {}
           }
           transition={{
@@ -101,9 +100,8 @@ const LineAnimation = ({
           style={{
             color: "#3b5ff0",
           }}
-          className={`${
-            start ? "invisible" : ""
-          } h-5 w-5 rounded-full -translate-y-5  font-bold text-xs md:text-base`}
+          className={`${start ? "invisible" : ""
+            } h-5 w-5 rounded-full -translate-y-5  font-bold text-xs md:text-base`}
         >
           {year}
         </motion.span>
@@ -116,9 +114,9 @@ const LineAnimation = ({
         animate={
           isInView
             ? {
-                width: "100%",
-                opacity: 1,
-              }
+              width: "100%",
+              opacity: 1,
+            }
             : {}
         }
         transition={{
@@ -139,8 +137,8 @@ const LineAnimation = ({
           animate={
             isInView
               ? {
-                  opacity: 1,
-                }
+                opacity: 1,
+              }
               : {}
           }
           transition={{
@@ -191,10 +189,10 @@ const LineAnimation = ({
           animate={
             isInView
               ? {
-                  opacity: 1,
-                  x: isMobile ? -8 : -10,
-                  y: 20,
-                }
+                opacity: 1,
+                x: isMobile ? -8 : -10,
+                y: 20,
+              }
               : {}
           }
           transition={{
@@ -215,10 +213,7 @@ const LineAnimation = ({
 const CardView = () => {
   return (
     <HeaderDiv
-      style={{
-        height: "550px",
-      }}
-      className="bg-card-color flex md:flex-row flex-col"
+      className="bg-card-color flex md:flex-row flex-col md:h-[450px] 2xl:h-[550px]"
     >
       <img
         src="https://res.cloudinary.com/djdyzefbx/image/upload/v1738503204/profile1_3_11zon_lsufig.png"
@@ -226,11 +221,11 @@ const CardView = () => {
       />
       <div className="h-full md:h-auto flex flex-col items-center justify-center w-full">
         <div>
-          <div className="text-6xl md:text-9xl xl:text-8xl font-bold font-mono space-x-5 flex">
+          <div className="text-6xl 2xl:text-9xl xl:text-8xl font-bold font-mono space-x-5 flex">
             <span>Rahul</span>
             <span>Rane</span>
           </div>
-          <span className="text-xl md:text-4xl xl:text-2xl tracking-wider flex justify-center">
+          <span className="text-xl 2xl:text-4xl xl:text-2xl tracking-wider flex justify-center">
             Managing Director at LAZERXTECH
           </span>
           <div className="flex justify-end">
@@ -273,9 +268,9 @@ const TextView = () => {
 const StickyTextView = () => {
   return (
     <div
-      className="leading-none text-7xl md:text-22xl"
+      className="leading-none text-7xl md:text-13xl 2xl:text-22xl"
       style={{
-        color: "rgba(255,255,255,0.05)",
+        color: "rgba(23, 6, 6, 0.05)",
       }}
     >
       Rahul Rane
