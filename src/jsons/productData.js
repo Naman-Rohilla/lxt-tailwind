@@ -292,58 +292,5 @@ export const announcementData = [
       "In fond remembrance of Rahul Sir on his birthday; We would like to commemorate his enduring legacy and passion for sports by organizing a Speed Skating Race on 15th September 2024.",
     ],
     type: [announcementType.ranking, announcementType.airss],
-  },
-  {
-    heading: "22nd LXT United Race 2024",
-    list: [
-      "In fond remembrance of Rahul Sir on his birthday.",
-      "In fond remembrance of Rahul Sir on his birthday; We would like to commemorate his enduring legacy and passion for sports by organizing a Speed Skating Race on 15th September 2024.",
-    ],
-    type: [
-      announcementType.lxt,
-      announcementType.ranking,
-      announcementType.rankingGoa,
-    ],
-  },
-  {
-    heading: "2nd India Skate Games 2024",
-    list: [
-      "This event will be held from August 7-11, 2024.",
-      "In fond remembrance of Rahul Sir on his birthday; We would like to commemorate his enduring legacy and passion for sports by organizing a Speed Skating Race on 15th September 2024.",
-    ],
-    type: [
-      announcementType.nationalRanking,
-      announcementType.ranking,
-      announcementType.airss,
-      announcementType.lxt,
-    ],
-  },
-  {
-    heading: "Visakhapatnam Open Roller Skating Championship",
-    list: [
-      "This event will be held from August 30-September 1, 2024.",
-      "In fond remembrance of Rahul Sir on his birthday; We would like to commemorate his enduring legacy and passion for sports by organizing a Speed Skating Race on 15th September 2024.",
-    ],
-    type: [
-      announcementType.ranking,
-      announcementType.airss,
-      announcementType.lxt,
-    ],
-  },
-  {
-    heading: "Visakhapatnam Open Roller Skating Championship",
-    list: [
-      "This event will be held from August 30-September 1, 2024.",
-      "In fond remembrance of Rahul Sir on his birthday; We would like to commemorate his enduring legacy and passion for sports by organizing a Speed Skating Race on 15th September 2024.",
-    ],
-    type: [announcementType.ranking, announcementType.airss],
-  },
-  {
-    heading: "Visakhapatnam Open Roller Skating Championship",
-    list: [
-      "This event will be held from August 30-September 1, 2024.",
-      "In fond remembrance of Rahul Sir on his birthday; We would like to commemorate his enduring legacy and passion for sports by organizing a Speed Skating Race on 15th September 2024.",
-    ],
-    type: [announcementType.ranking, announcementType.airss],
-  },
+  }
 ];

@@ -220,7 +220,7 @@ const AnouncementView = ({ inHome = false }) => {
               .filter((ad1, index) => {
                 if (isMobile) {
                   return ad1;
-                } else if (index < 5) {
+                } else if (index < 3) {
                   return ad1;
                 }
               })
@@ -257,7 +257,7 @@ const AnouncementView = ({ inHome = false }) => {
                   }
                 })
                 .filter((ad1, index) => {
-                  if (index >= 5 && index < 10) {
+                  if (index >= 3 && index < 5) {
                     return ad1;
                   }
                 })
